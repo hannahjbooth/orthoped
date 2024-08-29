@@ -29,11 +29,17 @@ nav, nav ul, ul {
 
 nav ul {
     list-style-type: none;
+    margin-right: 10px;
 }
 
 nav ul li {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
 }
 
 .nav-logo {
@@ -42,17 +48,24 @@ nav ul li {
 
 }
 
+.search-icon {
+    width: 20px;
+    height: 20px;
+}
 
 /* Footer */
 footer {
     border-style: solid;
     border-width: 1px;
+    text-align: center;
 }
 
 .row {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .address span {
@@ -75,8 +88,15 @@ footer {
     padding-bottom: 6px;
 
 }
-
+.logos {
+    margin-top: 20px;
+}
 .logos img {
     width: 266px;
     height: auto;
+}
+
+.copyright {
+    margin-block-start: 2px;
+    margin-block-end: 2px;
 }
