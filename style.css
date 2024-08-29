@@ -54,9 +54,26 @@ footer {
     flex-direction: row;
     justify-content: space-around;
 }
+
+.address span {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 .address, .policies {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-top: 20px;
+}
+
+.policies a {
+    color: black;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
 }
 
 .logos img {
