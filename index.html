@@ -16,7 +16,16 @@
                 <li><a href="/faqs/index.html">FAQ</a></li>
                 <li><a href="/feedback/index.html">Feedback</a></li>
                 <li><a href="/contact/index.html">Contact</a></li>
-                <li><img class="search-icon" src="/assets/search-icon.svg" alt="Search the Website"></li>  <!-- Add Image and Functionality -->
+                <li>
+                    <div class="hidden">
+                        <form id="search" role="search">
+                            <img class="search-icon" src="/assets/search-icon.svg" alt="Search the Website">
+                            <input type="search" id="query" name="q" placeholder="Search the website..." aria-label="Search through site content">
+                            <button>Search</button>
+                        </form>
+                    </div>
+                    
+                </li>  <!-- Add Image and Functionality -->
             </ul>
 
         </nav>
