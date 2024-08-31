@@ -10,29 +10,32 @@
 
 <body>
     <header>
-        <img src="/assets/logo.png" alt="OrthoPed logo" class="nav-logo">
         <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/user-guides/index.html">User Guides</a></li>
-                <li><a href="/faqs/index.html">FAQ</a></li>
-                <li><a href="/feedback/index.html">Feedback</a></li>
-                <li><a href="/contact/index.html">Contact</a></li>
-                <li>
-                    <form id="search" role="search" action="/search-results/index.html" method="GET">
-                        <!-- <label for="query">Search the website:</label> Semantically better? -->
-                        
-                        <input class="gcse-search" type="search" id="query" name="q" placeholder="Search the website..."
-                            aria-label="Search through site content">
-                        <button type="submit" aria-label="Submit search"><img class="search-icon" src="/assets/search-icon.svg"
-                                alt="Search the Website"></button>
-                    </form>
-                </li> <!-- Add Image and Functionality -->
-            </ul>
+            <div class="nav-row">
+                <img src="/assets/logo.png" alt="OrthoPed logo" class="nav-logo">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/user-guides/index.html">User Guides</a></li>
+                    <li><a href="/faqs/index.html">FAQ</a></li>
+                    <li><a href="/feedback/index.html">Feedback</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                    <li>
+                        <form id="search" role="search">
+                            <!-- <label for="query">Search the website:</label> Semantically better? -->
+                            
+                            <input  type="search" id="query" name="q" placeholder="Search the website..."
+                                aria-label="Search through site content">
+                            <button type="submit" aria-label="Submit search"><img class="search-icon" src="/assets/search-icon.svg"
+                                    alt="Search the Website"></button>
+                        </form>
+                    </li> <!-- Add Image and Functionality -->
+                </ul>
+            </div>
+
             <div class="search-results hidden">
                 <h2>Search Results:</h2>
                 <div class="results-content">
-                    <div class="gcse-search"></div>
+                    
                 </div>
             </div>
         </nav>
@@ -113,7 +116,7 @@
         <p class="copyright">© OrthoPed Ltd 2024</p>
     </footer>
     <script src="/script.js"></script>
-    <script async src="https://cse.google.com/cse.js?cx=d4c81bf4360a04444"></script>
+    <!-- <script async src="https://cse.google.com/cse.js?cx=d4c81bf4360a04444"></script> -->
 
 </body>
 
