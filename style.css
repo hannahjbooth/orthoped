@@ -59,10 +59,10 @@ nav a {
     width: 20px;
     height: 20px;
 }
-/* 
+
 .hidden {
     display: none;
-} */
+}
 
 /* Footer */
 footer {
@@ -110,4 +110,18 @@ footer {
 .copyright {
     margin-block-start: 2px;
     margin-block-end: 2px;
+}
+
+/* Home */
+
+.hero-section-logo {
+    width: 562px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-h1 {
+    text-align: ce ter;
 }
