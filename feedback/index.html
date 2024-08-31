@@ -1,0 +1,180 @@
+<h1>Feedback</h1>
+
+<p>Your feedback is incredibly important to us and enables us to make improvements to our product. Feedback can be provided using the following online feedback form, or by emailing info@orthoped.co.uk.</p>
+
+<form id="feedback-form" action="">
+    <fieldset>
+        <legend>OrthoPed Foot Drop Splint Feedback Form</legend>
+        <p>* Indicates required question</p>
+
+        <!-- Step 1 -->
+        <div class="step" id="step1">
+            <fieldset>
+                <legend>User Information</legend>
+                <label for="user-select" class="user-select">Please select which of the following categories apply to you *</label>
+                <br>
+                <select id="user-select" name="user-select">
+                    <option value="" disabled selected></option>
+                    <option value="user">I am the user of the product</option>
+                    <option value="carer">I am the parent, guardian or carer for the user of the product</option>
+                </select>
+                <br>
+                <label for="size-select" class="user-select">Please select which size splint was supplied *</label>
+                <br>
+                <select name="size-select" id="size-select">
+                    <option value="" disabled selected></option>
+                    <option value="XS">Child - Extra Small</option>
+                    <option value="S">Child - Small</option>
+                    <option value="M">Child - Medium</option>
+                    <option value="L">Child - Large</option>
+                </select>
+                <br>
+                <label for="shoe-size-select" class="shoe-size-select">Please select the UK shoe size for the user of the splint *</label>
+                <br>
+                <select name="shoe-size-select" id="shoe-size-select">
+                    <option value="" disabled selected></option>
+                    <option value="XS">Child - 2 to 4.5</option>
+                    <option value="XS">Child - 5 / 5.5</option>
+                    <option value="XS">Child - 6 / 6.5</option>
+                    <option value="XS">Child - 7 / 7.5</option>
+                    <option value="XS">Child - 8 / 8.5</option>
+                    <option value="XS">Child - 9 / 9.5</option>
+                    <option value="XS">Child - 10 / 10.5</option>
+                    <option value="XS">Child - 11 / 11.5</option>
+                    <option value="XS">Child - 12 / 12.5</option>
+                    <option value="XS">Child - 13 /13.5</option>
+                    <option value="XS">Adult - 1</option>
+                    <option value="XS">Adult - 2</option>
+                    <option value="XS">Adult - 3</option>
+                    <option value="XS">Adult - 4</option>
+                    <option value="XS">Adult - 5</option>
+                    <option value="XS">Adult - 6</option>
+                    <option value="XS">Adult - 8 or larger</option>
+                </select>
+                <br>
+                <p>Is the user able to put on their own shoes? *</p>
+                <input type="radio" id="yes-velcro-only">
+                <label for="yes-velcro-only">Yes - velcro only</label>
+                <br>
+                <input type="radio" id="yes-laced-or-velcro">
+                <label for="yes-laced-or-velcro">Yes - laced or velcro</label>
+                <br>
+                <input type="radio" id="shoes-no">
+                <label for="shoes-no">No</label>
+                <br>
+                <p>If you answered yes to the previous question, was the user able to put the splint on without assistance?</p>
+                <input type="radio" id="assistance-yes">
+                <label for="assistance-yes">Yes</label>
+                <br>
+                <input type="radio" id="assistance-no">
+                <label for="assistance-no">No</label>
+                <br>
+                <br>
+                <button type="button" onclick="nextStep()">Next</button>
+            </fieldset>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <fieldset>
+                <legend>Product fit, comfort and appearance</legend>
+    
+                <p>How was the fit of the splint: *</p>
+                <input type="radio" id="much-too-big">
+                <label for="much-too-big">Much too big</label>
+                <br>
+                <input type="radio" id="little-too-big">
+                <label for="little-too-big">A little bit too big</label>
+                <br>
+                <input type="radio" id="just-right">
+                <label for="just-right">Just Right</label>
+                <br>
+                <input type="radio" id="little-too-small">
+                <label for="little-too-small">A little bit too small</label>
+                <br>
+                <input type="radio" id="much-too-small">
+                <label for="much-too-small">Much too small</label>
+                <br>
+
+                <p>Was there any discomfort while wearing the splint? (Please select all that apply)</p>
+                <input type="checkbox" id="discomfort-no" name="discomfort-no" value="No">
+                <label for="discomfort-no">No</label>
+                <br>
+
+                <input type="checkbox" id="discomfort-yes-pinching" name="discomfort-yes-pinching" value="yes - pinching">
+                <label for="discomfort-yes-pinching">Yes - pinching</label>
+                <br>
+
+                <input type="checkbox" id="discomfort-yes-pulling" name="discomfort-yes-pulling" value="Yes - pulling">
+                <label for="discomfort-yes-pulling">Yes - pulling</label>
+                <br>
+
+                <input type="checkbox" id="discomfort-yes-rubbing" name="discomfort-yes-rubbing" value="Yes - rubbing">
+                <label for="discomfort-yes-rubbing">Yes - rubbing</label>
+                <br>
+
+                <input type="checkbox" id="discomfort-yes-redness" name="discomfort-yes-redness" value="Yes - redness">
+                <label for="discomfort-yes-redness">Yes - redness</label>
+                <br>
+
+                <input type="checkbox" id="discomfort-yes-swelling" name="discomfort-yes-swelling" value="Yes - swelling">
+                <label for="discomfort-yes-swelling">Yes - swelling</label>
+                <br>
+                <label for="discomfort-other">
+                    <input type="checkbox" id="discomfort-other" name="discomfort-other" value="Yes - swelling">
+                    Other:
+                </label>
+                <input type="text" name="discomfort-other">
+                <br>
+
+                <p>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *</p>
+                <input type="radio" id="very-likely">
+                <label for="very-likely">Very likely</label>
+                <br>
+                <input type="radio" id="quite-likely">
+                <label for="quite-likely">Quite likely</label>
+                <br>
+                <input type="radio" id="not-sure">
+                <label for="not-sure">Not sure</label>
+                <br>
+                <input type="radio" id="quite-unlikely">
+                <label for="quite-unlikely">Quite unlikely</label>
+                <br>
+                <input type="radio" id="very-unlikely">
+                <label for="very-unlikely">Very unlikely</label>
+                <br>
+                <br>
+                <label for="briefly-explain">Please briefly explain your answer to the previous question *</label><br>
+                <textarea name="briefly-explain" id="briefly-explain"></textarea>
+                <br>
+                <br>
+                <button type="button" onclick="nextStep()">Next</button>
+            </fieldset>
+        </div>
+
+                <!-- Step 1 -->
+        <div class="step" id="step1">
+            <fieldset>
+                <legend>Step 1: ___</legend>
+
+
+                <button type="button" onclick="nextStep()">Next</button>
+            </fieldset>
+        </div>
+    </fieldset>
+</form>
+
+
+
+ 
+    <!-- STEP
+
+    <div class="step" id="step1">
+        <fieldset>
+            <legend>Step 1: ___</legend>
+
+
+            <button type="button" onclick="nextStep()">Next</button>
+        </fieldset>
+    </div> -->
+
