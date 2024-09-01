@@ -11,6 +11,7 @@
         <div class="step" id="step1">
             <fieldset>
                 <legend>User Information</legend>
+                <input type="hidden" name="question" value="Please select which of the following categories apply to you *">
                 <label for="user-select" class="user-select">Please select which of the following categories apply to you *</label>
                 <br>
                 <select id="user-select" name="user-select" required>
@@ -19,6 +20,7 @@
                     <option value="carer">I am the parent, guardian or carer for the user of the product</option>
                 </select>
                 <br>
+                <input type="hidden" name="question" value="Please select which size splint was supplied *">
                 <label for="size-select" class="user-select">Please select which size splint was supplied *</label>
                 <br>
                 <select name="size-select" id="size-select" required>
@@ -29,6 +31,7 @@
                     <option value="L">Child - Large</option>
                 </select>
                 <br>
+                <input type="hidden" name="question" value="Please select the UK shoe size for the user of the splint *">
                 <label for="shoe-size-select" class="shoe-size-select">Please select the UK shoe size for the user of the splint *</label>
                 <br>
                 <select name="shoe-size-select" id="shoe-size-select" required>
@@ -52,6 +55,7 @@
                     <option value="XS">Adult - 8 or larger</option>
                 </select>
                 <br>
+                <input type="hidden" name="question" value="Is the user able to put on their own shoes? *">
                 <p>Is the user able to put on their own shoes? *</p>
                 <input type="radio" id="yes-velcro-only" name="put-on-shoes" required>
                 <label for="yes-velcro-only">Yes - velcro only</label>
@@ -62,6 +66,7 @@
                 <input type="radio" id="shoes-no" name="put-on-shoes">
                 <label for="shoes-no">No</label>
                 <br>
+                <input type="hidden" name="question" value="If you answered yes to the previous question, was the user able to put the splint on without assistance?">
                 <p>If you answered yes to the previous question, was the user able to put the splint on without assistance?</p>
                 <input type="radio" id="assistance-yes" name="assistance">
                 <label for="assistance-yes">Yes</label>
@@ -79,6 +84,7 @@
             <fieldset>
                 <legend>Product fit, comfort and appearance</legend>
     
+                <input type="hidden" name="question" value="How was the fit of the splint: *">
                 <p>How was the fit of the splint: *</p>
                 <input type="radio" id="much-too-big" name="splint-fit" required>
                 <label for="much-too-big">Much too big</label>
@@ -97,37 +103,39 @@
                 <br>
 
 <!-- Add 'required' functionality with Javascript -->
+                <input type="hidden" name="question" value="Was there any discomfort while wearing the splint? (Please select all that apply) *">
                 <p>Was there any discomfort while wearing the splint? (Please select all that apply) *</p>
-                <input type="checkbox" id="discomfort-no" name="discomfort-no" value="No">
+                <input type="checkbox" id="discomfort-no" name="discomfort-no" value="No" required>
                 <label for="discomfort-no">No</label>
                 <br>
 
-                <input type="checkbox" id="discomfort-yes-pinching" name="discomfort-yes-pinching" value="yes - pinching">
+                <input type="checkbox" id="discomfort-yes-pinching" name="discomfort-yes-pinching" value="yes - pinching" required>
                 <label for="discomfort-yes-pinching">Yes - pinching</label>
                 <br>
 
-                <input type="checkbox" id="discomfort-yes-pulling" name="discomfort-yes-pulling" value="Yes - pulling">
+                <input type="checkbox" id="discomfort-yes-pulling" name="discomfort-yes-pulling" value="Yes - pulling" required>
                 <label for="discomfort-yes-pulling">Yes - pulling</label>
                 <br>
 
-                <input type="checkbox" id="discomfort-yes-rubbing" name="discomfort-yes-rubbing" value="Yes - rubbing">
+                <input type="checkbox" id="discomfort-yes-rubbing" name="discomfort-yes-rubbing" value="Yes - rubbing" required>
                 <label for="discomfort-yes-rubbing">Yes - rubbing</label>
                 <br>
 
-                <input type="checkbox" id="discomfort-yes-redness" name="discomfort-yes-redness" value="Yes - redness">
+                <input type="checkbox" id="discomfort-yes-redness" name="discomfort-yes-redness" value="Yes - redness" required>
                 <label for="discomfort-yes-redness">Yes - redness</label>
                 <br>
 
-                <input type="checkbox" id="discomfort-yes-swelling" name="discomfort-yes-swelling" value="Yes - swelling">
+                <input type="checkbox" id="discomfort-yes-swelling" name="discomfort-yes-swelling" value="Yes - swelling" required>
                 <label for="discomfort-yes-swelling">Yes - swelling</label>
                 <br>
                 <label for="discomfort-other">
-                    <input type="checkbox" id="discomfort-other" name="discomfort-other" value="Yes - swelling">
+                    <input type="checkbox" id="discomfort-other" name="discomfort-other" value="Yes - swelling" required>
                     Other:
                 </label>
-                <input type="text" name="discomfort-other">
+                <input type="text"  id="discomfort-other-text" name="discomfort-other" required>
                 <br>
 
+                <input type="hidden" name="question" value="Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *">
                 <p>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *</p>
                 <input type="radio" id="very-likely" name="appearance" required>
                 <label for="very-likely">Very likely</label>
@@ -145,6 +153,7 @@
                 <label for="very-unlikely">Very unlikely</label>
                 <br>
                 <br>
+                <input type="hidden" name="question" value="Please briefly explain your answer to the previous question *">
                 <label for="briefly-explain">Please briefly explain your answer to the previous question *</label><br>
                 <textarea name="briefly-explain" id="briefly-explain" required></textarea>
                 <br>
@@ -157,6 +166,7 @@
         <div class="step" id="step3">
             <fieldset>
                 <legend>Ease of use of product</legend>
+                <input type="hidden" name="question" value="How easy was it to put the splint on and take it off? *">
                 <p>How easy was it to put the splint on and take it off? *</p>
 
                 <input type="radio" id="very-easy" name="ease" required>
@@ -180,6 +190,7 @@
                 <br>
                 <br>
 
+                <input type="hidden" name="question" value="If applicable, were you able to put the splint on one-handed? *">
                 <p>If applicable, were you able to put the splint on one-handed? *</p>
                 <input type="radio" id="yes-easily" name="one-handed" required>
                 <label for="yes-easily">Yes, easily</label>
@@ -205,6 +216,7 @@
         <div class="step" id="step4">
             <fieldset>
                 <legend>Product effectiveness</legend>
+                <input type="hidden" name="question" value="Do you feel the splint helped you / the user to walk more easily? *">
                 <p>Do you feel the splint helped you / the user to walk more easily? *</p>
 
                 <input type="radio" id="yes-barefoot" name="effectiveness" required>
@@ -231,8 +243,8 @@
         <div class="step" id="step5">
             <fieldset>
                 <legend>Any other feedback</legend>
-                <label for="any-feedback"></label>
-                <textarea name="any-feedback" id="any-feedback"></textarea>
+                <label for="any-other-feedback"></label>
+                <textarea name="any-other-feedback" id="any-other-feedback"></textarea>
                 <br>
                 <button type="button" onclick="nextStep()">Next</button>
             </fieldset>
