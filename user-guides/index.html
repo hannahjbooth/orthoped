@@ -1,84 +1,177 @@
-<ul class="example-nav">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/user-guides/index.html">User Guides</a></li>
-    <li><a href="/faqs/index.html">FAQ</a></li>
-    <li><a href="/feedback/index.html">Feedback</a></li>
-    <li><a href="/contact/index.html">Contact</a></li>        
-</ul>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
-<h1>User Guides</h1>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
 
-<h2>User guides for the OrthoPed foot drop splint</h2>
+<body>
+    <header>
+        <nav>
+            <div class="blank-space"></div>
+            <div class="nav-row">
+                <div class="logo-area">
+                    <img src="/assets/logo.png" alt="OrthoPed logo" class="nav-logo">
+                    <!-- <p class="logo-text"><span>Home of the</span> OrthoPed <span>
+                        Foot Drop Splint</span></p> -->
 
-<p>Instructions for putting on and taking off the OrthoPed foot drop splint are shown below, followed by some videos to accompany these instructions. Please also consult our detailed Information for Use which can be accessed by clicking <a href="/information-for-use/index.html">here</a>.</p>
-<p>Advice for users:</p>
-<ul>
-    <li>For comfort, wear a sock under the ankle strap</li>
-    <li>The OrthoPed splint will likely cause a slight red mark on your ankle like a sock mark. However, this should disappear within 30 minutes of taking off the OrthoPed splint. If it does not, please speak to the clinician providing you the splint as you may need a bigger size.</li>
-    <li>Always follow the advice given to you by your healthcare professional</li>
-</ul>
+                </div>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/user-guides/index.html">User Guides</a></li>
+                    <li><a href="/faqs/index.html">FAQ</a></li>
+                    <li><a href="/feedback/index.html">Feedback</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                    <li>
+                        <form id="search" role="search">
+                            <!-- <label for="query">Search the website:</label> Semantically better? -->
+                            
+                            <input  type="search" id="query" name="q" placeholder="Search the website..."
+                                aria-label="Search through site content">
+                            <button type="submit" aria-label="Submit search"><img class="search-icon" src="/assets/search-icon.svg"
+                                    alt="Search the Website"></button>
+                        </form>
+                    </li> <!-- Add Image and Functionality -->
+                </ul>
+            </div>
 
-<h2>How to put on the OrthoPed splint:</h2>
+            <div class="search-results hidden">
+                <h2>Search Results:</h2>
+                <div class="results-content">
+                    
+                </div>
+            </div>
+        </nav>
+    </header>
 
-<ul>
-    <li>Remove from the packaging.</li>
-    <li>Read the Information For Use (IFU).</li>
-    <li>If wearing lace up shoes, tighten the laces as much as possible and tie as tightly as
-        comfortable.</li>
-</ul>
+    <main class="user-guides">
 
-<div class="instruction">
-    <img src="" alt="" class="instruction-image">
-    <p class="instruction-text"></p>
-</div>
+        <h1>User Guides</h1>
 
-<ol type="1" class="instructions-list">
-    <!-- <li>Whilst sitting with feet flat on the floor, open the neoprene strap and pull the
-        round clasp off its magnetic base</li>
-    <img class="put-on-1" src="/assets/user-guides/put-on-1-copy.png" alt=""> -->
+        <h2>User guides for the OrthoPed foot drop splint</h2>
 
-    <div class="instruction">
-        <img src="/assets/user-guides/put-on-1-copy.png" alt="" class="instruction-image put-on-1">
-        <li class="instruction-text">Whilst sitting with feet flat on the floor, open the neoprene strap and pull the
-            round clasp off its magnetic base</li>
-    </div>
+        <p>Instructions for putting on and taking off the OrthoPed foot drop splint are shown below, followed by some videos to accompany these instructions. Please also consult our detailed Information for Use which can be accessed by clicking <a href="/information-for-use/index.html">here</a>.</p>
+        <p>Advice for users:</p>
+        <ul>
+            <li>For comfort, wear a sock under the ankle strap</li>
+            <li>The OrthoPed splint will likely cause a slight red mark on your ankle like a sock mark. However, this should disappear within 30 minutes of taking off the OrthoPed splint. If it does not, please speak to the clinician providing you the splint as you may need a bigger size.</li>
+            <li>Always follow the advice given to you by your healthcare professional</li>
+        </ul>
 
-    <li>Place foot through</li>
-    <img src="/assets/user-guides/put-on-2.png" alt="">
-    <img src="/assets/user-guides/put-on-3.png" alt="">
+        <h2>How to put on the OrthoPed splint:</h2>
 
-    <li>Have foot flat on the floor and shuffle forwards whilst keeping foot still on the
-        floor to bend ankle as much as is comfortable.</li>
-    <img src="/assets/user-guides/put-on-4.png" alt="">
+        <ul>
+            <li>Remove from the packaging.</li>
+            <li>Read the Information For Use (IFU).</li>
+            <li>If wearing lace up shoes, tighten the laces as much as possible and tie as tightly as
+                comfortable.</li>
+        </ul>
 
-    <li>Attach hook to furthest from the ankle shoelace or Velcro strap. Remember to
-        close the Velcro strap of your shoe over the hook.</li>
-    <img src="/assets/user-guides/put-on-5.png" alt="">
-    <img src="/assets/user-guides/put-on-6.png" alt="">
+        <div class="instruction">
+            <img src="" alt="" class="instruction-image">
+            <p class="instruction-text"></p>
+        </div>
+
+        <ol type="1" class="instructions-list">
+            <!-- <li>Whilst sitting with feet flat on the floor, open the neoprene strap and pull the
+                round clasp off its magnetic base</li>
+            <img class="put-on-1" src="/assets/user-guides/put-on-1-copy.png" alt=""> -->
+
+            <div class="instruction">
+                <img src="/assets/user-guides/put-on-1-copy.png" alt="" class="instruction-image put-on-1">
+                <li class="instruction-text">Whilst sitting with feet flat on the floor, open the neoprene strap and pull the
+                    round clasp off its magnetic base</li>
+            </div>
+
+            <li>Place foot through</li>
+            <img src="/assets/user-guides/put-on-2.png" alt="">
+            <img src="/assets/user-guides/put-on-3.png" alt="">
+
+            <li>Have foot flat on the floor and shuffle forwards whilst keeping foot still on the
+                floor to bend ankle as much as is comfortable.</li>
+            <img src="/assets/user-guides/put-on-4.png" alt="">
+
+            <li>Attach hook to furthest from the ankle shoelace or Velcro strap. Remember to
+                close the Velcro strap of your shoe over the hook.</li>
+            <img src="/assets/user-guides/put-on-5.png" alt="">
+            <img src="/assets/user-guides/put-on-6.png" alt="">
+            
+            <li>Twist the round clasp to create the tension you need in the cord to enable you to walk without catching your toes on the floor. The round clasp only tightens when you twist it to the left.
+            </li>
+            <img src="/assets/user-guides/put-on-7.png" alt="">
+        </ol>
+
+        <h2>How to take off the OrthoPed splint:</h2>
+        <ol type="1">
+            <li>Pull the round clasp off its magnetic base to release the tension in the cord.</li>
+            <img src="/assets/user-guides/take-off-1.png" alt="">
+
+            <li>Take the hook off the shoe.</li>
+            <img src="/assets/user-guides/take-off-2.png" alt="">
+
+            <li>Open the neoprene strap.</li>
+            <img src="/assets/user-guides/take-off-3.png" alt="">
+
+            <li>Pull splint off foot.</li>
+            <img src="/assets/user-guides/take-off-4.png" alt="">
+        </ol>
+
+        <div class="policies">
+            <a href="/privacy-policy/index.html">Privacy Policy</a>
+            <a href="/data-protection-policy/index.html">Data Protection Policy</a>
+            <a href="/information-for-use/index.html">Information for Use</a>
+        </div>
+    </main>
     
-    <li>Twist the round clasp to create the tension you need in the cord to enable you to walk without catching your toes on the floor. The round clasp only tightens when you twist it to the left.
-    </li>
-    <img src="/assets/user-guides/put-on-7.png" alt="">
-</ol>
+    <footer>
+        <div class="row">
+            <div class="contact-details">
+                <p class="address">
+                    <span>OrthoPed Ltd</span>
+                    <span>39 Rails Lane</span>
+                    <span>Hayling Island</span>
+                    <span>PO11 9LG</span>
+                </p>
+                <p class="email-address">info@orthoped.co.uk</p>
+            </div>
 
-<h2>How to take off the OrthoPed splint:</h2>
-<ol type="1">
-    <li>Pull the round clasp off its magnetic base to release the tension in the cord.</li>
-    <img src="/assets/user-guides/take-off-1.png" alt="">
+            <div class="policies">
+                <a href="/privacy-policy/index.html">Privacy Policy</a>
+                <a href="/data-protection-policy/index.html">Data Protection Policy</a>
+                <a href="/information-for-use/index.html">Information for Use</a>
+            </div>
+            <div class="logos">
+                <div class="row-1">
+                    <a href="https://www.ukri.org/councils/innovate-uk/"><img src="/assets/footer/innovate-uk.png"
+                            alt="Innovate UK logo"></a>
+                    <a href="https://www.ukri.org/"><img src="/assets/footer/research-innovation.png"
+                            alt="UK Research and Innovation logo"></a>
+                </div>
+                <div class="row-2">
+                    <a href="https://iuk.ktn-uk.org/business-growth/"><img src="/assets/footer/innovate-uk-edge.png"
+                            alt="Innovate UK EDGE logo"></a>
+                    <a href="https://www.sightprogramme.co.uk/"><img src="/assets/footer/sight.png"
+                            alt="SIGHT logo"></a>
+                </div>
+            </div>
+        </div>
+        <p class="patent">Patent Number: GB2618786</p>
+        <p class="copyright">© OrthoPed Ltd 2024</p>
+    </footer>
+    <script src="/script.js"></script>
+    <!-- <script async src="https://cse.google.com/cse.js?cx=d4c81bf4360a04444"></script> -->
 
-    <li>Take the hook off the shoe.</li>
-    <img src="/assets/user-guides/take-off-2.png" alt="">
+</body>
 
-    <li>Open the neoprene strap.</li>
-    <img src="/assets/user-guides/take-off-3.png" alt="">
-
-    <li>Pull splint off foot.</li>
-    <img src="/assets/user-guides/take-off-4.png" alt="">
-</ol>
-
-<div class="policies">
-    <a href="/privacy-policy/index.html">Privacy Policy</a>
-    <a href="/data-protection-policy/index.html">Data Protection Policy</a>
-    <a href="/information-for-use/index.html">Information for Use</a>
-</div>
+</html>
