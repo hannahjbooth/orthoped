@@ -22,6 +22,10 @@ h1, h2 {
     font-family: "Merriweather", "Times New Roman", serif;
 }
 
+h1 {
+    text-align: center;
+}
+
 /* Header */
 
 .blank-space {
@@ -46,7 +50,7 @@ nav {
     flex-direction: column;
 }
 
-nav ul, ul {
+.nav-ul {
     display: flex;
     padding-inline-start: 0px;
 }
@@ -246,4 +250,71 @@ section .text-right {
 
 
 /* User Guides */
+
+.user-guides-h1 {
+    margin-bottom: 10px;
+}
+
+.user-guides-intro, .put-on, .take-off {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.user-guides-nav {
+    margin: 0 auto;
+}
+
+.user-guides-nav li {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.instruction {
+    display: inline-block;
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.instruction-5 {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.instruction-image {
+    border-style: solid;
+    padding: 8px;
+    max-width: 300px;
+    max-height: 300px
+}
+
+
+
+
+.instruction-text {
+    width: 500px;
+    padding-left: 20px;
+}
+
+.instruction-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.put-on-3, .put-on-4, .put-on-5, .put-on-6 {
+    border-style: none;
+}
+
+.put-on-7 {
+    margin-right: 30px;
+}
+
+.multiple-images {
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+}
+
 
