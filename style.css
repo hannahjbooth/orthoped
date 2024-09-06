@@ -25,7 +25,6 @@ h1, h2 {
     display: flex;
     width: 100vw;
     height: 30px;
-
 }
 
 header {
@@ -144,11 +143,12 @@ footer {
 /* Home */
 
 .hero-section-logo {
-    width: 562px;
+    width: 500px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 30px;
 }
 
 .home-h1 {
@@ -160,10 +160,49 @@ footer {
     flex-direction: column;
 }
 
-.home-page section {
-    width: 48%;
-    margin: 20px;
+.home-page .overview, .home-page .history, .home-page .funding {
+    display: flex;
+    flex-direction: row;
+}
+
+
+section .images {
+    display: flex;
+    justify-content: center;
+    width: 45%;
+
+}
+
+section .text-left {
+    margin: 10px 40px 10px 60px;
     text-align: justify;
+    width: 45%;
+
+}
+
+section .text-right {
+    margin: 10px 60px 10px 40px;
+    text-align: justify;
+    width: 45%;
+
+}
+
+.image-placeholder {
+    border-style: solid;
+    width: 400px;
+    height: 300px;
+    margin-top: 30px
+}
+
+.image-placeholder-history {
+    border-style: solid;
+    width: 400px;
+    height: 500px;
+    margin-top: 30px
+}
+
+.image-placeholder p {
+    text-align: center;
 }
 
 .history {
@@ -171,16 +210,20 @@ footer {
 }
 
 .further-info {
+    display: flex;
+    flex-direction: column;
     width: 70%;
-    text-align: center;
     align-self: center;
 }
 
+.further-info p {
+    text-align: center;
+    margin-top: 10px;
+}
+
 .further-info-h2 {
-        text-align: center;
-
-    align-self: center;
-
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .feet-image-container {
@@ -192,9 +235,9 @@ footer {
 }
 
 .green-feet {
-    width: 350px;
+    width: 465px;
     height: auto; 
-    opacity: 30%;
+    opacity: 25%;
 }
 
 
