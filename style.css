@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 main {
@@ -168,6 +169,34 @@ footer {
 .history {
     align-self: flex-end;
 }
+
+.further-info {
+    width: 70%;
+    text-align: center;
+    align-self: center;
+}
+
+.further-info-h2 {
+        text-align: center;
+
+    align-self: center;
+
+}
+
+.feet-image-container {
+    display: flex;
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    width: 150%; 
+    overflow: hidden; 
+}
+
+.green-feet {
+    width: 350px;
+    height: auto; 
+    opacity: 30%;
+}
+
 
 /* User Guides */
 
