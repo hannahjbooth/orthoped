@@ -192,7 +192,6 @@ section .text-right {
     margin: 10px 60px 10px 40px;
     text-align: justify;
     width: 45%;
-
 }
 
 .image-placeholder {
@@ -269,33 +268,57 @@ section .text-right {
     padding-right: 10px;
 }
 
+.instructions-list {
+    margin: auto;
+    max-width: 900px;
+
+}
+
 .instruction {
     display: inline-block;
-    margin: 50px 50px 50px 50px;
+    margin: 20px 50px 50px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.instruction-5 {
-    display: flex;
-    flex-direction: row;
-}
-
-
 .instruction-image {
     border-style: solid;
     padding: 8px;
     max-width: 300px;
-    max-height: 300px
+    max-height: 300px;
 }
 
+.put-on-1 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 400px;
+}
 
+.put-on-2 {
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
 
+.put-on-3 {
+    max-width: 433px;
+    max-height: 300px;
+    padding-right: 30px;
+}
 
+.put-on-4 {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.put-on-5 {
+    padding-left: 10px;
+}
 .instruction-text {
-    width: 500px;
+    width: 300px;
     padding-left: 20px;
+    padding-top: 20px;
+    text-align: justify;
 }
 
 .instruction-row {
@@ -303,12 +326,44 @@ section .text-right {
     flex-direction: row;
 }
 
+.instruction-4 {
+    width: 880px;
+    margin: 20px 10px 50px 50px;
+}
+
+.instruction-5 {
+    display: flex;
+    flex-direction: row;
+}
+.instruction-text-1 {
+    width: 380px;
+}
+
+.instruction-text-3, .instruction-text-4 {
+    width: 820px;
+}
+
+.instruction-text-5 {
+    width: 450px;
+}
+
 .put-on-3, .put-on-4, .put-on-5, .put-on-6 {
     border-style: none;
 }
 
-.put-on-7 {
+.put-on-5 {
     margin-right: 30px;
+}
+
+.put-on-6 {
+    margin-left: 50px;
+}
+.put-on-7 {
+    margin-right: 50px;
+}
+
+.take-off-2 {
+    padding: 25px 0px 20px 15px;
 }
 
 .multiple-images {
@@ -317,4 +372,7 @@ section .text-right {
     border-style: solid;
 }
 
+.multiple-images-2 {
+    justify-content: center;
+}
 
