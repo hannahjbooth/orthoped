@@ -250,6 +250,26 @@ section .text-right {
 
 /* User Guides */
 
+.user-guides-header {
+    position: fixed;
+    width: 100vw;
+    z-index: 1;   
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+#user-guides-intro {
+    margin-top: 170px;
+}
+
+.scroll-target {
+    scroll-margin-top: 260px;
+}
+
 .bolder-font {
     font-weight: 400;
 }
@@ -258,13 +278,14 @@ section .text-right {
     margin-bottom: 10px;
 }
 
-.user-guides-intro, .put-on, .take-off {
-    margin-left: 50px;
-    margin-right: 50px;
+#user-guides-intro, #put-on, #take-off, #videos {
+    margin-left: 70px;
+    margin-right: 70px;
 }
 
 .user-guides-nav {
     margin: 0 auto;
+    font-style: italic;
 }
 
 .user-guides-nav li {
