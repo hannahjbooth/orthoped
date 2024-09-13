@@ -19,6 +19,25 @@
 
 // --- HEADER
 
+    // --- SEARCH
+
+    // IF "Search" is clicked
+        // LET Search input area appear below the main navigation bar
+        // LET all of main and footer content darken
+
+    const searchLink = document.getElementById("search-link");
+    const searchBox = document.getElementById("search-box")
+
+    searchLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        searchBox.classList.toggle("hidden");
+        // if (searchBox.classList === "hidden") {
+        //     searchBox.classList.remove("hidden");
+        // } else {
+        //     searchBox.classList.add("hidden");
+        // }
+    });
+
     // If text is in the search input bar, keep new padding-bottom of 10px
 
     const searchInput = document.getElementById("query");
