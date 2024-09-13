@@ -96,9 +96,15 @@ nav a {
     display: none;
 }
 
+.darkening-effect {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4); /* Black with 50% opacity */
+    z-index: 1; /* Ensure it’s above the content */
+    pointer-events: none; /* Allow interaction with elements beneath */
+}
+
 #search {
     padding: 20px 40px 20px 40px;
-    border-bottom: solid;
 }
 
 .search-input {
@@ -110,6 +116,7 @@ nav a {
     width: 500px;
     outline: none;
     transition: padding-bottom 0.3s ease;
+    font-family: "Merriweather", "Times New Roman", serif;
 }
 
 .search-input:focus {
@@ -125,7 +132,6 @@ nav a {
     font-family: "Merriweather", "Times New Roman", serif;
     font-size: 1rem;
     background-color: white;
-
 }
 
 /* Footer */
@@ -284,7 +290,7 @@ section .text-right {
 .user-guides-header {
     position: fixed;
     width: 100vw;
-    z-index: 1;   
+    z-index: 2;   
     border-width: 1px;
     border-color: black;
     border-style: solid;
