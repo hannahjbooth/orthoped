@@ -250,6 +250,10 @@ section .text-right {
 
 /* User Guides */
 
+.bolder-font {
+    font-weight: 400;
+}
+
 .user-guides-h1 {
     margin-bottom: 10px;
 }
