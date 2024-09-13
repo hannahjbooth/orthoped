@@ -77,5 +77,24 @@
 
 // showNextStep()
 
+// --- HEADER
+
+    // If text is in the search input bar, keep new padding-bottom of 10px
+
+    const searchInput = document.getElementById("query");
+
+    searchInput.addEventListener("input", function() {
+        console.log("Event listener working!");
+        const inputValue = searchInput.value;
+
+        if (inputValue) {
+            searchInput.classList.add("search-input-filled");
+        } else {
+            searchInput.classList.remove("search-input-filled");
+        }
+    });
+
+
+
 
 

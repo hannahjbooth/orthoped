@@ -33,6 +33,7 @@
                     <li><a href="/faqs/index.html">FAQ</a></li>
                     <li><a href="/feedback/index.html">Feedback</a></li>
                     <li><a href="/contact/index.html">Contact</a></li>
+                    <li><a href="">Search</a></li>
                     <li>
                         <form id="search" role="search">
                             <!-- <label for="query">Search the website:</label> Semantically better? -->
@@ -47,10 +48,12 @@
             </div>
 
             <div class="search-results hidden">
-                <h2>Search Results:</h2>
-                <div class="results-content">
-                    
-                </div>
+                <form id="search" role="search">
+                    <label for="query">Type to search:</label>
+                    <input  type="search" class="search-input" id="query" name="q">
+                    <button type="submit" class="search-button">Go</button>
+                </form>
+                <div class="results-content"></div>
             </div>
         </nav>
     </header>

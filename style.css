@@ -59,7 +59,6 @@ nav {
     display: flex;
     justify-content: space-between;
     border-style: solid;
-
 }
 
 nav ul {
@@ -94,7 +93,39 @@ nav a {
 }
 
 .hidden {
-    display: none;
+    /* display: none; */
+}
+
+#search {
+    padding: 20px 40px 20px 40px;
+    border-bottom: solid;
+}
+
+.search-input {
+    border-bottom: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-bottom: 0px;
+    width: 500px;
+    outline: none;
+    transition: padding-bottom 0.3s ease;
+}
+
+.search-input:focus {
+    padding-bottom: 10px;
+}
+
+.search-input-filled {
+    padding-bottom: 10px;
+}
+
+.search-button {
+    border-style: none;
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 1rem;
+    background-color: white;
+
 }
 
 /* Footer */
