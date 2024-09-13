@@ -23,9 +23,6 @@
             <div class="nav-row">
                 <div class="logo-area">
                     <img src="/assets/logo.png" alt="OrthoPed logo" class="nav-logo">
-                    <!-- <p class="logo-text"><span>Home of the</span> OrthoPed <span>
-                        Foot Drop Splint</span></p> -->
-
                 </div>
                 <ul class="nav-ul">
                     <li><a href="/index.html">Home</a></li>
@@ -33,23 +30,16 @@
                     <li><a href="/faqs/index.html">FAQ</a></li>
                     <li><a href="/feedback/index.html">Feedback</a></li>
                     <li><a href="/contact/index.html">Contact</a></li>
-                    <li>
-                        <form id="search" role="search">
-                            <!-- <label for="query">Search the website:</label> Semantically better? -->
-                            
-                            <input  type="search" id="query" name="q" placeholder="Search the website..."
-                                aria-label="Search through site content">
-                            <button type="submit" aria-label="Submit search"><img class="search-icon" src="/assets/search-icon.svg"
-                                    alt="Search the Website"></button>
-                        </form>
-                    </li> <!-- Add Image and Functionality -->
+                    <li><a href="" id="search-link">Search</a></li>
                 </ul>
             </div>
-
-            <div class="search-results hidden">
-                <h2>Search Results:</h2>
-                <div class="results-content">
-                    
+            <div id="search-box" class="hidden">
+                <div id="search">
+                    <form id="search" role="search" action="/search-results/index.html">
+                        <label for="query">Type to search the site:</label>
+                        <input type="search" class="search-input" id="query" name="q">
+                        <button type="submit" class="search-button">Go</button>
+                    </form> 
                 </div>
             </div>
         </nav>
