@@ -391,6 +391,11 @@ section .text-right {
     padding: 25px 0px 20px 15px;
 }
 
+.take-off-4 {
+    height: 288px;
+    width: 288px;
+}
+
 .multiple-images {
     display: flex;
     flex-direction: row;
