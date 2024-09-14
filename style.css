@@ -139,6 +139,13 @@ nav a {
 
 /* Feedback Form */
 
+#feedback-form {
+    max-width: max-content;
+}
+
+.step {
+    max-width: max-content;
+}
 
 /* Footer */
 footer {
