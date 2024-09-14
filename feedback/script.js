@@ -58,4 +58,10 @@
 
 // Show next step of the form, and hide all other steps
 
+// LET a form show a page of questions
+    // IF user clicks "Next"
+        // LET the page of questions change to number higher by one
+    // IF user clicks "Back"
+        // LET the page of questions change to number lower by one
+
 // showNextStep()
