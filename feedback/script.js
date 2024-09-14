@@ -57,11 +57,24 @@
 
 
 // Show next step of the form, and hide all other steps
-
-// LET a form show a page of questions
-    // IF user clicks "Next"
-        // LET the page of questions change to number higher by one
-    // IF user clicks "Back"
-        // LET the page of questions change to number lower by one
-
 // showNextStep()
+
+// PSEUDOCODE
+/*
+// LET a form show two elements
+//     LET the first element be a page of questions
+//     LET the second element be an array
+            LET array have 3 buttons
+                LET button "Next"
+        //         IF user clicks "Next"
+        //             IF all required questions are answered
+        //                 LET the question div's id increase by 1
+                LET button "Back"
+        //         IF user clicks "Back"
+        //                 IF all required questions are answered
+        //                     LET the question div's id decrease by 1
+                LET button "Submit"
+    //              IF user clicks "Submit" button
+    //                 IF all required questions are answered
+                            SEND form to server
+*/
