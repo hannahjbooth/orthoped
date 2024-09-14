@@ -3,12 +3,13 @@
     <li><a href="/user-guides/index.html">User Guides</a></li>
     <li><a href="/faqs/index.html">FAQ</a></li>
     <li><a href="/feedback/index.html">Feedback</a></li>
-    <li><a href="/contact/index.html">Contact</a></li>        
+    <li><a href="/contact/index.html">Contact</a></li>
 </ul>
 
 <h1>Feedback</h1>
 
-<p>Your feedback is incredibly important to us and enables us to make improvements to our product. Feedback can be provided using the following online feedback form, or by emailing info@orthoped.co.uk.</p>
+<p>Your feedback is incredibly important to us and enables us to make improvements to our product. Feedback can be
+    provided using the following online feedback form, or by emailing info@orthoped.co.uk.</p>
 
 <form id="feedback-form" name="feedback-form" action="/thank-you" method="POST" data-netlify="true">
     <fieldset>
@@ -16,16 +17,20 @@
         <p>* Indicates required question</p>
 
         <!-- Step 1 -->
-        <div class="step" id="step1">
+        <section class="step" id="step-1">
             <fieldset>
                 <legend>User Information</legend>
-                <input type="hidden" name="question-1" value="Please select which of the following categories apply to you *">
-                <label for="user-select" class="user-select">Please select which of the following categories apply to you *</label>
+                <input type="hidden" name="question-1"
+                    value="Please select which of the following categories apply to you *">
+                <label for="user-select" class="user-select">
+                    Please select which of the following categories apply to you *
+                </label>
                 <br>
                 <select id="user-select" name="user-select" required>
                     <option value="" disabled selected></option>
                     <option value="I am the user of the product">I am the user of the product</option>
-                    <option value="I am the parent, guardian or carer for the user of the product">I am the parent, guardian or carer for the user of the product</option>
+                    <option value="I am the parent, guardian or carer for the user of the product">I am the parent,
+                        guardian or carer for the user of the product</option>
                 </select>
                 <br>
                 <input type="hidden" name="question-2" value="Please select which size splint was supplied *">
@@ -39,8 +44,10 @@
                     <option value="Child - Large">Child - Large</option>
                 </select>
                 <br>
-                <input type="hidden" name="question-3" value="Please select the UK shoe size for the user of the splint *">
-                <label for="shoe-size-select" class="shoe-size-select">Please select the UK shoe size for the user of the splint *</label>
+                <input type="hidden" name="question-3"
+                    value="Please select the UK shoe size for the user of the splint *">
+                <label for="shoe-size-select" class="shoe-size-select">Please select the UK shoe size for the user of
+                    the splint *</label>
                 <br>
                 <select name="shoe-size-select" id="shoe-size-select" required>
                     <option value="" disabled selected></option>
@@ -75,8 +82,10 @@
                 <label for="shoes-no">No</label>
                 <br>
 
-                <input type="hidden" name="question-5" value="If you answered yes to the previous question, was the user able to put the splint on without assistance?">
-                <p>If you answered yes to the previous question, was the user able to put the splint on without assistance?</p>
+                <input type="hidden" name="question-5"
+                    value="If you answered yes to the previous question, was the user able to put the splint on without assistance?">
+                <p>If you answered yes to the previous question, was the user able to put the splint on without
+                    assistance?</p>
                 <input type="radio" id="assistance-yes" name="assistance" value="Yes">
                 <label for="assistance-yes">Yes</label>
                 <br>
@@ -86,13 +95,13 @@
                 <br>
                 <button type="button" onclick="showNextStep()">Next</button>
             </fieldset>
-        </div>
+        </section>
 
         <!-- Step 2 -->
-        <div class="step" id="step2">
+        <section class="step" id="step-2">
             <fieldset>
                 <legend>Product fit, comfort and appearance</legend>
-    
+
                 <input type="hidden" name="question-6" value="How was the fit of the splint: *">
                 <p>How was the fit of the splint: *</p>
                 <input type="radio" id="much-too-big" name="splint-fit" value="Much too big" required>
@@ -111,11 +120,14 @@
                 <label for="much-too-small">Much too small</label>
                 <br>
 
-<!-- Add 'required' functionality with Javascript -->
-                <input type="hidden" name="question-7" value="Was there any discomfort while wearing the splint? (Please select all that apply) *">
+                <!-- <div class="question"> -->
+                <input type="hidden" name="question-7"
+                    value="Was there any discomfort while wearing the splint? (Please select all that apply) *">
                 <p>Was there any discomfort while wearing the splint? (Please select all that apply) *</p>
                 <input type="checkbox" id="discomfort-no" name="discomfort" value="No" required>
                 <label for="discomfort-no">No</label>
+                <!-- </div>  -->
+
                 <br>
 
                 <input type="checkbox" id="discomfort-yes-pinching" name="discomfort" value="yes - pinching" required>
@@ -141,11 +153,13 @@
                     <input type="checkbox" id="discomfort-other" name="discomfort" value="Other discomfort" required>
                     Other:
                 </label>
-                <input type="text"  id="discomfort-other-text" name="discomfort-other">
+                <input type="text" id="discomfort-other-text" name="discomfort-other">
                 <br>
 
-                <input type="hidden" name="question-8" value="Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *">
-                <p>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *</p>
+                <input type="hidden" name="question-8"
+                    value="Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *">
+                <p>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *
+                </p>
                 <input type="radio" id="very-likely" name="appearance" value="Very likely" required>
                 <label for="very-likely">Very likely</label>
                 <br>
@@ -162,17 +176,18 @@
                 <label for="very-unlikely">Very unlikely</label>
                 <br>
                 <br>
-                <input type="hidden" name="question-9" value="Please briefly explain your answer to the previous question *">
+                <input type="hidden" name="question-9"
+                    value="Please briefly explain your answer to the previous question *">
                 <label for="briefly-explain">Please briefly explain your answer to the previous question *</label><br>
                 <textarea name="briefly-explain" id="briefly-explain" required></textarea>
                 <br>
                 <br>
                 <button type="button" onclick="showNextStep()">Next</button>
             </fieldset>
-        </div>
+        </section>
 
         <!-- Step 3 -->
-        <div class="step" id="step3">
+        <section class="step" id="step-3">
             <fieldset>
                 <legend>Ease of use of product</legend>
                 <input type="hidden" name="question-10" value="How easy was it to put the splint on and take it off? *">
@@ -199,7 +214,8 @@
                 <br>
                 <br>
 
-                <input type="hidden" name="question-11" value="If applicable, were you able to put the splint on one-handed? *">
+                <input type="hidden" name="question-11"
+                    value="If applicable, were you able to put the splint on one-handed? *">
                 <p>If applicable, were you able to put the splint on one-handed? *</p>
                 <input type="radio" id="yes-easily" name="one-handed" value="Yes, easily" required>
                 <label for="yes-easily">Yes, easily</label>
@@ -209,47 +225,52 @@
                 <label for="yes-difficult">Yes, with difficulty</label>
                 <br>
 
-                <input type="radio" id="no-one-hand" name="one-handed" value="No, I was not able to put it on one-handed">
+                <input type="radio" id="no-one-hand" name="one-handed"
+                    value="No, I was not able to put it on one-handed">
                 <label for="no-one-hand">No, I was not able to put it on one-handed</label>
                 <br>
 
-                <input type="radio" id="no-need" name="one-handed" value="Not applicable, I did not need to put it on one-handed">
+                <input type="radio" id="no-need" name="one-handed"
+                    value="Not applicable, I did not need to put it on one-handed">
                 <label for="no-need">Not applicable, I did not need to put it on one-handed</label>
                 <br>
                 <br>
                 <button type="button" onclick="showNextStep()">Next</button>
             </fieldset>
-        </div>
+        </section>
 
         <!-- Step 4 -->
-        <div class="step" id="step4">
+        <section class="step" id="step-4">
             <fieldset>
                 <legend>Product effectiveness</legend>
-                <input type="hidden" name="question-12" value="Do you feel the splint helped you / the user to walk more easily? *">
+                <input type="hidden" name="question-12"
+                    value="Do you feel the splint helped you / the user to walk more easily? *">
                 <p>Do you feel the splint helped you / the user to walk more easily? *</p>
 
                 <input type="radio" id="yes-barefoot" name="effectiveness" value="Yes, compared to barefoot" required>
                 <label for="yes-barefoot">Yes, compared to barefoot</label>
                 <br>
 
-                <input type="radio" id="yes-different" name="effectiveness" value="Yes, compared to using a different product">
+                <input type="radio" id="yes-different" name="effectiveness"
+                    value="Yes, compared to using a different product">
                 <label for="yes-different">Yes, compared to using a different product</label>
                 <br>
 
-                <input type="radio" id="yes-both" name="effectiveness" value="Yes, compared to both barefoot and using a different product">
+                <input type="radio" id="yes-both" name="effectiveness"
+                    value="Yes, compared to both barefoot and using a different product">
                 <label for="yes-both">Yes, compared to both barefoot and using a different product</label>
                 <br>
 
                 <input type="radio" id="no-improvement" name="effectiveness" value="No, there was no improvement">
                 <label for="no-improvement">No, there was no improvement</label>
                 <br>
-    
+
                 <button type="button" onclick="showNextStep()">Next</button>
             </fieldset>
-        </div>
+        </section>
 
         <!-- Step 5 -->
-        <div class="step" id="step5">
+        <section class="step" id="step-5">
             <fieldset>
                 <legend>Any other feedback</legend>
                 <label for="any-other-feedback">Please feel free to provide any further feedback below:</label>
@@ -258,7 +279,7 @@
                 <br>
                 <button type="button" onclick="showNextStep()">Next</button>
             </fieldset>
-        </div> 
+        </section>
 
         <input type="submit" value="Submit" id="submit-feedback">
     </fieldset>
@@ -274,8 +295,8 @@
 <script src="/script.js"></script>
 <script src="/feedback/script.js"></script>
 
- 
-    <!-- STEP
+
+<!-- STEP
 
     <div class="step" id="step1">
         <fieldset>
@@ -285,4 +306,3 @@
             <button type="button" onclick="showNextStep()">Next</button>
         </fieldset>
     </div> -->
-
