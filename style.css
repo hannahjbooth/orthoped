@@ -233,7 +233,7 @@ footer {
 
 /* Home */
 
-.home-nav {
+.page-nav-ul {
     padding-top: 15px;
     padding-bottom: 10px;
     margin: 0 auto;
@@ -339,7 +339,8 @@ section .text-right {
 .further-info {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    margin-left: 270px;
+    margin-right: 270px;
     align-self: center;
 }
 
