@@ -1,37 +1,105 @@
-<ul class="example-nav">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/user-guides/index.html">User Guides</a></li>
-    <li><a href="/faqs/index.html">FAQ</a></li>
-    <li><a href="/feedback/index.html">Feedback</a></li>
-    <li><a href="/contact/index.html">Contact</a></li>        
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="blank-space"></div>
+            <div class="nav-row">
+                <div class="logo-area">
+                    <img src="/assets/logo.png" alt="OrthoPed logo" class="nav-logo">
+                </div>
+                <ul class="nav-ul">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/user-guides/index.html">User Guides</a></li>
+                    <li><a href="/faqs/index.html">FAQ</a></li>
+                    <li><a href="/feedback/index.html">Feedback</a></li>
+                    <li><a href="/contact/index.html">Contact</a></li>
+                    <li><a href="" id="search-link">Search</a></li>
+                </ul>
+            </div>
+            <div id="search-box" class="hidden">
+                <div id="search">
+                    <form id="search" role="search" action="/search-results/index.html">
+                        <label for="query">Type to search the site:</label>
+                        <input type="search" class="search-input" id="query" name="q">
+                        <button type="submit" class="search-button">Go</button>
+                    </form> 
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <p>We would love to hear from you with any feedback, comments or questions. Please email us using info@orthoped.co.uk or complete the contact form below:</p>
+        <form id="feedback-form" name="contact-form" action="/thank-you" method="POST" data-netlify="true">
+            <legend>OrthoPed Contact Form</legend>
+            <p>Please use this form to get in touch with us</p>
+            <p>* Indicates required question</p>
+            <label for="contact-form-name">Name *</label>
+            <input type="text" id="contact-form-name" value="Name" required>
+            <br>
+            <br>
+            <label for="contact-form-email">Email Address *</label>
+            <input type="email" id="contact-form-email" value="Email Address" required>
+            <br>
+            <br>
+            <label for="contact-form-help">How can we help you? *</label>
+            <textarea name="contact-form-help" id="contact-form-help" value="How can we help you?"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Submit" id="submit-contact">
+        </form>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="contact-details">
+                <p class="address">
+                    <span>OrthoPed Ltd</span>
+                    <span>39 Rails Lane</span>
+                    <span>Hayling Island</span>
+                    <span>PO11 9LG</span>
+                </p>
+                <p class="email-address">info@orthoped.co.uk</p>
+            </div>
 
-<h1>Contact Us</h1>
-<p>We would love to hear from you with any feedback, comments or questions. Please email us using info@orthoped.co.uk or complete the contact form below:</p>
+            <div class="policies">
+                <a href="/privacy-policy/index.html">Privacy Policy</a>
+                <a href="/data-protection-policy/index.html">Data Protection Policy</a>
+                <a href="/information-for-use/index.html">Information for Use</a>
+            </div>
+            <div class="logos">
+                <div class="row-1">
+                    <a href="https://www.ukri.org/councils/innovate-uk/"><img src="/assets/footer/innovate-uk.png"
+                            alt="Innovate UK logo"></a>
+                    <a href="https://www.ukri.org/"><img src="/assets/footer/research-innovation.png"
+                            alt="UK Research and Innovation logo"></a>
+                </div>
+                <div class="row-2">
+                    <a href="https://iuk.ktn-uk.org/business-growth/"><img src="/assets/footer/innovate-uk-edge.png"
+                            alt="Innovate UK EDGE logo"></a>
+                    <a href="https://www.sightprogramme.co.uk/"><img src="/assets/footer/sight.png"
+                            alt="SIGHT logo"></a>
+                </div>
+            </div>
+        </div>
+        <p class="patent">Patent Number: GB2618786</p>
+        <p class="copyright">© OrthoPed Ltd 2024</p>
+    </footer>
+    <script src="/script.js"></script>
+</body>
 
-<form id="feedback-form" name="contact-form" action="/thank-you" method="POST" data-netlify="true">
-    <legend>OrthoPed Contact Form</legend>
-    <p>Please use this form to get in touch with us</p>
-    <p>* Indicates required question</p>
-    <label for="contact-form-name">Name *</label>
-    <input type="text" id="contact-form-name" value="Name" required>
-    <br>
-    <br>
-    <label for="contact-form-email">Email Address *</label>
-    <input type="email" id="contact-form-email" value="Email Address" required>
-    <br>
-    <br>
-    <label for="contact-form-help">How can we help you? *</label>
-    <textarea name="contact-form-help" id="contact-form-help" value="How can we help you?"></textarea>
-    <br>
-    <br>
-    <input type="submit" value="Submit" id="submit-contact">
-
-</form>
-
-<div class="policies">
-    <a href="/privacy-policy/index.html">Privacy Policy</a>
-    <a href="/data-protection-policy/index.html">Data Protection Policy</a>
-    <a href="/information-for-use/index.html">Information for Use</a>
-</div>
+</html>
