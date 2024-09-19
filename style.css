@@ -200,6 +200,21 @@ footer {
 
 /* Home */
 
+.home-scroll-target {
+    scroll-margin-top: 150px;
+}
+
+.home-sticky {
+    position: sticky;
+    top: 111px;
+    background-color: white;
+}
+
+.home-header {
+    padding-bottom: 20px;
+    border-bottom: solid;
+}
+
 .hero-section-logo {
     width: 500px;
     height: auto;
