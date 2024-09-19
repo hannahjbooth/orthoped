@@ -237,6 +237,7 @@ footer {
     padding-bottom: 5px;
     background-color: white;
     border-bottom: solid;
+    z-index: 2;
 }
 
 section .images {
@@ -304,6 +305,7 @@ section .text-right {
     gap: 10px; 
     width: 100%; 
     overflow: hidden; 
+    z-index: 0;
 }
 
 .green-feet {
