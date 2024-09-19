@@ -13,7 +13,7 @@ body {
 }
 
 main {
-    padding-top: 100px;
+    padding-top: 90px;
     position: relative;
     z-index: 0;
     font-size: 1.05rem;
@@ -21,7 +21,6 @@ main {
     font-weight: 300;
     font-style: normal;
 }
-
 
 h1, h2 {
     font-family: "Merriweather", "Times New Roman", serif;
@@ -108,8 +107,6 @@ nav ul li {
     padding-right: 15px;
 }
 
-
-
 .nav-logo {
     width: 200px;
     padding-left: 10px;
@@ -130,8 +127,6 @@ nav ul li {
 .hidden {
     display: none;
 }
-
-
 
 #search {
     padding: 20px 40px 20px 40px;
@@ -165,9 +160,6 @@ nav ul li {
     font-size: 1rem;
     background-color: white;
 }
-
-
-
 
 /* Feedback Form */
 
@@ -234,7 +226,7 @@ footer {
 /* Home */
 
 .page-nav-ul {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 10px;
     margin: 0 auto;
     font-family: "Albert Sans", sans-serif;
@@ -379,15 +371,14 @@ section .text-right {
     width: 100vw;
     z-index: 2;   
     border-width: 1px;
-    border-color: black;
-    border-style: solid;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #868585;
     background: white;
-    padding-top: 20px;
-    padding-bottom: 30px;
 }
 
 #user-guides-intro {
-    padding-top: 170px;
+    padding-top: 120px;
 }
 
 .user-guides-scroll-target {
@@ -399,7 +390,8 @@ section .text-right {
 }
 
 .user-guides-h1 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: 18px;
 }
 
 #user-guides-intro, #put-on, #take-off, #videos {
