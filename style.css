@@ -471,6 +471,6 @@ section .text-right {
 
 /* Contact Us */
 
-.contact-us-content {
+.contact-us-content, .feedback-content {
     padding-top: 100px;
 }
