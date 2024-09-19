@@ -24,6 +24,13 @@ h1, h2 {
 
 h1 {
     text-align: center;
+    width: 100vw;
+}
+
+.h1-container {
+    position: fixed;
+    border-bottom: solid;
+    background-color: white;
 }
 
 /* Header */
@@ -456,3 +463,8 @@ section .text-right {
     justify-content: center;
 }
 
+/* FAQS */
+
+.questions {
+    padding-top: 100px;
+}
