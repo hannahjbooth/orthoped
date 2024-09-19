@@ -253,6 +253,7 @@ footer {
 .home-h1 {
     text-align: center;
     margin: 0px;
+    padding-top: 5px;
     color: #2a2a2a;
     font-weight: 400;
 }
@@ -284,9 +285,9 @@ Colours
 
 .home-sticky {
     position: sticky;
-    top: 100px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    top: 90px;
+    padding-top: 10px;
+    padding-bottom: 3px;
     background-color: white;
     border-bottom: solid;
     border-width: 1px;
@@ -298,14 +299,12 @@ section .images {
     display: flex;
     justify-content: center;
     width: 45%;
-
 }
 
 section .text-left {
     margin: 20px 40px 20px 60px;
     text-align: justify;
     width: 45%;
-
 }
 
 section .text-right {
@@ -369,6 +368,9 @@ section .text-right {
     opacity: 25%;
 }
 
+.home-scroll-target {
+    scroll-margin-top: 200px;
+}
 
 /* User Guides */
 
