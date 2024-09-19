@@ -16,7 +16,7 @@ main {
     padding-top: 100px;
     position: relative;
     z-index: 0;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-family: "IBM Plex Serif", "Times New Roman", serif;
     font-weight: 300;
     font-style: normal;
@@ -47,7 +47,7 @@ h1 {
 } */
 
 header {
-    padding-top: 20px;
+    padding-top: 15px;
     display: flex;
     position: fixed;
     width: 100vw;
@@ -166,9 +166,7 @@ nav ul li {
     background-color: white;
 }
 
-.search-box {
 
-}
 
 
 /* Feedback Form */
@@ -235,6 +233,15 @@ footer {
 
 /* Home */
 
+.home-nav {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+    font-family: "Albert Sans", sans-serif;
+    letter-spacing: 1.3px;
+
+}
+
 .hero-section-logo {
     width: 500px;
     height: auto;
@@ -245,8 +252,26 @@ footer {
 
 .home-h1 {
     text-align: center;
+    margin: 0px;
+    color: #2a2a2a;
+    font-weight: 400;
 }
 
+.ortho {
+    color: #80BDBC;
+    font-weight: 300;
+}
+
+.ped {
+    color: #868585;
+    font-weight: 300;
+}
+
+/* 
+Colours
+    Grey: 868585
+    Blue/Green: 80BDBC
+ */
 .home-page {
     display: flex;
     flex-direction: column;
@@ -264,6 +289,8 @@ footer {
     padding-bottom: 5px;
     background-color: white;
     border-bottom: solid;
+    border-width: 1px;
+    border-color: #868585;
     z-index: 1;
 }
 
