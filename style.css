@@ -230,6 +230,14 @@ footer {
     flex-direction: row;
 }
 
+.home-sticky {
+    position: sticky;
+    top: 100px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-bottom: solid;
+}
 
 section .images {
     display: flex;
