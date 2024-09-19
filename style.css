@@ -29,11 +29,16 @@ h1, h2 {
 h1 {
     text-align: center;
     width: 100vw;
+    color: #2a2a2a;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .h1-container {
     position: fixed;
     border-bottom: solid;
+    border-width: 1px;
+    border-color: #868585;
     background-color: white;
 }
 
