@@ -61,22 +61,23 @@
 
 // PSEUDOCODE
 /*
-LET a form have 5 fieldsets
+LET a form have 5 steps
 LET the user interface for the form show two sections
-    LET the first section display a fieldset
+    LET the first section display a step
+        LET the first step of the form be displayed upon page load
     LET the second section display a button section with 3 possible buttons
-        IF the first fieldset is displayed
-            LET a button "Next" show the next fieldset
-        IF the second, third or fourth fieldset are displayed
+        IF the first step is displayed
+            LET a button "Next" show the next step
+        IF the second, third or fourth step are displayed
             LET two buttons "Back" and Next" be displayed
                 IF the user clicks "Next"
-                    LET the next fieldset be displayed
+                    LET the next step be displayed
                 IF the user clicks "Back"
-                    LET the previous fieldset be displayed
-        IF the fifth fieldset is displayed
+                    LET the previous step be displayed
+        IF the fifth step is displayed
             LET two buttons "Back" and "Submit" be displayed
                 IF the user clicks "Back"
-                    LET the previous fieldset be displayed
+                    LET the previous step be displayed
                 IF the user clicks "Submit"
                     SEND the form to the server
 */
