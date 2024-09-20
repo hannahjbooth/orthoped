@@ -56,25 +56,27 @@
     });
 
 
-// Show next step of the form, and hide all other steps
+// When user clicks "Next" to access next step of the form, show next step, with all other steps hidden
 // showNextStep()
 
 // PSEUDOCODE
 /*
-// LET a form show two elements
-//     LET the first element be a page of questions
-//     LET the second element be an array
-            LET array have 3 buttons
-                LET button "Next"
-        //         IF user clicks "Next"
-        //             IF all required questions are answered
-        //                 LET the question div's id increase by 1
-                LET button "Back"
-        //         IF user clicks "Back"
-        //                 IF all required questions are answered
-        //                     LET the question div's id decrease by 1
-                LET button "Submit"
-    //              IF user clicks "Submit" button
-    //                 IF all required questions are answered
-                            SEND form to server
+LET a form have 5 fieldsets
+LET the user interface for the form show two sections
+    LET the first section display a fieldset
+    LET the second section display a button section with 3 possible buttons
+        IF the first fieldset is displayed
+            LET a button "Next" show the next fieldset
+        IF the second, third or fourth fieldset are displayed
+            LET two buttons "Back" and Next" be displayed
+                IF the user clicks "Next"
+                    LET the next fieldset be displayed
+                IF the user clicks "Back"
+                    LET the previous fieldset be displayed
+        IF the fifth fieldset is displayed
+            LET two buttons "Back" and "Submit" be displayed
+                IF the user clicks "Back"
+                    LET the previous fieldset be displayed
+                IF the user clicks "Submit"
+                    SEND the form to the server
 */
