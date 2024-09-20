@@ -115,36 +115,40 @@
                                         </div>
                                         <div class="question"> <!-- Q4 -->
                                             <input type="hidden" name="Q" value="Is the user able to put on their own shoes? *">
-                                            <p>Is the user able to put on their own shoes? *</p>
-                                            <div class="answers">
-                                                <div class="answer">
-                                                    <input type="radio" id="yes-velcro-only" name="A" value="Yes - velcro only" required>
-                                                    <label for="yes-velcro-only">Yes - velcro only</label>
+                                            <fieldset>
+                                                <legend>Is the user able to put on their own shoes? *</legend>
+                                                <div class="answers">
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-velcro-only" name="A" value="Yes - velcro only" required>
+                                                        <label for="yes-velcro-only">Yes - velcro only</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-laced-or-velcro" name="A" value="Yes - laced or velcro">
+                                                        <label for="yes-laced-or-velcro">Yes - laced or velcro</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="shoes-no" name="A" value="No">
+                                                        <label for="shoes-no">No</label>
+                                                    </div>
                                                 </div>
-                                                <div class="answer">
-                                                    <input type="radio" id="yes-laced-or-velcro" name="A" value="Yes - laced or velcro">
-                                                    <label for="yes-laced-or-velcro">Yes - laced or velcro</label>
-                                                </div>
-                                                <div class="answer">
-                                                    <input type="radio" id="shoes-no" name="A" value="No">
-                                                    <label for="shoes-no">No</label>
-                                                </div>
-                                            </div>
+                                            </fieldset>
                                         </div>
                                         <div class="question"> <!-- Q5 -->
                                             <input type="hidden" name="Q" value="If you answered yes to the previous question, was the user able to put the splint on without assistance?">
-                                            <p>If you answered yes to the previous question, was the user able to put the splint on without
-                                                assistance?</p>
-                                            <div class="answers">
-                                                <div class="answer">
-                                                    <input type="radio" id="assistance-yes" name="A" value="Yes">
-                                                    <label for="assistance-yes">Yes</label>    
+                                            <fieldset>
+                                                <legend>If you answered yes to the previous question, was the user able to put the splint on without
+                                                assistance?</legend>
+                                                <div class="answers">
+                                                    <div class="answer">
+                                                        <input type="radio" id="assistance-yes" name="A" value="Yes">
+                                                        <label for="assistance-yes">Yes</label>    
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="assistance-no" name="A" value="No">
+                                                        <label for="assistance-no">No</label>
+                                                    </div>
                                                 </div>
-                                                <div class="answer">
-                                                    <input type="radio" id="assistance-no" name="A" value="No">
-                                                    <label for="assistance-no">No</label>
-                                                </div>
-                                            </div>
+                                            </fieldset>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -155,94 +159,101 @@
                                         <legend>Product fit, comfort and appearance</legend>
                                         <div class="question"> <!-- Q6 -->
                                             <input type="hidden" name="Q" value="How was the fit of the splint: *">
-                                            <p>How was the fit of the splint: *</p>    
+                                            <fieldset>
+                                                <legend>How was the fit of the splint: *</legend>  
+                                                <div class="anwsers">
+                                                    <div class="answer">
+                                                        <input type="radio" id="much-too-big" name="A" value="Much too big" required>
+                                                        <label for="much-too-big">Much too big</label>    
+                                                    </div>                                            
+                                                    <div class="answer">
+                                                        <input type="radio" id="little-too-big" name="A" value="A little bit too big">
+                                                        <label for="little-too-big">A little bit too big</label>    
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="just-right" name="A" value="Just Right">
+                                                        <label for="just-right">Just Right</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="little-too-small" name="A" value="A little bit too small">
+                                                        <label for="little-too-small">A little bit too small</label>    
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="much-too-small" name="A" value="Much too small">
+                                                        <label for="much-too-small">Much too small</label> 
+                                                    </div>
+                                                </div>    
+                                            </fieldset>
                                         </div>
-                                        <div class="anwsers">
-                                            <div class="answer">
-                                                <input type="radio" id="much-too-big" name="A" value="Much too big" required>
-                                                <label for="much-too-big">Much too big</label>    
-                                            </div>                                            
-                                            <div class="answer">
-                                                <input type="radio" id="little-too-big" name="A" value="A little bit too big">
-                                                <label for="little-too-big">A little bit too big</label>    
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="just-right" name="A" value="Just Right">
-                                                <label for="just-right">Just Right</label>
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="little-too-small" name="A" value="A little bit too small">
-                                                <label for="little-too-small">A little bit too small</label>    
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="much-too-small" name="A" value="Much too small">
-                                                <label for="much-too-small">Much too small</label> 
-                                            </div>
-                                        </div>
+                                        
                                         <div class="question"> <!-- Q7 -->
                                             <input type="hidden" name="Q"
                                                 value="Was there any discomfort while wearing the splint? (Please select all that apply) *">
-                                            <p>Was there any discomfort while wearing the splint? (Please select all that apply) *</p>
-                                        </div>
-                                        <div class="answers">
-                                            <div class="answer">
-                                                <input type="checkbox" id="discomfort-no" name="A" value="No" required>
-                                                <label for="discomfort-no">No</label>
-                                            </div>
-                                            <div class="answer">
-                                                <input type="checkbox" id="discomfort-yes-pinching" name="A" value="yes - pinching" required>
-                                                <label for="discomfort-yes-pinching">Yes - pinching</label>    
-                                            </div>
-                                            <div class="answer">
-                                                <input type="checkbox" id="discomfort-yes-pulling" name="A" value="Yes - pulling" required>
-                                                <label for="discomfort-yes-pulling">Yes - pulling</label>
-                                            </div>
-                                            <div class="anwser">
-                                                <input type="checkbox" id="discomfort-yes-rubbing" name="A" value="Yes - rubbing" required>
-                                                <label for="discomfort-yes-rubbing">Yes - rubbing</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="checkbox" id="discomfort-yes-redness" name="A" value="Yes - redness" required>
-                                                <label for="discomfort-yes-redness">Yes - redness</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="checkbox" id="discomfort-yes-swelling" name="A" value="Yes - swelling" required>
-                                                <label for="discomfort-yes-swelling">Yes - swelling</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <label for="discomfort-other">
-                                                <input type="checkbox" id="discomfort-other" name="A" value="Other discomfort" required>
-                                                Other:
-                                                </label>
-                                                <input type="text" id="discomfort-other-text" name="A">                        
-                                            </div>
+                                            <fieldset>
+                                                <legend>Was there any discomfort while wearing the splint? (Please select all that apply) *</legend>
+                                                <div class="answers">
+                                                    <div class="answer">
+                                                        <input type="checkbox" id="discomfort-no" name="A" value="No" required>
+                                                        <label for="discomfort-no">No</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="checkbox" id="discomfort-yes-pinching" name="A" value="yes - pinching" required>
+                                                        <label for="discomfort-yes-pinching">Yes - pinching</label>    
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="checkbox" id="discomfort-yes-pulling" name="A" value="Yes - pulling" required>
+                                                        <label for="discomfort-yes-pulling">Yes - pulling</label>
+                                                    </div>
+                                                    <div class="anwser">
+                                                        <input type="checkbox" id="discomfort-yes-rubbing" name="A" value="Yes - rubbing" required>
+                                                        <label for="discomfort-yes-rubbing">Yes - rubbing</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="checkbox" id="discomfort-yes-redness" name="A" value="Yes - redness" required>
+                                                        <label for="discomfort-yes-redness">Yes - redness</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="checkbox" id="discomfort-yes-swelling" name="A" value="Yes - swelling" required>
+                                                        <label for="discomfort-yes-swelling">Yes - swelling</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <label for="discomfort-other">
+                                                        <input type="checkbox" id="discomfort-other" name="A" value="Other discomfort" required>
+                                                        Other:
+                                                        </label>
+                                                        <input type="text" id="discomfort-other-text" name="A">                        
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                         </div>
                                         <div class="question"> <!-- Q8 -->
                                             <input type="hidden" name="Q"
                                                 value="Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *">
-                                            <p>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *</p>                    
-                                        </div>
-                                        <div class="answers">
-                                            <div class="anwser">
-                                                <input type="radio" id="very-likely" name="A" value="Very likely" required>
-                                                <label for="very-likely">Very likely</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="quite-likely" name="A" value="Quite likely">
-                                                <label for="quite-likely">Quite likely</label>
-                                            </div>                                             
-                                            <div class="answer">
-                                                <input type="radio" id="not-sure" name="A" value="Not sure">
-                                                <label for="not-sure">Not sure</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="quite-unlikely" name="A" value="Quite unlikely">
-                                                <label for="quite-unlikely">Quite unlikely</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="very-unlikely" name="A" value="Very unlikely">
-                                                <label for="very-unlikely">Very unlikely</label>
-                                            </div>
+                                            <fieldset>
+                                                <legend>Based on the appearance of the splint, how likely would you / the user be to wear it frequently? *</legend>                    
+                                                <div class="answers">
+                                                    <div class="anwser">
+                                                        <input type="radio" id="very-likely" name="A" value="Very likely" required>
+                                                        <label for="very-likely">Very likely</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="quite-likely" name="A" value="Quite likely">
+                                                        <label for="quite-likely">Quite likely</label>
+                                                    </div>                                             
+                                                    <div class="answer">
+                                                        <input type="radio" id="not-sure" name="A" value="Not sure">
+                                                        <label for="not-sure">Not sure</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="quite-unlikely" name="A" value="Quite unlikely">
+                                                        <label for="quite-unlikely">Quite unlikely</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="very-unlikely" name="A" value="Very unlikely">
+                                                        <label for="very-unlikely">Very unlikely</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                         </div>
                                         <div class="question"> <!-- Q9 -->
                                             <input type="hidden" name="Q"
@@ -264,54 +275,58 @@
                                         <legend>Ease of use of product</legend>
                                         <div class="question"> <!-- Q10 -->
                                             <input type="hidden" name="Q" value="How easy was it to put the splint on and take it off? *">
-                                            <p>How easy was it to put the splint on and take it off? *</p>                    
-                                        </div>
-                                        <div class="answers">
-                                            <div class="answer">
-                                                <input type="radio" id="very-easy" name="A" value="Very easy" required>
-                                                <label for="very-easy">Very easy</label>
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="quite-easy" name="A" value="Quite easy">
-                                                <label for="quite-easy">Quite easy</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="neither-nor" name="A" value="Neither easy nor difficult">
-                                                <label for="neither-nor">Neither easy nor difficult</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="quite-difficult" name="A" value="Quite difficult">
-                                                <label for="quite-difficult">Quite difficult</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="very-difficult" name="A" value="Very difficult">
-                                                <label for="very-difficult">Very difficult</label>
-                                            </div>
-                                        </div>
+                                            <fieldset>
+                                                <legend>How easy was it to put the splint on and take it off? *</legend>                   
+                                                <div class="answers">
+                                                    <div class="answer">
+                                                        <input type="radio" id="very-easy" name="A" value="Very easy" required>
+                                                        <label for="very-easy">Very easy</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="quite-easy" name="A" value="Quite easy">
+                                                        <label for="quite-easy">Quite easy</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="neither-nor" name="A" value="Neither easy nor difficult">
+                                                        <label for="neither-nor">Neither easy nor difficult</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="quite-difficult" name="A" value="Quite difficult">
+                                                        <label for="quite-difficult">Quite difficult</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="very-difficult" name="A" value="Very difficult">
+                                                        <label for="very-difficult">Very difficult</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>    
                                         <div class="question"> <!-- Q11 -->
                                             <input type="hidden" name="Q"
                                                 value="If applicable, were you able to put the splint on one-handed? *">
-                                            <p>If applicable, were you able to put the splint on one-handed? *</p>                    
-                                        </div>
-                                        <div class="answers">
-                                            <div class="answer">
-                                                <input type="radio" id="yes-easily" name="A" value="Yes, easily" required>
-                                                <label for="yes-easily">Yes, easily</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="yes-difficult" name="A" value="Yes, with difficulty">
-                                                <label for="yes-difficult">Yes, with difficulty</label>
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="no-one-hand" name="A"
-                                                    value="No, I was not able to put it on one-handed">
-                                                <label for="no-one-hand">No, I was not able to put it on one-handed</label>                        
-                                            </div>
-                                            <div class="anwser">
-                                                <input type="radio" id="no-need" name="A"
-                                                    value="Not applicable, I did not need to put it on one-handed">
-                                                <label for="no-need">Not applicable, I did not need to put it on one-handed</label>
-                                            </div>
+                                            <fieldset>
+                                                <legend>If applicable, were you able to put the splint on one-handed? *</legend>                    
+                                                <div class="answers">
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-easily" name="A" value="Yes, easily" required>
+                                                        <label for="yes-easily">Yes, easily</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-difficult" name="A" value="Yes, with difficulty">
+                                                        <label for="yes-difficult">Yes, with difficulty</label>
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="no-one-hand" name="A"
+                                                            value="No, I was not able to put it on one-handed">
+                                                        <label for="no-one-hand">No, I was not able to put it on one-handed</label>                        
+                                                    </div>
+                                                    <div class="anwser">
+                                                        <input type="radio" id="no-need" name="A"
+                                                            value="Not applicable, I did not need to put it on one-handed">
+                                                        <label for="no-need">Not applicable, I did not need to put it on one-handed</label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                         </div>
                                     </fieldset>
                                 </div>
@@ -323,27 +338,29 @@
                                         <div class="question"> <!-- Q12 -->
                                             <input type="hidden" name="Q"
                                                 value="Do you feel the splint helped you / the user to walk more easily? *">
-                                            <p>Do you feel the splint helped you / the user to walk more easily? *</p>                    
-                                        </div>
-                                        <div class="answers">
-                                            <div class="anwser">
-                                                <input type="radio" id="yes-barefoot" name="A" value="Yes, compared to barefoot" required>
-                                                <label for="yes-barefoot">Yes, compared to barefoot</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="yes-different" name="A"
-                                                    value="Yes, compared to using a different product">
-                                                <label for="yes-different">Yes, compared to using a different product</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="yes-both" name="A"
-                                                    value="Yes, compared to both barefoot and using a different product">
-                                                <label for="yes-both">Yes, compared to both barefoot and using a different product</label>                        
-                                            </div>
-                                            <div class="answer">
-                                                <input type="radio" id="no-improvement" name="A" value="No, there was no improvement">
-                                                <label for="no-improvement">No, there was no improvement</label>                        
-                                            </div>
+                                            <fieldset>
+                                                <legend>Do you feel the splint helped you / the user to walk more easily? *</legend>                   
+                                                <div class="answers">
+                                                    <div class="anwser">
+                                                        <input type="radio" id="yes-barefoot" name="A" value="Yes, compared to barefoot" required>
+                                                        <label for="yes-barefoot">Yes, compared to barefoot</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-different" name="A"
+                                                            value="Yes, compared to using a different product">
+                                                        <label for="yes-different">Yes, compared to using a different product</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="yes-both" name="A"
+                                                            value="Yes, compared to both barefoot and using a different product">
+                                                        <label for="yes-both">Yes, compared to both barefoot and using a different product</label>                        
+                                                    </div>
+                                                    <div class="answer">
+                                                        <input type="radio" id="no-improvement" name="A" value="No, there was no improvement">
+                                                        <label for="no-improvement">No, there was no improvement</label>                        
+                                                    </div>
+                                                </div>
+                                            </fieldset>
                                         </div>
                                     </fieldset>
                                 </div>
