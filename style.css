@@ -168,13 +168,26 @@ nav ul li {
 
 /* Feedback Form */
 
-/* #feedback-form {
-    max-width: max-content;
+
+.buttons {
+    display: flex;
+    justify-content: center;
 }
 
-.step {
-    max-width: max-content;
-} */
+form {
+    width: auto 0;
+    display: flex;
+    justify-content: center;    
+}
+
+fieldset {
+    padding: 20px;
+}
+.question {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
 
 /* Footer */
 footer {
