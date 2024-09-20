@@ -204,7 +204,7 @@ textarea {
     /* Dynamic styling */
 
     .hidden {
-        display: hidden;
+        display: none;
     }
 /* Footer */
 footer {
