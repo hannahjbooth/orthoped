@@ -180,11 +180,6 @@ form {
     justify-content: center;    
 }
 
-fieldset {
-    padding: 20px;
-    margin: 20px;
-}
-
 .question fieldset {
     border: none;
     padding: 0;
@@ -193,7 +188,7 @@ fieldset {
 .question {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 520px;
     margin-top: 20px;
     margin-bottom: 20px;
     border-style: solid;
