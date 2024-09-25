@@ -17,7 +17,7 @@
 // Handling the 'Other' checkbox's text input, so that it becomes required when the checkbox is selected
 
     let otherCheckbox = document.getElementById("discomfort-other");
-    let otherTextInput = document.getElementById("discomfort-other-text")
+    let otherTextInput = document.getElementById("discomfort-other-text");
 
     function handleRequiredOnTextInput(checkbox) {
         if (checkbox.checked) {
