@@ -118,4 +118,80 @@
         }
     })
 
+// Handle required questions
 
+    // IF user clicks Next
+        // CHECK if required questions are answered
+            // IF they are
+                // LET next step show
+            // IF they aren't
+                // DISABLE next button
+                // SHOW "Answer required questions" message above buttons
+                // SHOW "Required" message beside any unanswered question
+                // REENABLE 
+
+    // function checkIfRequiredQuestionsAreAnswered(requiredQuestions) {
+    //     // GET which step
+    //     // GET all required questions for that step
+
+    //         // FOR each element types
+    //         for (let question of requiredQuestions) {
+    //             console.log(question.tagName);
+    //         }
+    //             // CHECK if question is answered
+        
+    //     // Question types are: select, input, radio, checkbox, textarea
+    // }
+
+    // checkIfRequiredQuestionsAreAnswered(requiredQuestions)
+
+    let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
+
+    console.log(requiredQuestions);
+
+    // Function that returns present required question types in the console
+    function checkEachElementTypeIsAnswered(requiredQuestions) {
+        for (let question of requiredQuestions) {
+            if (question.tagName === "INPUT") {
+                console.log(question);
+                // Run a function that checks if input is answered
+            } else if (question.tagName === "SELECT") {
+                console.log(question);
+                // Run a function that checks if select is answered
+            } else if (question.tagName === "RADIO") {
+                console.log(question);
+                // Run a function that checks if radio is answered
+            } else if (question.tagName === "CHECKBOX") {
+                console.log(question);
+                // Run a function that checks if checkbox is answered
+            } else if (question.tagName === "TEXTAREA") {
+                console.log(question);
+                // Run a function that checks if textarea is answered
+            }
+        }
+    }
+
+    checkEachElementTypeIsAnswered(requiredQuestions);
+
+    // Function that checks if a radio based question has been answered
+
+    function checksRadioIsClicked(question) {
+
+        const radioButtons = Array.from(question.querySelectorAll('input[type="radio"]'));
+        
+        for (const radio of radioButtons) {
+            if (radio.checked) {
+                return;
+            } else {
+                // Disable "Next" button
+                // Display "Answer required"
+            }
+        }
+
+        // question.checkValidity()
+    }
+
+
+
+
+    
