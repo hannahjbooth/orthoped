@@ -55,123 +55,90 @@
     });
 
 
-// When user clicks "Next" to access next step of the form, show next step, with all other steps hidden
-// showNextStep()
+// Handling steps navigation
 
-// PSEUDOCODE
-/*
-LET a form have 5 steps
-LET the user interface for the form show two sections
-    LET the first section display a step
-        LET the first step of the form be displayed upon page load
-    LET the second section display a button section with 3 possible buttons
-        IF the first step is displayed
-            LET a button "Next" show the next step
-        IF the second, third or fourth step are displayed
-            LET two buttons "Back" and Next" be displayed
-                IF the user clicks "Next"
-                    LET the next step be displayed
-                IF the user clicks "Back"
-                    LET the previous step be displayed
-        IF the fifth step is displayed
-            LET two buttons "Back" and "Submit" be displayed
-                IF the user clicks "Back"
-                    LET the previous step be displayed
-                IF the user clicks "Submit"
-                    SEND the form to the server
-*/
+    const back = document.getElementById("back");
+    const next = document.getElementById("next");
+    const submit = document.getElementById("submit");
+    const formButtons = [back, next, submit];
 
-    // Handle user buttons
+    const formSteps = Array.from(document.getElementsByClassName("step"));
+    const firstStep = formSteps[0];
+    const lastStep = formSteps[formSteps.length - 1];
 
-        // Variables storing each button
-        const back = document.getElementById("back");
-        const next = document.getElementById("next");
-        const submit = document.getElementById("submit");
-        // Array storing the buttons
-        const formButtons = document.getElementsByClassName("feedback-form-button");
-        const formButtonsArray = Array.from(formButtons);
+    function displayButton(button) {
+        button.classList.remove("hidden");
+    }
 
-        // Variable storing the steps of the form
-        const formSteps = document.getElementsByClassName("step");
-        console.log(formSteps);
-        const formStepsArray = Array.from(formSteps);
-        console.log(formStepsArray);
+    function hideAllButtons(buttons) {
+        for (let button of buttons) {
+            button.classList.add("hidden");
+        }   
+    }
 
-
-
-        // Function to get the currently visible step's index
-        function getCurrentStepIndex(steps) {
-            // ITERATE through the steps of the form
-            for (let i = 0; i < steps.length; i++) {
-                // IF the step is currently displayed (= doesn't have a class of hidden)
-                if (!steps[i].classList.contains("hidden")) {
-                    return i;
-                }
+    function getCurrentStep(steps) {
+        for (let step of steps) {
+            if (!step.classList.contains("hidden")) {
+                return step;
             }
         }
-        
-        // Function to remove class of hidden from all buttons 
-        function displayAllButtons(back, next, submit) {
-            back.classList.remove("hidden");
-            next.classList.remove("hidden");
-            submit.classList.remove("hidden");       
+    }
+
+    function getCurrentStepIndex(steps) {
+        for (let i = 0; i < steps.length; i++) {
+            if (steps[i] === currentStep) {
+                return i;
+            }
         }
-        // Function handling which buttons are displayed
-        function handleButtonDisplay(index, steps) {
- 
-            // IF handling first step
-            if (index === 0) {
-                // Remove class of hidden from all buttons
-                displayAllButtons(back, next, submit);
-                // Apply a class of "hidden" to buttons back and submit
-                back.classList.add("hidden");
-                submit.classList.add("hidden");
-            // IF handling last step
-            } else if (index === steps.length - 1) {
-                // Remove class of hidden from all buttons
-                displayAllButtons(back, next, submit);
-                // Apply a class of "hidden" to button next
-                next.classList.add("hidden");
-            // IF handling any other step
+    }
+    
+    let currentStep = getCurrentStep(formSteps);
+
+    function handleButtonsDisplay(currentStep, buttons, back, next, submit, steps) {
+        for (let step of steps) {
+            if (currentStep === firstStep) {
+                hideAllButtons(buttons);
+                displayButton(next);
+            } else if (currentStep === lastStep) {
+                hideAllButtons(buttons);
+                displayButton(back);
+                displayButton(submit);
             } else {
-                // Remove class of hidden from all buttons
-                displayAllButtons(back, next, submit);
-                // Apply a class of "hidden" to button submit
-                submit.classList.add("hidden");
-            }    
-        }
-
-        // Call function
-        handleButtonDisplay(getCurrentStepIndex(formStepsArray), formStepsArray);
-
-
-        // Handle "Next" button
-        function showNextStep() {
-            const currentStepIndex = getCurrentStepIndex(formStepsArray);
-            if (currentStepIndex < formStepsArray.length - 1) {
-                formStepsArray[currentStepIndex].classList.add("hidden");
-                formStepsArray[currentStepIndex + 1].classList.remove("hidden");
-                handleButtonDisplay(currentStepIndex + 1, formStepsArray);
+                hideAllButtons(buttons);
+                displayButton(next);
+                displayButton(back);
             }
         }
+    }
 
-        // Handle "Back" button
-        function showPreviousStep() {
-            const currentStepIndex = getCurrentStepIndex(formStepsArray);
-            if (currentStepIndex > 0) {
-                formStepsArray[currentStepIndex].classList.add("hidden");
-                formStepsArray[currentStepIndex - 1].classList.remove("hidden");
-                handleButtonDisplay(currentStepIndex - 1, formStepsArray);
-            }
+    handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
+
+    next.addEventListener("click", function(event) {
+
+        let currentStepIndex = getCurrentStepIndex(formSteps, currentStep);
+        let nextStep = formSteps[currentStepIndex + 1];
+
+        if (nextStep) {
+            currentStep.classList.add("hidden");
+            nextStep.classList.remove("hidden");
+            currentStep = nextStep;
+            
+            handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
+    })
 
-
-
-
-        // IF user clicks next 
-            // LET class of hidden be added to current step, aka step without a class of hidden
-            // LET class of hidden be removed from next step
-        // next.addEventListener ("click", showNextStep(formStepsArray));
-
-    //
+    back.addEventListener("click", function(event) {
         
+        let currentStepIndex = getCurrentStepIndex(formSteps, currentStep);
+        let previousStep = formSteps[currentStepIndex - 1];
+
+        if (previousStep) {
+            currentStep.classList.add("hidden");
+            previousStep.classList.remove("hidden");
+            currentStep = previousStep;
+
+            handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
+        }
+    })
+
+
