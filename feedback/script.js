@@ -73,15 +73,13 @@
 
     function handleButtonsDisplay(currentStep, buttons, back, next, submit, steps) {
         for (let step of steps) {
+            hideAllButtons(buttons);
             if (currentStep === firstStep) {
-                hideAllButtons(buttons);
                 displayButton(next);
             } else if (currentStep === lastStep) {
-                hideAllButtons(buttons);
                 displayButton(back);
                 displayButton(submit);
             } else {
-                hideAllButtons(buttons);
                 displayButton(next);
                 displayButton(back);
             }
@@ -122,7 +120,9 @@
 
     // IF user clicks Next
         // CHECK if required questions are answered
-            // IF they are
+            // ITERATE through each required answer by type
+                // FOR each type
+                    // IF they are
                 // LET next step show
             // IF they aren't
                 // DISABLE next button
@@ -151,7 +151,12 @@
 
     // Function that returns present required question types in the console
     function checkEachElementTypeIsAnswered(requiredQuestions) {
+
+        let missingInput = false;
+
         for (let question of requiredQuestions) {
+            
+
             if (question.tagName === "INPUT") {
                 console.log(question);
                 // Run a function that checks if input is answered
@@ -159,8 +164,11 @@
                 console.log(question);
                 // Run a function that checks if select is answered
             } else if (question.tagName === "RADIO") {
-                console.log(question);
-                // Run a function that checks if radio is answered
+                if (checksRadioIsClicked(question) === false) {
+                    missingInput = true;
+                }
+
+
             } else if (question.tagName === "CHECKBOX") {
                 console.log(question);
                 // Run a function that checks if checkbox is answered
@@ -181,17 +189,17 @@
         
         for (const radio of radioButtons) {
             if (radio.checked) {
-                return;
-            } else {
-                // Disable "Next" button
-                // Display "Answer required"
+                return true;
             }
         }
-
-        // question.checkValidity()
+        // console.log("Nothing is checked") // DISABLE next button
+        return false;
     }
 
+    
+    // true or false
 
+        // question.checkValidity()
 
 
     
