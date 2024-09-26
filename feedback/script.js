@@ -71,21 +71,19 @@
     
     let currentStep = getCurrentStep(formSteps);
 
-    function handleButtonsDisplay(currentStep, buttons, back, next, submit, steps) {
-        for (let step of steps) {
-            hideAllButtons(buttons);
-            if (currentStep === firstStep) {
-                displayButton(next);
-            } else if (currentStep === lastStep) {
-                displayButton(back);
-                displayButton(submit);
-            } else {
-                displayButton(next);
-                displayButton(back);
-            }
+    function handleButtonsDisplay(currentStep, buttons, back, next, submit) {
+        hideAllButtons(buttons);
+        if (currentStep === firstStep) {
+            displayButton(next);
+        } else if (currentStep === lastStep) {
+            displayButton(back);
+            displayButton(submit);
+        } else {
+            displayButton(next);
+            displayButton(back);
         }
     }
-
+    
     handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
 
     next.addEventListener("click", function(event) {
@@ -97,10 +95,17 @@
             currentStep.classList.add("hidden");
             nextStep.classList.remove("hidden");
             currentStep = nextStep;
-            
+
+            // Call the function to get required questions for the new current step
+            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
+
+            checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
+       
+
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
     })
+
 
     back.addEventListener("click", function(event) {
         
@@ -111,49 +116,82 @@
             currentStep.classList.add("hidden");
             previousStep.classList.remove("hidden");
             currentStep = previousStep;
+            // Call the function to get required questions for the new current step
+            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
+
+            checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
     })
 
+// Handle manual validation
 
-    let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
+    function returnArrayOfCurrentRequiredQuestions() {
+        let currentStep = getCurrentStep(formSteps);
+        let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
+        return requiredQuestions;
+    }
+    
 
-    console.log("Required questions:", requiredQuestions);
+    let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
+
+
+    
 
     // Function that returns present required question types in the console
     function checkEachElementTypeIsAnswered(requiredQuestions) {
+        console.log(requiredQuestions);
 
         let missingInput = false;
 
         for (let question of requiredQuestions) {
-            
+
+    
 
             if (question.tagName === "INPUT") {
-                console.log(question);
+
+                // if (question.querySelec)
+
+                // console.log("Input question:", question);
                 // Run a function that checks if input is answered
+
             } else if (question.tagName === "SELECT") {
-                console.log(question);
+
+                // console.log("Select question:", question);
                 // Run a function that checks if select is answered
+
             } else if (question.tagName === "RADIO") {
+
+                // console.log("Radio question:", question)
+
                 if (checksRadioIsClicked(question) === false) {
                     missingInput = true;
-                    // Run a function that passes question as an argument and enables a user alert               
-                    }
+                    alertToMissingAnswer(question);
+                    // console.log("test")
+                }
             } else if (question.tagName === "CHECKBOX") {
-                console.log(question);
+
+                // console.log("Checkbox question:", question);
                 // Run a function that checks if checkbox is answered
+
             } else if (question.tagName === "TEXTAREA") {
-                console.log(question);
+
+                // console.log("Textarea question:", question);
                 // Run a function that checks if textarea is answered
             }
         }
-        if (missingInput = true) {
-            // Run a function that DISABLES the "next" button
-            disableNextButton(next);
-        }
+
+        // for (let question of requiredQuestions) {
+        //     if (missingInput = true) {
+        //         alertToMissingAnswer(question);
+        //     }
+        // }
+        
     }
 
+
+    
     checkEachElementTypeIsAnswered(requiredQuestions);
 
     // RADIO --- Function that checks if a RADIO based question has been answered
@@ -173,11 +211,25 @@
     function disableNextButton(next) {
         next.disabled = true;
     }
+    
+    function enableNextButton(next) {
+        next.disabled = false;
+    }
 
     function alertToMissingAnswer(question) {
-        // GET the parent element of the question
-        let question.parentElement;
+        storesHiddenRequiredMessage(question).classList.remove("hidden");
     }
+
+    function storesHiddenRequiredMessage(question) {
+        // GET the parent element of the question
+        let parentOfAnswer = question.parentElement;
+        // console.log("parent:", parentOfAnswer);
+        // GET the p of class "required" within the parent element 
+        let requiredMessage = parentOfAnswer.getElementsByClassName("required")[0];
+        // console.log("p:", requiredMessage);
+        
+    }
+
 
 
     // true or false
