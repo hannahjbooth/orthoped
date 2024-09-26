@@ -101,7 +101,7 @@
 
             checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
        
-
+            
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
     })
@@ -118,7 +118,7 @@
             currentStep = previousStep;
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-
+            console.log(requiredQuestions);
             checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
@@ -133,21 +133,14 @@
         return requiredQuestions;
     }
     
-
     let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
-
-
-    
 
     // Function that returns present required question types in the console
     function checkEachElementTypeIsAnswered(requiredQuestions) {
-        console.log(requiredQuestions);
-
+        
         let missingInput = false;
 
         for (let question of requiredQuestions) {
-
-    
 
             if (question.tagName === "INPUT") {
 
