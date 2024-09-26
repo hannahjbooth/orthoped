@@ -116,38 +116,10 @@
         }
     })
 
-// Handle required questions
-
-    // IF user clicks Next
-        // CHECK if required questions are answered
-            // ITERATE through each required answer by type
-                // FOR each type
-                    // IF they are
-                // LET next step show
-            // IF they aren't
-                // DISABLE next button
-                // SHOW "Answer required questions" message above buttons
-                // SHOW "Required" message beside any unanswered question
-                // REENABLE 
-
-    // function checkIfRequiredQuestionsAreAnswered(requiredQuestions) {
-    //     // GET which step
-    //     // GET all required questions for that step
-
-    //         // FOR each element types
-    //         for (let question of requiredQuestions) {
-    //             console.log(question.tagName);
-    //         }
-    //             // CHECK if question is answered
-        
-    //     // Question types are: select, input, radio, checkbox, textarea
-    // }
-
-    // checkIfRequiredQuestionsAreAnswered(requiredQuestions)
 
     let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
 
-    console.log(requiredQuestions);
+    console.log("Required questions:", requiredQuestions);
 
     // Function that returns present required question types in the console
     function checkEachElementTypeIsAnswered(requiredQuestions) {
@@ -166,9 +138,8 @@
             } else if (question.tagName === "RADIO") {
                 if (checksRadioIsClicked(question) === false) {
                     missingInput = true;
-                }
-
-
+                    // Run a function that passes question as an argument and enables a user alert               
+                    }
             } else if (question.tagName === "CHECKBOX") {
                 console.log(question);
                 // Run a function that checks if checkbox is answered
@@ -177,12 +148,15 @@
                 // Run a function that checks if textarea is answered
             }
         }
+        if (missingInput = true) {
+            // Run a function that DISABLES the "next" button
+            disableNextButton(next);
+        }
     }
 
     checkEachElementTypeIsAnswered(requiredQuestions);
 
-    // Function that checks if a radio based question has been answered
-
+    // RADIO --- Function that checks if a RADIO based question has been answered
     function checksRadioIsClicked(question) {
 
         const radioButtons = Array.from(question.querySelectorAll('input[type="radio"]'));
@@ -196,7 +170,16 @@
         return false;
     }
 
-    
+    function disableNextButton(next) {
+        next.disabled = true;
+    }
+
+    function alertToMissingAnswer(question) {
+        // GET the parent element of the question
+        let question.parentElement;
+    }
+
+
     // true or false
 
         // question.checkValidity()
