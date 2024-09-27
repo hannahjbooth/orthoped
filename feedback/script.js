@@ -198,7 +198,11 @@
 
             if (key === "select") {
                 console.log("test:", elements);
-                // Run a function that checks if select is answered
+                if (checksOptionIsSelected(elements) === false) {
+                    missingInput = true;
+                    // alertToMissingAnswer(elements);
+                    // console.log("test")
+                }
             } else if (key === "radio") {
                 console.log("test:", elements);
                 if (checksRadioIsClicked(elements) === false) {
@@ -214,7 +218,11 @@
                     // console.log("test")
                 }
             } else if (key === "text") {
-                // Run a function that checks if text is answered
+                if (checksTextInputIsFilled(elements) === false) {
+                    missingInput = true;
+                    // alertToMissingAnswer(elements);
+                    // console.log("test")
+                }
             } else if (key === "textarea") {
                 // Run a function that checks if textarea is answered
             }
@@ -243,11 +251,32 @@
                 return true;
             }
         }
-        console.log("Nothing is checked") // DISABLE next button
+        console.log("Nothing is checked"); // DISABLE next button
         return false;
     }
 
-    
+    // SELECT - Function that checks if a SELECT based question has been answered
+    function checksOptionIsSelected(elements) {
+        for (let element of elements) {
+            if (!element.value === "") {
+                return true;
+            }
+        }
+        console.log("Nothing is selected"); // DISABLE next button
+        return false;
+    }
+
+    // TEXT - Function that checks if a TEXT based question has been answered
+    function checksTextInputIsFilled(elements) {
+        for (let element of elements) {
+            if (!element.value === "") {
+                return true;
+            }
+        }
+        console.log("Nothing is typed"); // DISABLE next button
+        return false;
+    }
+
 
     function disableNextButton(next) {
         next.disabled = true;
