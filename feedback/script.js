@@ -1,9 +1,7 @@
 // Handling 'required' feature on checkbox based question
 
-
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    let checkboxesArray = Array.from(checkboxes);
-    console.log("checkbox array:", checkboxesArray);
+    let allCheckboxes = document.querySelectorAll('input[type="checkbox"]');
+    let allCheckboxesArray = Array.from(allCheckboxes);
 
     function returnsAllAssociatedCheckboxes(checkbox) {
         let checkboxParent = checkbox.parentElement;
@@ -11,7 +9,7 @@
         return checkboxes;
     }
 
-    function removeRequiredFromCheckboxes(checkbox) {
+    function removeRequiredFromAssociatedCheckboxes(checkbox) {
         let checkboxes = returnsAllAssociatedCheckboxes(checkbox);
         for (let checkbox of checkboxes) {
             if (checkbox.hasAttribute("required")) {
@@ -20,12 +18,11 @@
         }          
     }
 
-    checkboxesArray.forEach(checkbox => {
+    allCheckboxesArray.forEach(checkbox => {
         checkbox.addEventListener("change", function () {
-            removeRequiredFromCheckboxes(checkbox);
+            removeRequiredFromAssociatedCheckboxes(checkbox);
         })
     })
-
 
 // Handling the 'Other' checkbox's text input, so that it becomes required when the checkbox is selected
 
