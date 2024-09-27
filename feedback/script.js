@@ -224,7 +224,11 @@
                     // console.log("test")
                 }
             } else if (key === "textarea") {
-                // Run a function that checks if textarea is answered
+                if (checksTextareaIsFilled(elements) === false) {
+                    missingInput = true;
+                    // alertToMissingAnswer(elements);
+                    // console.log("test")
+                }
             }
         })
     }
@@ -268,6 +272,17 @@
 
     // TEXT - Function that checks if a TEXT based question has been answered
     function checksTextInputIsFilled(elements) {
+        for (let element of elements) {
+            if (!element.value === "") {
+                return true;
+            }
+        }
+        console.log("Nothing is typed"); // DISABLE next button
+        return false;
+    }
+
+    // TEXTAREA - Function that checks if a TEXTAREA based question has been answered
+    function checksTextareaIsFilled(elements) {
         for (let element of elements) {
             if (!element.value === "") {
                 return true;
