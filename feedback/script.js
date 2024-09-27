@@ -98,9 +98,8 @@
 
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-
+            createsObjectOfRequiredQuestionsByType(requiredQuestions);
             checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
-       
             
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
@@ -118,7 +117,7 @@
             currentStep = previousStep;
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-            console.log(requiredQuestions);
+            createsObjectOfRequiredQuestionsByType(requiredQuestions);
             checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
@@ -134,8 +133,55 @@
     }
     
     let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
+    console.log("all required questions:", requiredQuestions);
 
-    // Function that returns present required question types in the console
+
+
+
+
+
+
+
+    function createsObjectOfRequiredQuestionsByType(requiredQuestions) {
+        let requiredQuestionsByType = {
+            select: [],
+            radio: [],
+            checkbox: [],
+            text: [],
+            textarea: []
+        };
+
+        requiredQuestions.forEach(element => {
+            if (element.tagName === "INPUT") {
+                if (element.type === "radio") {
+                    // push to object
+                    requiredQuestionsByType.radio.push(element);
+                    console.log("radio:", element);
+                    
+                } else if (element.type === "checkbox") {
+                    // push to object
+                    requiredQuestionsByType.checkbox.push(element);
+                    console.log("checkbox:", element);
+                } else if (element.type === "text") {
+                    // push to object
+                    requiredQuestionsByType.text.push(element);
+                    console.log("text:", element);
+                }
+            } else if (element.tagName === "SELECT") {
+                // push to object
+                requiredQuestionsByType.select.push(element);
+                console.log("select:", element);
+            } else if (element.tagName === "TEXTAREA") {
+                // push to object
+                requiredQuestionsByType.textarea.push(element);
+                console.log("textarea:", element);
+            }
+        });
+
+        console.log("object:", requiredQuestionsByType);
+
+    }
+
     function checkEachElementTypeIsAnswered(requiredQuestions) {
         
         let missingInput = false;
