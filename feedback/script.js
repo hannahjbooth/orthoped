@@ -207,14 +207,69 @@
                     // console.log("test")
                 }
             } else if (key === "checkbox") {
-                // Run a function that checks if select is answered
+                console.log("test:", elements);
+                if (checksCheckboxIsClicked(elements) === false) {
+                    missingInput = true;
+                    // alertToMissingAnswer(elements);
+                    // console.log("test")
+                }
             } else if (key === "text") {
                 // Run a function that checks if text is answered
             } else if (key === "textarea") {
                 // Run a function that checks if textarea is answered
             }
         })
+    }
 
+    checkEachElementTypeIsAnswered(requiredQuestions);
+
+    // RADIO - Function that checks if a RADIO based question has been answered
+    function checksRadioIsClicked(elements) {
+        
+        for (let element of elements) {
+            if (element.checked) {
+                return true;
+            }
+        }
+        console.log("Nothing is checked") // DISABLE next button
+        return false;
+    }
+
+    // CHECKBOX - Function that checks if a CHECKBOX based question has been answered
+    function checksCheckboxIsClicked(elements) {
+        
+        for (let element of elements) {
+            if (element.checked) {
+                return true;
+            }
+        }
+        console.log("Nothing is checked") // DISABLE next button
+        return false;
+    }
+
+    
+
+    function disableNextButton(next) {
+        next.disabled = true;
+    }
+    
+    function enableNextButton(next) {
+        next.disabled = false;
+    }
+
+    function alertToMissingAnswer(question) {
+        storesHiddenRequiredMessage(question).classList.remove("hidden");
+    }
+
+    function storesHiddenRequiredMessage(question) {
+        // GET the parent element of the question
+        let parentOfAnswer = question.parentElement;
+        // console.log("parent:", parentOfAnswer);
+        // GET the p of class "required" within the parent element 
+        let requiredMessage = parentOfAnswer.getElementsByClassName("required")[0];
+        // console.log("p:", requiredMessage);
+        
+    }
         // for (let question of requiredQuestions) {
 
         //     if (question.tagName === "INPUT") {
@@ -256,45 +311,11 @@
         //     }
         // }
         
-    }
+    
 
 
     
-    checkEachElementTypeIsAnswered(requiredQuestions);
 
-    // RADIO - Function that checks if a RADIO based question has been answered
-    function checksRadioIsClicked(elements) {
-        
-        for (let element of elements) {
-            if (element.checked) {
-                return true;
-            }
-        }
-        console.log("Nothing is checked") // DISABLE next button
-        return false;
-    }
-
-    function disableNextButton(next) {
-        next.disabled = true;
-    }
-    
-    function enableNextButton(next) {
-        next.disabled = false;
-    }
-
-    function alertToMissingAnswer(question) {
-        storesHiddenRequiredMessage(question).classList.remove("hidden");
-    }
-
-    function storesHiddenRequiredMessage(question) {
-        // GET the parent element of the question
-        let parentOfAnswer = question.parentElement;
-        // console.log("parent:", parentOfAnswer);
-        // GET the p of class "required" within the parent element 
-        let requiredMessage = parentOfAnswer.getElementsByClassName("required")[0];
-        // console.log("p:", requiredMessage);
-        
-    }
 
 
 
