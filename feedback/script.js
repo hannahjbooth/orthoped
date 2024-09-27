@@ -1,18 +1,30 @@
-// Handling 'required' feature on checkbox for discomfort question
+// Handling 'required' feature on checkbox based question
 
-    let discomfortCheckboxes = document.getElementsByName("discomfort");
 
-    function removeRequiredFromCheckboxes(checkboxes) {
-        checkboxes.forEach(checkbox => {
-            checkbox.removeAttribute('required');
-        });
+    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let checkboxesArray = Array.from(checkboxes);
+    console.log("checkbox array:", checkboxesArray);
+
+    function returnsAllAssociatedCheckboxes(checkbox) {
+        let checkboxParent = checkbox.parentElement;
+        let checkboxes = Array.from(checkboxParent.querySelectorAll('input[type="checkbox"]'));
+        return checkboxes;
     }
 
-    discomfortCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            removeRequiredFromCheckboxes(discomfortCheckboxes);
-        });       
-    });
+    function removeRequiredFromCheckboxes(checkbox) {
+        let checkboxes = returnsAllAssociatedCheckboxes(checkbox);
+        for (let checkbox of checkboxes) {
+            // LET "required" attribute be removed
+            checkbox.removeAttribute("required");
+        }          
+    }
+
+    checkboxesArray.forEach(checkbox => {
+        checkbox.addEventListener("change", function () {
+            removeRequiredFromCheckboxes(checkbox);
+        })
+    })
+
 
 // Handling the 'Other' checkbox's text input, so that it becomes required when the checkbox is selected
 
@@ -99,7 +111,7 @@
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
             createsObjectOfRequiredQuestionsByType(requiredQuestions);
-            checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
+            // checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
             
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
@@ -118,7 +130,7 @@
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
             createsObjectOfRequiredQuestionsByType(requiredQuestions);
-            checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
+            // checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
@@ -161,7 +173,7 @@
                 } else if (element.type === "checkbox") {
                     // push to object
                     requiredQuestionsByType.checkbox.push(element);
-                    console.log("checkbox:", element);
+                    // console.log("checkbox:", element);
                 } else if (element.type === "text") {
                     // push to object
                     requiredQuestionsByType.text.push(element);
