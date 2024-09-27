@@ -102,16 +102,20 @@
         let nextStep = formSteps[currentStepIndex + 1];
 
         if (nextStep) {
-            currentStep.classList.add("hidden");
-            nextStep.classList.remove("hidden");
-            currentStep = nextStep;
+            if (checksIfRequiredInputIsMissing(requiredQuestions) === true) {
+                console.log("Will run an alert on each unanswered question");
+                console.log("Will also stop the next stage appearing")
+            } else {
+                currentStep.classList.add("hidden");
+                nextStep.classList.remove("hidden");
+                currentStep = nextStep;
 
-            // Call the function to get required questions for the new current step
-            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-            createsObjectOfRequiredQuestionsByType(requiredQuestions);
-            // checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
+                let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
+                returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+
+                handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
+            }
             
-            handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
     })
 
@@ -122,13 +126,14 @@
         let previousStep = formSteps[currentStepIndex - 1];
 
         if (previousStep) {
+
             currentStep.classList.add("hidden");
             previousStep.classList.remove("hidden");
             currentStep = previousStep;
             // Call the function to get required questions for the new current step
             let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-            createsObjectOfRequiredQuestionsByType(requiredQuestions);
-            // checkEachElementTypeIsAnswered(requiredQuestions); // Validate the new current step
+            returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+            checksIfRequiredInputIsMissing(requiredQuestions); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
@@ -143,8 +148,9 @@
     }
     
     let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
-    console.log("all required questions:", requiredQuestions);
+    // console.log("all required questions:", requiredQuestions);
 
+    
     function returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions) {
         let requiredQuestionsGroupedByType = {
             select: [],
@@ -153,13 +159,13 @@
             text: [],
             textarea: []
         };
-
+        
         requiredQuestions.forEach(element => {
             if (element.tagName === "INPUT") {
                 if (element.type === "radio") {
                     // push to object
                     requiredQuestionsGroupedByType.radio.push(element);
-                    console.log("radio:", element);
+                    // console.log("radio:", element);
                     
                 } else if (element.type === "checkbox") {
                     // push to object
@@ -168,25 +174,25 @@
                 } else if (element.type === "text") {
                     // push to object
                     requiredQuestionsGroupedByType.text.push(element);
-                    console.log("text:", element);
+                    // console.log("text:", element);
                 }
             } else if (element.tagName === "SELECT") {
                 // push to object
                 requiredQuestionsGroupedByType.select.push(element);
-                console.log("select:", element);
+                // console.log("select:", element);
             } else if (element.tagName === "TEXTAREA") {
                 // push to object
                 requiredQuestionsGroupedByType.textarea.push(element);
-                console.log("textarea:", element);
+                // console.log("textarea:", element);
             }
         });
 
-        console.log("object:", requiredQuestionsGroupedByType);
+        // console.log("object:", requiredQuestionsGroupedByType);
         return requiredQuestionsGroupedByType;
 
     }
 
-    function checkEachElementTypeIsAnswered(requiredQuestions) {
+    function checksIfRequiredInputIsMissing(requiredQuestions) {
 
         let object = returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
         
@@ -197,29 +203,32 @@
             const elements = object[key];
 
             if (key === "select") {
-                console.log("test:", elements);
+                // console.log("test:", elements);
                 if (checksOptionIsSelected(elements) === false) {
                     missingInput = true;
+                    
                     // alertToMissingAnswer(elements);
                     // console.log("test")
                 }
             } else if (key === "radio") {
-                console.log("test:", elements);
+                // console.log("test:", elements);
                 if (checksRadioIsClicked(elements) === false) {
                     missingInput = true;
                     // alertToMissingAnswer(elements);
                     // console.log("test")
                 }
             } else if (key === "checkbox") {
-                console.log("test:", elements);
+                // console.log("test:", elements);
                 if (checksCheckboxIsClicked(elements) === false) {
                     missingInput = true;
+                    
                     // alertToMissingAnswer(elements);
                     // console.log("test")
                 }
             } else if (key === "text") {
                 if (checksTextInputIsFilled(elements) === false) {
                     missingInput = true;
+                
                     // alertToMissingAnswer(elements);
                     // console.log("test")
                 }
@@ -229,11 +238,17 @@
                     // alertToMissingAnswer(elements);
                     // console.log("test")
                 }
+                
             }
-        })
+        });
+        return missingInput;
     }
 
-    checkEachElementTypeIsAnswered(requiredQuestions);
+    checksIfRequiredInputIsMissing(requiredQuestions);
+    console.log("global scope:", checksIfRequiredInputIsMissing(requiredQuestions));
+
+    // checkEachElementTypeIsAnswered(requiredQuestions);
+    
 
     // RADIO - Function that checks if a RADIO based question has been answered
     function checksRadioIsClicked(elements) {
@@ -243,7 +258,7 @@
                 return true;
             }
         }
-        console.log("Nothing is checked") // DISABLE next button
+        // console.log("Nothing is checked") // DISABLE next button
         return false;
     }
 
@@ -255,7 +270,7 @@
                 return true;
             }
         }
-        console.log("Nothing is checked"); // DISABLE next button
+        //console.log("Nothing is checked"); // DISABLE next button
         return false;
     }
 
@@ -266,7 +281,7 @@
                 return true;
             }
         }
-        console.log("Nothing is selected"); // DISABLE next button
+        // console.log("Nothing is selected"); // DISABLE next button
         return false;
     }
 
@@ -277,7 +292,7 @@
                 return true;
             }
         }
-        console.log("Nothing is typed"); // DISABLE next button
+        // console.log("Nothing is typed"); // DISABLE next button
         return false;
     }
 
@@ -288,17 +303,8 @@
                 return true;
             }
         }
-        console.log("Nothing is typed"); // DISABLE next button
+        // console.log("Nothing is typed"); // DISABLE next button
         return false;
-    }
-
-
-    function disableNextButton(next) {
-        next.disabled = true;
-    }
-    
-    function enableNextButton(next) {
-        next.disabled = false;
     }
 
     function alertToMissingAnswer(question) {
