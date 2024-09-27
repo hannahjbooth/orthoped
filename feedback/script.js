@@ -102,6 +102,9 @@
         let nextStep = formSteps[currentStepIndex + 1];
 
         if (nextStep) {
+            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
+            returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+
             if (checksIfRequiredInputIsMissing(requiredQuestions) === true) {
                 console.log("Will run an alert on each unanswered question");
                 console.log("Will also stop the next stage appearing")
@@ -110,8 +113,7 @@
                 nextStep.classList.remove("hidden");
                 currentStep = nextStep;
 
-                let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-                returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+                
 
                 handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
             }
@@ -144,11 +146,43 @@
     function returnArrayOfCurrentRequiredQuestions() {
         let currentStep = getCurrentStep(formSteps);
         let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
+        console.log("required qs:", requiredQuestions);
         return requiredQuestions;
     }
     
+    function returnsRadioButtonsInArraysByQuestion() {
+        requiredQuestions.forEach(element => {
+            if (element.tagName === "INPUT" && element.type === "radio") {
+                let parentElement = element.parentElement();
+                let radioArray = parentElement.forEach(element => {
+                    
+                })
+
+            }
+        })
+    }
+
     let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
     // console.log("all required questions:", requiredQuestions);
+
+    // Radio problem: requiredQuestions doesn't collect all the radio buttons,
+    // it only collects the radio button with an attribute of "required".
+
+    // If I were to collect all the radio buttons, they woudln't be grouped by question.
+
+    // For each radio based question, I need to produce a single array of multiple radio buttons,
+    // and check for 1 of those radio buttons being selected.
+
+    // To produce the array, I need to start with the radio button itself.
+
+    // LET function returnArrayOfCurrentRequiredQuestions() return an array of all element with "required" attribute
+        // LET that array be passed into a function:
+            // IF array contains an element of tag name "input" and of type "radio"
+                // GET parent element of that element
+                    // GET all elements inside that parent element of tag name "input" and of type "radio"
+                        // LET those elements form an array of radio buttons
+                            // PUSH that array into 
+
 
     
     function returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions) {
@@ -163,38 +197,25 @@
         requiredQuestions.forEach(element => {
             if (element.tagName === "INPUT") {
                 if (element.type === "radio") {
-                    // push to object
-                    requiredQuestionsGroupedByType.radio.push(element);
-                    // console.log("radio:", element);
-                    
+                    requiredQuestionsGroupedByType.radio.push(element);                    
                 } else if (element.type === "checkbox") {
-                    // push to object
                     requiredQuestionsGroupedByType.checkbox.push(element);
-                    // console.log("checkbox:", element);
                 } else if (element.type === "text") {
-                    // push to object
                     requiredQuestionsGroupedByType.text.push(element);
-                    // console.log("text:", element);
                 }
             } else if (element.tagName === "SELECT") {
-                // push to object
                 requiredQuestionsGroupedByType.select.push(element);
-                // console.log("select:", element);
             } else if (element.tagName === "TEXTAREA") {
-                // push to object
                 requiredQuestionsGroupedByType.textarea.push(element);
-                // console.log("textarea:", element);
             }
         });
-
-        // console.log("object:", requiredQuestionsGroupedByType);
         return requiredQuestionsGroupedByType;
-
     }
 
     function checksIfRequiredInputIsMissing(requiredQuestions) {
 
         let object = returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+        console.log("object:", object);
         
         let missingInput = false;
 
@@ -202,58 +223,50 @@
 
             const elements = object[key];
 
-            if (key === "select") {
-                // console.log("test:", elements);
+            if (elements.length > 0) {
+                if (key === "select") {
+                //console.log("test:", elements);
                 if (checksOptionIsSelected(elements) === false) {
                     missingInput = true;
-                    
-                    // alertToMissingAnswer(elements);
-                    // console.log("test")
+                    console.log("select:", missingInput)
+                    }
+                } else if (key === "radio") {
+                    // console.log("test:", elements);
+                    if (checksRadioIsClicked(elements) === false) {
+                        missingInput = true;
+                        console.log("radio:", missingInput)
+                    }
+                } else if (key === "checkbox") {
+                    console.log("key:", elements);
+                    if (checksCheckboxIsClicked(elements) === false) {
+                        missingInput = true;
+                    }
+                } else if (key === "text") {
+                    if (checksTextInputIsFilled(elements) === false) {
+                        missingInput = true;
+                    }
+                } else if (key === "textarea") {
+                    if (checksTextareaIsFilled(elements) === false) {
+                        missingInput = true;
+                    }
                 }
-            } else if (key === "radio") {
-                // console.log("test:", elements);
-                if (checksRadioIsClicked(elements) === false) {
-                    missingInput = true;
-                    // alertToMissingAnswer(elements);
-                    // console.log("test")
-                }
-            } else if (key === "checkbox") {
-                // console.log("test:", elements);
-                if (checksCheckboxIsClicked(elements) === false) {
-                    missingInput = true;
-                    
-                    // alertToMissingAnswer(elements);
-                    // console.log("test")
-                }
-            } else if (key === "text") {
-                if (checksTextInputIsFilled(elements) === false) {
-                    missingInput = true;
-                
-                    // alertToMissingAnswer(elements);
-                    // console.log("test")
-                }
-            } else if (key === "textarea") {
-                if (checksTextareaIsFilled(elements) === false) {
-                    missingInput = true;
-                    // alertToMissingAnswer(elements);
-                    // console.log("test")
-                }
-                
             }
+            
         });
         return missingInput;
     }
 
-    checksIfRequiredInputIsMissing(requiredQuestions);
-    console.log("global scope:", checksIfRequiredInputIsMissing(requiredQuestions));
+    //checksIfRequiredInputIsMissing(requiredQuestions);
+
 
     // checkEachElementTypeIsAnswered(requiredQuestions);
     
 
     // RADIO - Function that checks if a RADIO based question has been answered
     function checksRadioIsClicked(elements) {
-        
+        console.log("1: checking all elements are present:", elements);
         for (let element of elements) {
+            console.log("2: checking all elements are present:", element);
             if (element.checked) {
                 return true;
             }
@@ -264,7 +277,6 @@
 
     // CHECKBOX - Function that checks if a CHECKBOX based question has been answered
     function checksCheckboxIsClicked(elements) {
-        
         for (let element of elements) {
             if (element.checked) {
                 return true;
@@ -277,7 +289,7 @@
     // SELECT - Function that checks if a SELECT based question has been answered
     function checksOptionIsSelected(elements) {
         for (let element of elements) {
-            if (!element.value === "") {
+            if (element.value !== "") {
                 return true;
             }
         }
@@ -288,7 +300,7 @@
     // TEXT - Function that checks if a TEXT based question has been answered
     function checksTextInputIsFilled(elements) {
         for (let element of elements) {
-            if (!element.value === "") {
+            if (element.value !== "") {
                 return true;
             }
         }
@@ -299,7 +311,7 @@
     // TEXTAREA - Function that checks if a TEXTAREA based question has been answered
     function checksTextareaIsFilled(elements) {
         for (let element of elements) {
-            if (!element.value === "") {
+            if (element.value !== "") {
                 return true;
             }
         }
