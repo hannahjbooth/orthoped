@@ -14,8 +14,9 @@
     function removeRequiredFromCheckboxes(checkbox) {
         let checkboxes = returnsAllAssociatedCheckboxes(checkbox);
         for (let checkbox of checkboxes) {
-            // LET "required" attribute be removed
-            checkbox.removeAttribute("required");
+            if (checkbox.hasAttribute("required")) {
+                checkbox.removeAttribute("required");
+            }
         }          
     }
 
