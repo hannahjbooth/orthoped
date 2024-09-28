@@ -102,18 +102,16 @@
         let nextStep = formSteps[currentStepIndex + 1];
 
         if (nextStep) {
-            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-            returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+            let requiredElements = returnArrayOfCurrentRequiredElements(); 
+            returnsObjectOfrequiredElementsGroupedByType(requiredElements);
 
-            if (checksIfRequiredInputIsMissing(requiredQuestions) === true) {
+            if (checksIfRequiredInputIsMissing(requiredElements) === true) {
                 console.log("Will run an alert on each unanswered question");
                 console.log("Will also stop the next stage appearing")
             } else {
                 currentStep.classList.add("hidden");
                 nextStep.classList.remove("hidden");
                 currentStep = nextStep;
-
-                
 
                 handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
             }
@@ -133,9 +131,9 @@
             previousStep.classList.remove("hidden");
             currentStep = previousStep;
             // Call the function to get required questions for the new current step
-            let requiredQuestions = returnArrayOfCurrentRequiredQuestions(); 
-            returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
-            checksIfRequiredInputIsMissing(requiredQuestions); // Validate the new current step
+            let requiredElements = returnArrayOfCurrentRequiredElements(); 
+            returnsObjectOfrequiredElementsGroupedByType(requiredElements);
+            checksIfRequiredInputIsMissing(requiredElements); // Validate the new current step
 
             handleButtonsDisplay(currentStep, formButtons, back, next, submit, formSteps);
         }
@@ -143,15 +141,15 @@
 
 // Handle manual validation
 
-    function returnArrayOfCurrentRequiredQuestions() {
+    function returnArrayOfCurrentRequiredElements() {
         let currentStep = getCurrentStep(formSteps);
-        let requiredQuestions = Array.from(currentStep.querySelectorAll("[required]"));
-        console.log("required qs:", requiredQuestions);
-        return requiredQuestions;
+        let requiredElements = Array.from(currentStep.querySelectorAll("[required]"));
+        console.log("required qs:", requiredElements);
+        return requiredElements;
     }
     
     function returnsRadioButtonsInArraysByQuestion() {
-        requiredQuestions.forEach(element => {
+        requiredElements.forEach(element => {
             if (element.tagName === "INPUT" && element.type === "radio") {
                 let parentElement = element.parentElement();
                 let radioArray = parentElement.forEach(element => {
@@ -162,10 +160,10 @@
         })
     }
 
-    let requiredQuestions = returnArrayOfCurrentRequiredQuestions();
-    // console.log("all required questions:", requiredQuestions);
+    let requiredElements = returnArrayOfCurrentRequiredElements();
+    // console.log("all required questions:", requiredElements);
 
-    // Radio problem: requiredQuestions doesn't collect all the radio buttons,
+    // Radio problem: requiredElements doesn't collect all the radio buttons,
     // it only collects the radio button with an attribute of "required".
 
     // If I were to collect all the radio buttons, they woudln't be grouped by question.
@@ -175,7 +173,7 @@
 
     // To produce the array, I need to start with the radio button itself.
 
-    // LET function returnArrayOfCurrentRequiredQuestions() return an array of all element with "required" attribute
+    // LET function returnArrayOfCurrentRequiredElements() return an array of all element with "required" attribute
         // LET that array be passed into a function:
             // IF array contains an element of tag name "input" and of type "radio"
                 // GET parent element of that element
@@ -185,8 +183,8 @@
 
 
     
-    function returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions) {
-        let requiredQuestionsGroupedByType = {
+    function returnsObjectOfrequiredElementsGroupedByType(requiredElements) {
+        let requiredElementsGroupedByType = {
             select: [],
             radio: [],
             checkbox: [],
@@ -194,27 +192,27 @@
             textarea: []
         };
         
-        requiredQuestions.forEach(element => {
+        requiredElements.forEach(element => {
             if (element.tagName === "INPUT") {
                 if (element.type === "radio") {
-                    requiredQuestionsGroupedByType.radio.push(element);                    
+                    requiredElementsGroupedByType.radio.push(element);                    
                 } else if (element.type === "checkbox") {
-                    requiredQuestionsGroupedByType.checkbox.push(element);
+                    requiredElementsGroupedByType.checkbox.push(element);
                 } else if (element.type === "text") {
-                    requiredQuestionsGroupedByType.text.push(element);
+                    requiredElementsGroupedByType.text.push(element);
                 }
             } else if (element.tagName === "SELECT") {
-                requiredQuestionsGroupedByType.select.push(element);
+                requiredElementsGroupedByType.select.push(element);
             } else if (element.tagName === "TEXTAREA") {
-                requiredQuestionsGroupedByType.textarea.push(element);
+                requiredElementsGroupedByType.textarea.push(element);
             }
         });
-        return requiredQuestionsGroupedByType;
+        return requiredElementsGroupedByType;
     }
 
-    function checksIfRequiredInputIsMissing(requiredQuestions) {
+    function checksIfRequiredInputIsMissing(requiredElements) {
 
-        let object = returnsObjectOfRequiredQuestionsGroupedByType(requiredQuestions);
+        let object = returnsObjectOfrequiredElementsGroupedByType(requiredElements);
         console.log("object:", object);
         
         let missingInput = false;
@@ -256,10 +254,10 @@
         return missingInput;
     }
 
-    //checksIfRequiredInputIsMissing(requiredQuestions);
+    //checksIfRequiredInputIsMissing(requiredElements);
 
 
-    // checkEachElementTypeIsAnswered(requiredQuestions);
+    // checkEachElementTypeIsAnswered(requiredElements);
     
 
     // RADIO - Function that checks if a RADIO based question has been answered
@@ -332,7 +330,7 @@
         // console.log("p:", requiredMessage);
         
     }
-        // for (let question of requiredQuestions) {
+        // for (let question of requiredElements) {
 
         //     if (question.tagName === "INPUT") {
 
@@ -367,7 +365,7 @@
         //     }
         // }
 
-        // for (let question of requiredQuestions) {
+        // for (let question of requiredElements) {
         //     if (missingInput = true) {
         //         alertToMissingAnswer(question);
         //     }
