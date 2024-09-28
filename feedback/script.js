@@ -106,8 +106,8 @@
             returnsObjectOfrequiredElementsGroupedByType(requiredElements);
 
             if (checksIfRequiredInputIsMissing(requiredElements) === true) {
-                console.log("Will run an alert on each unanswered question");
-                console.log("Will also stop the next stage appearing")
+                // console.log("Will run an alert on each unanswered question");
+                // console.log("Will also stop the next stage appearing")
             } else {
                 currentStep.classList.add("hidden");
                 nextStep.classList.remove("hidden");
@@ -145,7 +145,7 @@
         let currentStep = getCurrentStep(formSteps);
         let requiredElements = Array.from(currentStep.querySelectorAll("[required]"));
 
-        console.log("required qs:", requiredElements);
+        
         return requiredElements;
     }
 
@@ -160,17 +160,7 @@
 
     }
 
-    function returnsArrayOfAllAssociatedRadios(element) {      
-        let parentElement = element.parentElement;
-        let allChildElements = Array.from(parentElement.children);
-        let allChildRadios = [];
-        allChildElements.forEach(child => {
-            if (child.tagName === "INPUT" && child.type === "radio") {
-                allChildRadios.push(child);
-            }
-        });
-        return allChildRadios;
-    }
+
         
         
     
@@ -241,14 +231,19 @@
                 //console.log("test:", elements);
                 if (checksOptionIsSelected(elements) === false) {
                     missingInput = true;
-                    console.log("select:", missingInput)
+                    // console.log("select:", missingInput)
                     }
                 } else if (key === "radio") {
+                    // console.log("testing all required radios are appearing:", elements)
                     // console.log("test:", elements);
-                    if (checksRadioIsClicked(elements) === false) {
-                        missingInput = true;
-                        console.log("radio:", missingInput)
+                    for (let element of elements) {
+                        console.log("testing individual element appears", element);
+                        if (checksRadioIsClicked(element) === false) {
+                            missingInput = true;
+                            console.log("missing input is:", missingInput)
+                        }
                     }
+                    
                 } else if (key === "checkbox") {
                     console.log("key:", elements);
                     if (checksCheckboxIsClicked(elements) === false) {
@@ -273,25 +268,34 @@
 
 
     // checkEachElementTypeIsAnswered(requiredElements);
-    
+    function returnsArrayOfAllAssociatedRadios(element) {      
+        let parentElement = element.parentElement;
+        let allChildElements = Array.from(parentElement.children);
+        let allChildRadios = [];
+        allChildElements.forEach(child => {
+            if (child.tagName === "INPUT" && child.type === "radio") {
+                allChildRadios.push(child);
+            }
+        });
+        return allChildRadios;
+    }
 
     // RADIO - Function that checks if a RADIO based question has been answered
-    function checksRadioIsClicked(elements) {
-        console.log("1: checking all elements are present:", elements);
-        for (let element of elements) {
-            let allRadios = returnsArrayOfAllAssociatedRadios(element);
-
+    function checksRadioIsClicked(element) {
+        let questionIsAnswered = false;
+          console.log("2: checking element being iterated over:", element);  
+          let allRadios = returnsArrayOfAllAssociatedRadios(element);
             for (let radio of allRadios) {
                 if (radio.checked) {
-                    console.log("radio is clicked");
+                    console.log("question is answered");
                     return true;
-                }
-            }
+            }            
         }
-        console.log("Nothing is checked") // DISABLE next button
+        console.log("question is unanswered");
         return false;
     }
 
+    
     // CHECKBOX - Function that checks if a CHECKBOX based question has been answered
     function checksCheckboxIsClicked(elements) {
         for (let element of elements) {
