@@ -102,7 +102,7 @@
         let nextStep = formSteps[currentStepIndex + 1];
 
         if (nextStep) {
-            let requiredElements = returnArrayOfCurrentRequiredElements(); 
+            let requiredElements = returnArrayOfInputsFromCurrentRequiredQuestions(); 
             returnsObjectOfrequiredElementsGroupedByType(requiredElements);
 
             if (checksIfRequiredInputIsMissing(requiredElements) === true) {
@@ -131,7 +131,7 @@
             previousStep.classList.remove("hidden");
             currentStep = previousStep;
             // Call the function to get required questions for the new current step
-            let requiredElements = returnArrayOfCurrentRequiredElements(); 
+            let requiredElements = returnArrayOfInputsFromCurrentRequiredQuestions(); 
             returnsObjectOfrequiredElementsGroupedByType(requiredElements);
             checksIfRequiredInputIsMissing(requiredElements); // Validate the new current step
 
@@ -141,26 +141,41 @@
 
 // Handle manual validation
 
-    function returnArrayOfCurrentRequiredElements() {
+    function returnArrayOfInputsFromCurrentRequiredQuestions() {
         let currentStep = getCurrentStep(formSteps);
         let requiredElements = Array.from(currentStep.querySelectorAll("[required]"));
+
         console.log("required qs:", requiredElements);
         return requiredElements;
     }
-    
-    function returnsRadioButtonsInArraysByQuestion() {
-        requiredElements.forEach(element => {
-            if (element.tagName === "INPUT" && element.type === "radio") {
-                let parentElement = element.parentElement();
-                let radioArray = parentElement.forEach(element => {
-                    
-                })
 
-            }
-        })
+
+    
+    function removesSingleRadioInputs(requiredElements) {
+
     }
 
-    let requiredElements = returnArrayOfCurrentRequiredElements();
+
+    function addsAllRadiosAssociatedWithRequiredRadios(requiredElements) {
+
+    }
+
+    function returnsArrayOfAllAssociatedRadios(element) {      
+        let parentElement = element.parentElement;
+        let allChildElements = Array.from(parentElement.children);
+        let allChildRadios = [];
+        allChildElements.forEach(child => {
+            if (child.tagName === "INPUT" && child.type === "radio") {
+                allChildRadios.push(child);
+            }
+        });
+        return allChildRadios;
+    }
+        
+        
+    
+
+    let requiredElements = returnArrayOfInputsFromCurrentRequiredQuestions();
     // console.log("all required questions:", requiredElements);
 
     // Radio problem: requiredElements doesn't collect all the radio buttons,
@@ -173,7 +188,7 @@
 
     // To produce the array, I need to start with the radio button itself.
 
-    // LET function returnArrayOfCurrentRequiredElements() return an array of all element with "required" attribute
+    // LET function returnArrayOfInputsFromCurrentRequiredQuestions() return an array of all element with "required" attribute
         // LET that array be passed into a function:
             // IF array contains an element of tag name "input" and of type "radio"
                 // GET parent element of that element
@@ -264,12 +279,16 @@
     function checksRadioIsClicked(elements) {
         console.log("1: checking all elements are present:", elements);
         for (let element of elements) {
-            console.log("2: checking all elements are present:", element);
-            if (element.checked) {
-                return true;
+            let allRadios = returnsArrayOfAllAssociatedRadios(element);
+
+            for (let radio of allRadios) {
+                if (radio.checked) {
+                    console.log("radio is clicked");
+                    return true;
+                }
             }
         }
-        // console.log("Nothing is checked") // DISABLE next button
+        console.log("Nothing is checked") // DISABLE next button
         return false;
     }
 
