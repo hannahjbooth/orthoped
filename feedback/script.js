@@ -310,7 +310,7 @@
     function checksCheckboxIsClicked(value) {  
         let allCheckboxes = returnsArrayOfAllAssociatedCheckboxes(value);
         for (let checkbox of allCheckboxes) {
-            if (element.checked) {
+            if (checkbox.checked) {
                 console.log("checkbox q is answered");
                 return true;
             }
