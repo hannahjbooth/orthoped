@@ -267,7 +267,6 @@
     //checksIfRequiredInputIsMissing(requiredElements);
 
 
-    // checkEachElementTypeIsAnswered(requiredElements);
     function returnsArrayOfAllAssociatedRadios(value) {      
         let parentElement = value.parentElement;
         let allChildElements = Array.from(parentElement.children);
@@ -279,6 +278,19 @@
         });
         return allChildRadios;
     }
+
+    function returnsArrayOfAllAssociatedCheckboxes(value) {      
+        let parentElement = value.parentElement;
+        let allChildElements = Array.from(parentElement.children);
+        let allChildCheckboxes = [];
+        allChildElements.forEach(child => {
+            if (child.tagName === "INPUT" && child.type === "checkbox") {
+                allChildCheckboxes.push(child);
+            }
+        });
+        return allChildCheckboxes;
+    }
+
 
     // RADIO - Function that checks if a RADIO based question has been answered
     function checksRadioIsClicked(value) {       
@@ -296,10 +308,12 @@
     
     // CHECKBOX - Function that checks if a CHECKBOX based question has been answered
     function checksCheckboxIsClicked(value) {  
-        // REQUIRES SAME FUNCTIONALITY AS RADIO FUNCTION 
-        if (element.checked) {
-            console.log("checkbox q is answered");
-            return true;
+        let allCheckboxes = returnsArrayOfAllAssociatedCheckboxes(value);
+        for (let checkbox of allCheckboxes) {
+            if (element.checked) {
+                console.log("checkbox q is answered");
+                return true;
+            }
         }
         return false;
     }
