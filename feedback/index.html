@@ -131,16 +131,19 @@
                                     <div class="question"> <!-- Q4 -->
                                         <p class="required-message hidden">Required</p>
                                         <fieldset>
+                                            <!-- Store the question in a hidden input -->
+                                            <input type="hidden" name="Q4-question" value="Is the user able to put on their own shoes? *">
+                                    
                                             <legend>Is the user able to put on their own shoes? *</legend>
                                     
-                                            <!-- Combine the question and the answer in a hidden input -->
-                                            <input type="radio" id="yes-velcro-only" name="Q4" value="Is the user able to put on their own shoes? *: Yes - velcro only" required>
+                                            <!-- Only store the answer in the radio buttons -->
+                                            <input type="radio" id="yes-velcro-only" name="Q4-answer" value="Yes - velcro only" required>
                                             <label for="yes-velcro-only">Yes - velcro only</label>
                                     
-                                            <input type="radio" id="yes-laced-or-velcro" name="Q4" value="Is the user able to put on their own shoes? *: Yes - laced or velcro">
+                                            <input type="radio" id="yes-laced-or-velcro" name="Q4-answer" value="Yes - laced or velcro">
                                             <label for="yes-laced-or-velcro">Yes - laced or velcro</label>
                                     
-                                            <input type="radio" id="shoes-no" name="Q4" value="Is the user able to put on their own shoes? *: No">
+                                            <input type="radio" id="shoes-no" name="Q4-answer" value="No">
                                             <label for="shoes-no">No</label>
                                         </fieldset>
                                     </div>
