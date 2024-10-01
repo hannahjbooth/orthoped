@@ -106,8 +106,7 @@
             returnsObjectOfRequiredElementsGroupedByType(requiredElements);
 
             if (checksIfRequiredInputIsMissing(requiredElements) === true) {
-                // console.log("Will run an alert on each unanswered question");
-                // console.log("Will also stop the next stage appearing")
+                console.log("Will run an alert on each unanswered question");
             } else {
                 currentStep.classList.add("hidden");
                 nextStep.classList.remove("hidden");
@@ -159,34 +158,8 @@
 
     }
 
-
-        
-        
-    
-
     let requiredElements = returnArrayOfInputsFromCurrentRequiredQuestions();
-    // console.log("all required questions:", requiredElements);
-
-    // Radio problem: requiredElements doesn't collect all the radio buttons,
-    // it only collects the radio button with an attribute of "required".
-
-    // If I were to collect all the radio buttons, they woudln't be grouped by question.
-
-    // For each radio based question, I need to produce a single array of multiple radio buttons,
-    // and check for 1 of those radio buttons being selected.
-
-    // To produce the array, I need to start with the radio button itself.
-
-    // LET function returnArrayOfInputsFromCurrentRequiredQuestions() return an array of all element with "required" attribute
-        // LET that array be passed into a function:
-            // IF array contains an element of tag name "input" and of type "radio"
-                // GET parent element of that element
-                    // GET all elements inside that parent element of tag name "input" and of type "radio"
-                        // LET those elements form an array of radio buttons
-                            // PUSH that array into 
-
-
-    
+   
     function returnsObjectOfRequiredElementsGroupedByType(requiredElements) {
         let requiredElementsGroupedByType = {
             select: [],
@@ -264,8 +237,52 @@
         return missingInput;
     }
 
-    //checksIfRequiredInputIsMissing(requiredElements);
+    function returnsArrayOfUnansweredRequiredInputs(requiredElements) {
+        let object = returnsObjectOfRequiredElementsGroupedByType(requiredElements);
+        console.log("object:", object);
+        
+        let unansweredRequiredInputs = [];
 
+        for (const [key, values] of Object.entries(object)) {
+            if (values.length > 0) {
+                if (key === "select") {
+                    for (let value of values) {
+                        if (checksOptionIsSelected(value) === false) {
+                            unansweredRequiredInputs.push(value);
+                        }
+                    }                
+                } else if (key === "radio") {
+                    for (let value of values) {
+                        if (checksRadioIsClicked(value) === false) {
+                            unansweredRequiredInputs.push(value);
+                        }
+                    }
+                } else if (key === "checkbox") {
+                    for (let value of values) {
+                        if (checksCheckboxIsClicked(value) === false) {
+                            unansweredRequiredInputs.push(value);
+                        }
+                    }
+                } else if (key === "text") {
+                    for (let value of values) {
+                        if (checksTextInputIsFilled(value) === false) {
+                            unansweredRequiredInputs.push(value);
+                        }
+                    }
+                } else if (key === "textarea") {
+                    for (let value of values) {
+                        if (checksTextareaIsFilled(value) === false) {
+                            unansweredRequiredInputs.push(value);
+                        }
+                    }
+                }
+            }
+        };
+        console.log("unansweredRequiredInputs:", unansweredRequiredInputs);
+        return unansweredRequiredInputs;
+    }
+
+    returnsArrayOfUnansweredRequiredInputs(requiredElements);
 
     function returnsArrayOfAllAssociatedRadios(value) {      
         let parentElement = value.parentElement;
@@ -291,10 +308,7 @@
         return allChildCheckboxes;
     }
 
-
-    // RADIO - Function that checks if a RADIO based question has been answered
     function checksRadioIsClicked(value) {       
-        // console.log("2: checking element being iterated over:", element);  
         let allRadios = returnsArrayOfAllAssociatedRadios(value);
         for (let radio of allRadios) {
             if (radio.checked) {
@@ -305,8 +319,6 @@
         return false;
     }
 
-    
-    // CHECKBOX - Function that checks if a CHECKBOX based question has been answered
     function checksCheckboxIsClicked(value) {  
         let allCheckboxes = returnsArrayOfAllAssociatedCheckboxes(value);
         for (let checkbox of allCheckboxes) {
@@ -318,7 +330,6 @@
         return false;
     }
 
-    // SELECT - Function that checks if a SELECT based question has been answered
     function checksOptionIsSelected(value) {
         if (value.value !== "") {
             console.log("select q is answered");
@@ -327,7 +338,6 @@
         return false;
     }
 
-    // TEXT - Function that checks if a TEXT based question has been answered
     function checksTextInputIsFilled(value) {
             if (value.value !== "") {
                 console.log("text q is answered");
@@ -336,7 +346,6 @@
         return false;
     }
 
-    // TEXTAREA - Function that checks if a TEXTAREA based question has been answered
     function checksTextareaIsFilled(value) {
             if (value.value !== "") {
                 console.log("textarea q is answered");
@@ -350,66 +359,10 @@
     }
 
     function storesHiddenRequiredMessage(question) {
-        // GET the parent element of the question
         let parentOfAnswer = question.parentElement;
-        // console.log("parent:", parentOfAnswer);
-        // GET the p of class "required" within the parent element 
-        let requiredMessage = parentOfAnswer.getElementsByClassName("required")[0];
-        // console.log("p:", requiredMessage);
-        
+        let requiredMessage = parentOfAnswer.getElementsByClassName("required")[0];        
     }
-        // for (let question of requiredElements) {
 
-        //     if (question.tagName === "INPUT") {
-
-        //         // if (question.querySelec)
-
-        //         // console.log("Input question:", question);
-        //         // Run a function that checks if input is answered
-
-        //     } else if (question.tagName === "SELECT") {
-
-        //         // console.log("Select question:", question);
-        //         // Run a function that checks if select is answered
-
-        //     } else if (question.tagName === "RADIO") {
-
-        //         // console.log("Radio question:", question)
-
-        //         if (checksRadioIsClicked(question) === false) {
-        //             missingInput = true;
-        //             alertToMissingAnswer(question);
-        //             // console.log("test")
-        //         }
-        //     } else if (question.tagName === "CHECKBOX") {
-
-        //         // console.log("Checkbox question:", question);
-        //         // Run a function that checks if checkbox is answered
-
-        //     } else if (question.tagName === "TEXTAREA") {
-
-        //         // console.log("Textarea question:", question);
-        //         // Run a function that checks if textarea is answered
-        //     }
-        // }
-
-        // for (let question of requiredElements) {
-        //     if (missingInput = true) {
-        //         alertToMissingAnswer(question);
-        //     }
-        // }
-        
-    
-
-
-    
-
-
-
-
-    // true or false
-
-        // question.checkValidity()
 
 
     
