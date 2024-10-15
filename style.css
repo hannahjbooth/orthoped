@@ -320,7 +320,7 @@ Colours
     flex-direction: row;
 }
 
-.home-sticky {
+.home-header {
     position: sticky;
     top: 90px;
     padding-top: 10px;
@@ -593,7 +593,22 @@ section .text-right {
 /* Styling for mobile devices */
 
 @media (max-width: 430px) {
+
+    /* body {
+        max-width: 100vw;
+        overflow: hidden;
+    } */
+     
     /* Navigation bar */
+
+    header {
+        padding-top: 0;
+        display: flex;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 1;   
+    }
 
     .logo-area {
         display: flex;
@@ -606,13 +621,29 @@ section .text-right {
         align-self: center;
     }
 
-    .nav-row, .main-nav-ul {
+    .main-nav-ul {
         display: flex;
-        flex-direction: column;
     }
 
     .nav-row {
-        background: linear-gradient(to bottom, #ffffff, #80bdbc38, #80bdbc6b, #80bdbcc7, #80BDBC, #80BDBC);
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, #ffffff, #ffffff,#8ef1f051, #80bdbc86, #71b4b2f6);
+    }
+
+    .mobile-nav-title {
+        display: contents;
+        display: flex;
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .ortho {
+        padding-left: 5px;
+    }
+
+    .ped {
+        padding-right: 5px;
     }
 
     .main-nav-ul li {
@@ -626,22 +657,24 @@ section .text-right {
     }
 
     .home-header {
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
-    .mobile-nav-title {
-        display: contents;
+    .home-header ul {
         display: flex;
-        width: 90%;
-        align-self: center;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
-    .ortho {
-        padding-left: 5px;
+    .home-header a {
+        font-size: 0.8rem;
     }
 
-    .ped {
-        padding-right: 5px;
+    .home-h1 {
+        display: none;;
     }
+    
+
+
 
 }
