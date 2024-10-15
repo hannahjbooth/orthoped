@@ -598,7 +598,7 @@ section .text-right {
         max-width: 100vw;
         overflow: hidden;
     } */
-     
+
     /* Navigation bar */
 
     header {
@@ -652,18 +652,24 @@ section .text-right {
 
     /* Home */
 
+    main {
+        padding-top: 230px;
+    }
+    
     .hero-section-logo {
         display: none;
     }
 
     .home-header {
         margin-top: 30px;
+        position: fixed;
     }
 
     .home-header ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        width: 100vw;
     }
 
     .home-header a {
@@ -671,10 +677,31 @@ section .text-right {
     }
 
     .home-h1 {
-        display: none;;
+        display: none;
     }
     
+    .overview {
+        width: 100%;
+    }
 
+    section .images, .image-placeholder, .image-placeholder-history {
+        display: none;
+    }
+
+    section .text-left, section .text-right {
+        margin: 0px 20px 0px 20px;
+        width: 100%;
+    }
+
+    .further-info {
+        margin: 0px 20px 0px 20px;
+    }
+
+    .green-feet {
+        width: 330px;
+        height: auto; 
+        opacity: 25%;
+    }
 
 
 }
