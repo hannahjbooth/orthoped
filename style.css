@@ -166,6 +166,10 @@ nav ul li {
     background-color: white;
 }
 
+.mobile-home-nav-title {
+    display: none;
+}
+
 /* Feedback Form */
 
 
@@ -599,7 +603,15 @@ section .text-right {
     }
 
     main {
-        padding-top: 250px;
+        padding-top: 270px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
     }
 
 
@@ -629,12 +641,14 @@ section .text-right {
         flex-wrap: wrap;
         width: 100vw;
         margin: 0;
+        padding-bottom: 5px;
+
     }
 
     .nav-row {
         display: flex;
         flex-direction: column;
-        background: linear-gradient(to bottom, #ffffff, #ffffff,#8ef1f051, #80bdbc86, #71b4b2f6);
+        background: linear-gradient(to bottom, #ffffff, #ffffff,#ffffff,#ffffff,#80bdbc1e,#80bdbc88, #80bdbc, #71b4b2f6);
     }
 
     .mobile-nav-title {
@@ -651,10 +665,20 @@ section .text-right {
     .ped {
         padding-right: 5px;
     }
-
+    
     .main-nav-ul li {
         height: 20px;
     }
+
+    .mobile-home-nav-title {
+        display: initial;
+        font-family: "Merriweather", "Times New Roman", serif;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin: 0px 0px 0px 14px;
+        text-align: center;
+    }
+    
 
     /* Footer */
 
@@ -664,8 +688,8 @@ section .text-right {
     }
 
     footer .row div {
-        flex: 0 1 30%;         /* Each item takes up 30% of the row */
-        margin: 10px;          /* Optional: space between items */
+        flex: 0 1 30%;         
+        margin: 10px;
     
     }
 
@@ -677,17 +701,15 @@ section .text-right {
     /* Home */
 
     .home-scroll-target {
-        scroll-margin-top: 245px;
+        scroll-margin-top: 260px;
     }
-
-    
 
     .hero-section-logo {
         display: none;
     }
 
     .home-header {
-        margin-top: 50px;
+        margin-top: 60px;
         position: fixed;
     }
 
@@ -700,6 +722,11 @@ section .text-right {
 
     .home-header a {
         font-size: 0.8rem;
+    }
+
+    .page-nav-ul {
+        padding-top: 0;
+        padding-bottom: 3px;
     }
 
     .home-h1 {
