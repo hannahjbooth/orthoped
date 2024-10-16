@@ -674,10 +674,11 @@ section .text-right {
     .mobile-home-nav-title {
         display: initial;
         font-family: "Merriweather", "Times New Roman", serif;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 500;
         margin: 0px 0px 0px 14px;
         text-align: center;
+        color:#595757;
     }
     
 
@@ -710,8 +711,10 @@ section .text-right {
     }
 
     .home-header {
-        margin-top: 60px;
+        margin-top: 63px;
         position: fixed;
+        border-color: #b2b2b2;
+        padding-bottom: 0;
     }
 
     .home-header ul {
