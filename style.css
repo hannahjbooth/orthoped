@@ -760,5 +760,19 @@ section .text-right {
         opacity: 25%;
     }
 
+    /* User Guides */
+
+    .user-guides {
+        padding-top: 150px;
+    }
+
+    #user-guides-intro {
+        padding-top: 180px;
+    }
+
+    .page-nav-ul li {
+        display: flex;
+        flex-direction: column;
+    }
 
 }
