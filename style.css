@@ -448,11 +448,6 @@ section .text-right {
     margin-right: 70px;
 }
 
-.user-guides-nav {
-    margin: 0 auto;
-    font-style: italic;
-}
-
 .user-guides-nav li {
     padding-left: 10px;
     padding-right: 10px;
@@ -474,6 +469,7 @@ section .text-right {
 
 .instruction-image {
     border-style: solid;
+    border-color: black;
     padding: 8px;
     max-width: 300px;
     max-height: 300px;
@@ -492,6 +488,8 @@ section .text-right {
 
 .put-on-3 {
     width: 400px;
+    border-style: solid;
+    border-color: black;
 }
 
 .put-on-4 {
@@ -699,6 +697,30 @@ section .text-right {
        display: flex;
        align-items: center;
     }
+    .home-header {
+        margin-top: 63px;
+        position: fixed;
+        border-color: #b2b2b2;
+        padding-bottom: 0;
+    }
+
+    .home-header ul, .user-guides-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100vw;
+    }
+
+    .home-header a, .user-guides-nav a {
+        font-size: 0.8rem;
+    }
+
+    .user-guides-nav {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        padding-bottom: 3px;
+    }
 
     /* Home */
 
@@ -708,29 +730,6 @@ section .text-right {
 
     .hero-section-logo {
         display: none;
-    }
-
-    .home-header {
-        margin-top: 63px;
-        position: fixed;
-        border-color: #b2b2b2;
-        padding-bottom: 0;
-    }
-
-    .home-header ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100vw;
-    }
-
-    .home-header a {
-        font-size: 0.8rem;
-    }
-
-    .page-nav-ul {
-        padding-top: 0;
-        padding-bottom: 3px;
     }
 
     .home-h1 {
@@ -767,12 +766,45 @@ section .text-right {
     }
 
     #user-guides-intro {
-        padding-top: 180px;
+        padding-top: 150px;
     }
 
-    .page-nav-ul li {
-        display: flex;
-        flex-direction: column;
+    .user-guides-h1 {
+        font-size: 1.2rem;
     }
+
+    #user-guides-intro, #put-on, #take-off, #videos {
+        margin: 0px 20px 0px 20px;
+    }
+
+    #user-guides-intro p, #user-guides-intro li, #put-on li, #take-off li {
+        text-align: justify;
+    }
+
+    #put-on ol, #take-off ol {
+        padding: 0;
+        margin: 0;
+    }
+
+    #put-on ol li, #take-off ol li {
+        width: 150px;
+        padding: 0;
+    }
+
+    #put-on img, #take-off img {
+        width: 130px;
+    }
+
+    .instruction {
+        margin: 0;
+        justify-content: flex-start;
+    }
+
+    .instruction-row {
+        justify-content: space-around;
+    }
+
+
+
 
 }
