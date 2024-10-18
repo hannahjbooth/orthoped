@@ -488,8 +488,6 @@ section .text-right {
 
 .put-on-3 {
     width: 400px;
-    border-style: solid;
-    border-color: black;
 }
 
 .put-on-4 {
@@ -525,6 +523,8 @@ section .text-right {
 .instruction-6 {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .instruction-text-1 {
@@ -539,7 +539,8 @@ section .text-right {
     width: 95%;
 }
 
-.put-on-3, .put-on-4, .put-on-5, .put-on-6 {
+
+.put-on-5, .put-on-6 {
     border-style: none;
 }
 
@@ -786,7 +787,7 @@ section .text-right {
         margin: 0;
     }
 
-    #put-on ol li, #take-off ol li {
+    .instructions-list li, .instructions-list ol li {
         width: 150px;
         padding: 0;
     }
@@ -802,6 +803,28 @@ section .text-right {
 
     .instruction-row {
         justify-content: space-around;
+    }
+
+    .put-on-4 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .put-on-5, .put-on-6, .put-on-7 {
+        height: 150px;
+        margin: 0;
+    }
+
+    .multiple-images-2 {
+        justify-content: space-around;
+    }
+
+    .instructions-list .instruction-text-5 {
+        width: 350px;
+    }
+
+    .instructions-list .instruction-text-6 {
+        margin-left: 20px;
     }
 
 
