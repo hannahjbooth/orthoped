@@ -866,8 +866,19 @@ section .text-right {
     }
 
     .feedback-content {
-        padding-top: 200px;
+        padding-top: 70px;
     }
+
+    .feedback-intro {
+        text-align: justify;
+        margin: 0px 20px 29px 20px;
+    }
+
+    .question {
+        max-width: 280px;
+    }
+
+
 
 
 
