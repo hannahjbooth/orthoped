@@ -44,12 +44,6 @@ h1 {
 
 /* Header */
 
-/* .blank-space {
-    display: flex;
-    width: 100vw;
-    height: 30px;
-} */
-
 header {
     padding-top: 15px;
     display: flex;
@@ -234,7 +228,10 @@ footer {
     margin-bottom: 10px;
 }
 
+
+
 .address span {
+    display: none;
     padding-top: 3px;
     padding-bottom: 3px;
 }
