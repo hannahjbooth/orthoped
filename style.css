@@ -708,7 +708,7 @@ section .text-right {
     .home-header ul, .user-guides-nav {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         width: 100vw;
     }
 
@@ -739,6 +739,7 @@ section .text-right {
     
     .overview {
         width: 100%;
+        margin-top: 15px;
     }
 
     section .images, .image-placeholder, .image-placeholder-history {
@@ -766,8 +767,12 @@ section .text-right {
         padding-top: 150px;
     }
 
+    .user-guides-scroll-target {
+        scroll-margin-top: 295px;
+    }
+
     #user-guides-intro {
-        padding-top: 150px;
+        padding-top: 130px;
     }
 
     .user-guides-h1 {
@@ -775,7 +780,7 @@ section .text-right {
     }
 
     #user-guides-intro, #put-on, #take-off, #videos {
-        margin: 0px 20px 0px 20px;
+        margin: 0px 30px 0px 30px;
     }
 
     #user-guides-intro p, #user-guides-intro li, #put-on li, #take-off li {
@@ -786,16 +791,25 @@ section .text-right {
         padding: 10px 5px 10px 5px;
     }
 
+    #put-on .instruction-1, #put-on .instruction-3, #take-off .instruction-1, #take-off .instruction-3 {
+        margin-right: 10px;
+    }
+
+    #put-on .instruction-2, #put-on .instruction-4, #take-off .instruction-2, #take-off .instruction-4 {
+        margin-left: 10px;
+    }
+
     .instruction-text {
         margin: 10px 0px 15px 0px;
     }
 
     #put-on .instruction-text-6 {
-        margin: 0px 40px 15px 40px;
+        margin: 0px 15px 15px 40px;
     }
 
     #put-on .instruction-text-5 {
         margin: 10px 10px 15px 20px;
+        width: 93%;
     }
 
     #put-on ol, #take-off ol {
@@ -815,10 +829,12 @@ section .text-right {
     .instruction {
         margin: 0;
         justify-content: flex-start;
+        max-width: 100%;
     }
 
     .instruction-row {
         justify-content: space-around;
+        max-width: 100%;
     }
 
     .put-on-4 {
@@ -831,22 +847,24 @@ section .text-right {
         margin: 0;
     }
 
-    .multiple-images-2 {
+    /* .multiple-images-2 {
         justify-content: space-around;
-        margin-right: 10px;
-    }
+        margin: 0px 10px 0px 10px;
+    } */
 
     .take-off-4 {
-        max-height: 150px
+        max-height: 150px;
     }
 
-    .instructions-list .instruction-text-5 {
-        width: 350px;
+    .instructions-list {
+        width: 100%;
     }
 
-    .instructions-list .instruction-text-6 {
+    
+
+    /* .instructions-list .instruction-text-6 {
         margin-left: 20px;
-    }
+    } */
 
 
 
