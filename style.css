@@ -878,6 +878,24 @@ section .text-right {
         max-width: 280px;
     }
 
+    /* FAQ */
+
+    .faqs-main {
+        padding-top: 160px;
+    }
+
+    .faqs-main h1 {
+        margin: 15px 0px 10px 0px;
+    }
+
+    .faqs-main .questions {
+        padding-top: 50px;
+        margin: 0px 20px 0px 20px;
+    }
+
+    .faqs-main h2 {
+        padding-top: 10px;
+    }
 
 
 
