@@ -674,11 +674,11 @@ section .text-right {
     .mobile-home-nav-title {
         display: initial;
         font-family: "Merriweather", "Times New Roman", serif;
-        font-size: 0.85rem;
+        font-size: 1.2rem;
         font-weight: 500;
-        margin: 0px 0px 0px 14px;
+        margin: 10px 0px 0px 0px;
         text-align: center;
-        color:#595757;
+        /* color:#595757; */
     }
     
 
@@ -700,6 +700,8 @@ section .text-right {
        align-items: center;
     }
     .home-header {
+        display: flex;
+        flex-direction: column;
         margin-top: 63px;
         position: fixed;
         border-color: #b2b2b2;
@@ -725,6 +727,10 @@ section .text-right {
     }
 
     /* Home */
+
+    .page-nav-ul {
+        padding-top: 0;
+    }
 
     .home-scroll-target {
         scroll-margin-top: 260px;
