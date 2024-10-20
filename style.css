@@ -782,6 +782,22 @@ section .text-right {
         text-align: justify;
     }
 
+    .instruction {
+        padding: 10px 5px 10px 5px;
+    }
+
+    .instruction-text {
+        margin: 10px 0px 15px 0px;
+    }
+
+    #put-on .instruction-text-6 {
+        margin: 0px 40px 15px 40px;
+    }
+
+    #put-on .instruction-text-5 {
+        margin: 10px 10px 15px 20px;
+    }
+
     #put-on ol, #take-off ol {
         padding: 0;
         margin: 0;
@@ -817,6 +833,11 @@ section .text-right {
 
     .multiple-images-2 {
         justify-content: space-around;
+        margin-right: 10px;
+    }
+
+    .take-off-4 {
+        max-height: 150px
     }
 
     .instructions-list .instruction-text-5 {
