@@ -900,8 +900,26 @@ section .text-right {
         padding-top: 10px;
     }
 
+    /* Contact Us */
 
+    .contact-us-main {
+        padding-top: 120px;
+    }
 
+    .contact-us-h1 h1 {
+        margin: 15px 0px 10px 0px;
+    }
 
+    .contact-us-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-us-content p {
+        justify-content: center;
+
+        text-align: justify;
+        width: 90%;
+    }
 
 }
