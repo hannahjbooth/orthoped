@@ -55,16 +55,19 @@
                 <form id="contact-form" name="contact-form" action="/thank-you" method="POST" data-netlify="true">
                     <fieldset>
                         <legend>OrthoPed Contact Form</legend>
-                        <p>Please use this form to get in touch with us</p>
+                        <!-- <p>Please use this form to get in touch with us</p> -->
                         <p>* Indicates required question</p>
+                        <p class="required-message hidden">Required</p>
                         <label for="contact-form-name">Name *</label>
                         <input type="text" id="contact-form-name" value="Name" required>
                         <br>
                         <br>
+                        <p class="required-message hidden">Required</p>
                         <label for="contact-form-email">Email Address *</label>
                         <input type="email" id="contact-form-email" value="Email Address" required>
                         <br>
                         <br>
+                        <p class="required-message hidden">Required</p>
                         <label for="contact-form-help">How can we help you? *</label>
                         <textarea name="contact-form-help" id="contact-form-help" value="How can we help you?"></textarea>
                         <br>
