@@ -591,6 +591,13 @@ section .text-right {
     pointer-events: none;
 }
 
+/* Privacy Policy */
+
+.privacy-policy-main {
+    
+}
+
+
 /* Styling for mobile devices */
 
 @media (max-width: 430px) {
