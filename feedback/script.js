@@ -353,4 +353,16 @@
             }
         return false;
     }
+
+
+    let feedbackForm = document.getElementById('feedback-form');
+    // console.log('feedback form variable', feedbackForm);
+    
+    
+    feedbackForm.addEventListener('click', function(event){
+        let formData = new FormData(document.getElementById('feedback-form'));
+        console.log(formData.entries());
+    })
+
+    
     
