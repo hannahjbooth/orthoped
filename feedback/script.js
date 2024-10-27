@@ -361,8 +361,10 @@
     
     feedbackForm.addEventListener('click', function(event){
         let formData = new FormData(document.getElementById('feedback-form'));
-        console.log(formData.entries());
+        console.log(Object.fromEntries(formData));
     })
+
+    // let submitButton = document.getElementById('submit')
 
     
     
