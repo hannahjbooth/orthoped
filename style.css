@@ -591,14 +591,13 @@ section .text-right {
     pointer-events: none;
 }
 
-/* Privacy Policy */
+/* Privacy Policy & Data Protection Policy */
 
-
-.privacy-policy-main {
+.privacy-policy-main, .data-protection-main {
     padding-top: 90px;
 }
 
-.privacy-policy-content {
+.privacy-policy-content, .data-protection-content {
     padding-top: 80px;
     margin: 0px 20px 0px 20px;
 }
@@ -608,8 +607,6 @@ section .text-right {
     margin-top: 12px;
     margin-bottom: 12px;
 }
-
-
 
 /* Styling for mobile devices */
 
