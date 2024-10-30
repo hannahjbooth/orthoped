@@ -594,7 +594,7 @@ section .text-right {
 /* Privacy Policy */
 
 .privacy-policy-main {
-    
+    padding: 0px 20px 0px 20px;
 }
 
 
