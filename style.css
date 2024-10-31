@@ -610,6 +610,19 @@ section .text-right {
 
 /* Shop */
 
+/* 
+Colours
+    Grey: 868585
+    Blue/Green: 80BDBC
+
+    test grey: #f7f6f5
+ */
+
+
+.shop-intro-p {
+    margin: 20px;
+}
+
 .shop-content {
     padding-top: 80px;
 }
@@ -631,16 +644,27 @@ section .text-right {
 .product {
     display: flex;
     flex-direction: column;
-    border-style: solid;
+    background-color: #776b6b17;
     border-width: 1px;
-    height: 400px;
+    height: 370px;
     width: 600px;
     margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e;   
+}
+
+.product-title-container {
+    text-align: center;
 }
 
 .product-title {
-    text-align: center;
+    width: fit-content;
     font-family: "Albert Sans", sans-serif;
+    color: white;
+    background-color:#80bdbccf;
+    display: inline-block;
+    padding: 7px 12px 7px 12px;
+    border-radius: 15px;
 }
 
 
@@ -648,6 +672,7 @@ section .text-right {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    /* padding: 10px 0px 30px 0px; */
 }
 
 #interest-adult-splint {
@@ -655,7 +680,6 @@ section .text-right {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
 .interest-details {
@@ -671,7 +695,7 @@ section .text-right {
 .product-image {
     display: flex;
     width: 40%;
-    height: 300px;
+    height: 280px;
     margin-left: 3%;
     align-items: center;
 }
