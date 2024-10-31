@@ -630,6 +630,7 @@ Colours
 .products {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 @media (max-width: 1000px) {
@@ -646,7 +647,7 @@ Colours
     flex-direction: column;
     background-color: #776b6b17;
     border-width: 1px;
-    height: 370px;
+    height: 380px;
     width: 600px;
     margin: 20px;
     border-radius: 10px;
