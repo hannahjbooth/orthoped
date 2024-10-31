@@ -961,13 +961,13 @@ section .text-right {
         /* text-align: end; */
     }
 
-    /* Privacy Policy and Data Protection Policy */
+    /* Privacy Policy, Data Protection Policy and Information for Use */
 
-    .privacy-policy-main, .data-protection-main {
+    .privacy-policy-main, .data-protection-main, .info-for-use-main {
         padding-top: 155px;
     }
 
-    .privacy-policy-content, .data-protection-content {
+    .privacy-policy-content, .data-protection-content, .info-for-use-content {
         padding-top: 70px;
     }
 
