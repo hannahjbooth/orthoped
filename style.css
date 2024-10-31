@@ -961,5 +961,14 @@ section .text-right {
         /* text-align: end; */
     }
 
+    /* Privacy Policy and Data Protection Policy */
+
+    .privacy-policy-main, .data-protection-main {
+        padding-top: 155px;
+    }
+
+    .privacy-policy-content, .data-protection-content {
+        padding-top: 70px;
+    }
 
 }
