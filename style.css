@@ -640,8 +640,9 @@ section .text-right {
 
 .product-title {
     text-align: center;
-    font-family: "IBM Plex Serif", "Times New Roman", serif;
+    font-family: "Albert Sans", sans-serif;
 }
+
 
 .product-content {
     display: flex;
@@ -668,15 +669,24 @@ section .text-right {
 }
 
 .product-image {
+    display: flex;
     width: 40%;
     height: 300px;
+    margin-left: 3%;
+    align-items: center;
+}
+
+.splint-image {
+    max-width: 100%;
+    max-height: 100%;
     border-style: solid;
     border-width: 1px;
-    margin-left: 3%;
 }
 
 .interest-form-submit {
     align-items: center;
+    font-family: "Albert Sans", sans-serif;
+
 }
 
 /* Styling for mobile devices */
@@ -1041,5 +1051,29 @@ section .text-right {
     .privacy-policy-content, .data-protection-content, .info-for-use-content {
         padding-top: 70px;
     }
+
+    /* Shop */
+    .shop-main {
+        padding-top: 155px;
+    }
+
+    .product {
+        width: 90%;
+        height: 320px;
+    }
+
+    .product-image {
+        height: 100%;
+    }
+
+    .product-content {
+        height: 90%;
+        margin-bottom: 10%;
+    }
+
+    #interest-adult-splint, #interest-child-splint {
+        justify-content: space-between;
+    }
+
 
 }
