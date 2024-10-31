@@ -614,7 +614,23 @@ section .text-right {
     padding-top: 80px;
 }
 
+.products {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 1000px) {
+    .products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
 .product {
+    display: flex;
+    flex-direction: column;
     border-style: solid;
     border-width: 1px;
     height: 400px;
@@ -622,11 +638,45 @@ section .text-right {
     margin: 20px;
 }
 
-.shop-image {
-    width: 200px;
-    height: 200px;
+.product-title {
+    text-align: center;
+    font-family: "IBM Plex Serif", "Times New Roman", serif;
+}
+
+.product-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#interest-adult-splint {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.interest-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-form {
+    width: 40%;
+    margin-right: 3%;
+}
+
+.product-image {
+    width: 40%;
+    height: 300px;
     border-style: solid;
     border-width: 1px;
+    margin-left: 3%;
+}
+
+.interest-form-submit {
+    align-items: center;
 }
 
 /* Styling for mobile devices */
