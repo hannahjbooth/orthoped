@@ -262,11 +262,14 @@ textarea {
 /* Footer */
 footer {
     width: 100%;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
+    border-color: #7b7b7b4e; */
     text-align: center;
     font-family: "Merriweather", "Times New Roman", serif;
     font-size: 0.8rem;
+    background: linear-gradient(to top, #ffffff, #ffffff,#ffffff,#ffffff, #7b7b7b13);
+
 }
 
 .row {
