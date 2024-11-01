@@ -579,7 +579,7 @@ section .text-right {
 /* FAQS */
 
 .faqs-main {
-    padding-top: 75px;
+    padding-top: 85px;
 }
 
 .questions {
@@ -587,41 +587,63 @@ section .text-right {
 }
 
 .accordeon {
+    margin: 0px 20px 0px 20px;
     padding-top: 80px;
     list-style-type: none; 
     padding-left: 0;
 }
 
-li.accordeon-section {
-    display: flex;        /* Use flexbox for alignment */
-   flex-direction: row;  /* Align items vertically */
-  }
+.accordeon-section {
+    background-color: #776b6b17;
+    border-width: 1px;
+    width: 800px;
+    padding-left: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e;   
+}
 
-li.accordeon-section::before {
+.accordeon-button h2 {
+    display: inline-flex; 
+    align-items: center;  
+    /* margin: 0; */
+}
+
+.accordeon-button h2::before {
     content: "+";
     margin-right: 8px;
-    color: #333;
-    font-weight: bold;     /* Optional: make it bold */
-  }
+    color: #80BDBC; 
+    font-weight: bold;
+    font-size: 1.5rem;
+}
 
 .faqs-main h2 {
     font-size: 1rem;
-    font-weight:300;
+    font-weight:400;
 }
-
 
 .accordeon-content {
     max-height: 0;            
     opacity: 0;               
     overflow: hidden;        
     transition: max-height 0.3s ease, opacity 0.3s ease;
-  }
+    margin-left: 20px;
+    margin-right: 20px;
+}
   
-  .accordeon-content.visible {
+.accordeon-content.visible {
     max-height: 1000px;
     opacity: 1;
     display: block;
-  }
+}
+
+.accordeon-content p {
+    margin-top: 0px;
+}
+
+.p-with-top-margin {
+    margin-top: 16.8px;
+}
 
 /* Contact Us */
 
