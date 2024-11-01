@@ -4,6 +4,10 @@ Colours
     Blue/Green: 80BDBC
  */
 
+/* Accordeon */
+
+
+
 body {
     margin: 0;
     padding: 0;
@@ -574,9 +578,34 @@ section .text-right {
 
 /* FAQS */
 
+.faqs-main {
+    padding-top: 75px;
+}
+
 .questions {
     padding-top: 100px;
 }
+
+.accordeon {
+    padding-top: 80px;
+}
+
+.faqs-main h2 {
+    font-size: 1rem;
+    font-weight:300;
+}
+
+.accordeon-content {
+    max-height: 0;            
+    opacity: 0;               
+    overflow: hidden;        
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .accordeon-content.visible {
+    max-height: 1000px;
+    opacity: 1;
+  }
 
 /* Contact Us */
 
