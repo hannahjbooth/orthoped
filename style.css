@@ -588,12 +588,27 @@ section .text-right {
 
 .accordeon {
     padding-top: 80px;
+    list-style-type: none; 
+    padding-left: 0;
 }
+
+li.accordeon-section {
+    display: flex;        /* Use flexbox for alignment */
+   flex-direction: row;  /* Align items vertically */
+  }
+
+li.accordeon-section::before {
+    content: "+";
+    margin-right: 8px;
+    color: #333;
+    font-weight: bold;     /* Optional: make it bold */
+  }
 
 .faqs-main h2 {
     font-size: 1rem;
     font-weight:300;
 }
+
 
 .accordeon-content {
     max-height: 0;            
@@ -605,6 +620,7 @@ section .text-right {
   .accordeon-content.visible {
     max-height: 1000px;
     opacity: 1;
+    display: block;
   }
 
 /* Contact Us */
