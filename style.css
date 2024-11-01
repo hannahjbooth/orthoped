@@ -580,10 +580,17 @@ section .text-right {
 
 .faqs-main {
     padding-top: 85px;
+
+}
+
+.faq-content {
+    display: flex;
+    justify-content: center;
 }
 
 .questions {
     padding-top: 100px;
+
 }
 
 .accordeon {
