@@ -885,6 +885,12 @@ Colours
 
 }
 
+/* Information for Use */
+
+.info-for-use-main {
+    height: 50vh;
+}
+
 /* Styling for mobile devices */
 
 @media (max-width: 430px) {
@@ -1247,6 +1253,10 @@ Colours
 
     .privacy-policy-content, .data-protection-content, .info-for-use-content {
         padding-top: 70px;
+    }
+
+    .info-for-use-main {
+        height: 100vh;
     }
 
     /* Shop */
