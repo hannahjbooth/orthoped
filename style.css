@@ -493,17 +493,6 @@ section .text-right {
 
 /* User Guides */
 
-.user-guides-header {
-    position: fixed;
-    width: 100vw;
-    z-index: 2;   
-    border-width: 1px;
-    border-bottom: solid;
-    border-width: 1px;
-    border-color: #868585;
-    background: white;
-}
-
 #user-guides-intro {
     padding-top: 120px;
 }
