@@ -45,6 +45,15 @@ h1 {
     text-underline-offset: 3px; */
 }
 
+.page-h1-container {
+    position: fixed;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: #ece8e8;
+    background-color: white;
+    background: linear-gradient(to bottom, #ffffff, #ffffff, #f9f7f7);
+}
+
 .h1-container {
     position: fixed;
     border-bottom: solid;
