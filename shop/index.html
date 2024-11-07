@@ -51,156 +51,157 @@
         <div class="overlay">
             <div class="page-h1-container">
                 <h1>Shop</h1>
+                <nav>
+                    <ul class="page-nav-ul shop">
+                        <li><a href="/shop/index.html#availability">FUTURE AVAILABILITY</a></li>
+                        <li><a href="/shop/index.html#size">SIZES</a></li>
+                        <li><a href="/shop/index.html#interest">REGISTER YOUR INTEREST</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="shop-content">
-
                 <div class="shop-intro-p">
-                    <h2>OrthoPed splint future availability</h2>
-                    <p class="shop-intro-p1">The children OrthoPed splints will be launched in <span>Spring 2025</span> with the adult
-                    OrthoPed splints being launched in <span>2026</span>. <span>Please register your interest below for a 5%
-                    introductory discount.</span></p><br>
-                    <h2>How to decide which OrthoPed splint size to order</h2>
-                    <p class="shop-intro-p2">To measure the size of OrthoPed splint use a tape measure around the widest part
-                    of your ankle as shown in the picture below.</p>
-
-                    <div class="shop-tables">
-                        <table class="child-table">
-                            <tr>
-                              <th>Children Size</th>
-                              <th>Ankle circumference (cm)</th>
-                            </tr>
-                            <tr>
-                              <td>Extra small</td>
-                              <td>13-16cm</td>
-                            </tr>
-                            <tr>
-                                <td>Small</td>
-                                <td>15-18cm</td>
-                            </tr>
-                            <tr>
-                                <td>Medium</td>
-                                <td>17-20cm</td>
-                            </tr>
-                            <tr>
-                                <td>Large</td>
-                                <td>19-22cm</td>
-                            </tr>
-                        </table>
-                        <table class="adult-table">
-                            <tr>
-                              <th>Adult Size</th>
-                              <th>Ankle circumference (cm)</th>
-                            </tr>
-                            <tr>
-                                <td>Small</td>
-                                <td>19-22cm</td>
-                            </tr>
-                            <tr>
-                                <td>Medium</td>
-                                <td>21-24cm</td>
-                            </tr>
-                            <tr>
-                                <td>Large</td>
-                                <td>23-26cm</td>
-                            </tr>
-                            <tr>
-                                <td>Extra Large</td>
-                                <td>25-28cm</td>
-                              </tr>
-                        </table>
-                    </div>
-
-
-                    <img class="foot-measurement" src="/assets/foot-measure.png" alt="Foot being measured around the widest part of the ankle with a tape measure">
-                </div>
-                <h2 class="products-h2">Register your interest</h2>
-                <div class="products">
-                    <div class="product">
-                        <div class="product-title-container">
-                            <p class="product-title">ADULT SPLINT</p>
+                    <section id="availability" class="shop-scroll-target">
+                        <h2>OrthoPed splint future availability</h2>
+                        <p class="shop-intro-p shop-intro-p1">The children OrthoPed splints will be launched in <span>Spring 2025</span> with the adult
+                        OrthoPed splints being launched in <span>2026</span>. <span>Please register your interest below for a 5%
+                        introductory discount.</span></p><br>
+                    </section>
+                    <section id="size" class="shop-scroll-target">
+                        <h2>How to decide which OrthoPed splint size to order</h2>
+                        <p class="shop-intro-p shop-intro-p2">To measure the size of OrthoPed splint use a tape measure around the widest part
+                        of your ankle as shown in the picture below.</p>
+                        <div class="shop-tables">
+                            <table class="child-table">
+                                <tr>
+                                  <th>Children Size</th>
+                                  <th>Ankle circumference (cm)</th>
+                                </tr>
+                                <tr>
+                                  <td>Extra small</td>
+                                  <td>13-16cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Small</td>
+                                    <td>15-18cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Medium</td>
+                                    <td>17-20cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Large</td>
+                                    <td>19-22cm</td>
+                                </tr>
+                            </table>
+                            <table class="adult-table">
+                                <tr>
+                                  <th>Adult Size</th>
+                                  <th>Ankle circumference (cm)</th>
+                                </tr>
+                                <tr>
+                                    <td>Small</td>
+                                    <td>19-22cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Medium</td>
+                                    <td>21-24cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Large</td>
+                                    <td>23-26cm</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra Large</td>
+                                    <td>25-28cm</td>
+                                  </tr>
+                            </table>
                         </div>
-                        <div class="product-content">
+                        <img class="foot-measurement" src="/assets/foot-measure.png" alt="Foot being measured around the widest part of the ankle with a tape measure">    
+                    </section>
+                </div>
+                <section id="interest" class="shop-scroll-target">
+                    <h2 class="products-h2">Register your interest</h2>
+                    <div class="products">
+                        <div class="product">
+                            <div class="product-title-container">
+                                <p class="product-title">ADULT SPLINT</p>
+                            </div>
+                            <div class="product-content">
+                                <div class="product-image">
+                                    <img src="/assets/Claires Spint-7.JPG" class="splint-image" alt="Photo of the OrthoPed Footdrop Splint">
+                                </div>
+                                <div class="product-form">
+                                    <form action="POST" id="interest-adult-splint" name="Interest in Adult Splint" netlify>
+                                        <div class="interest-options">
+                                            <label for="adult-select">Select size:</label>
+                                            <select name="adult-select" id="adult-select">
+                                                <option value="" disabled selected></option>
+                                                <option value="Small">Small</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Large">Large</option>
+                                                <option value="Extra Large">Extra Large</option>
+                                            </select>
+                                        </div>    
+                                        <div class="interest-details">
+                                            <label for="shop-name">Name:</label>
+                                            <input type="text" id="shop-name">
+                
+                                            <label for="shop-surname">Surname:</label>
+                                            <input type="text" id="shop-surname">
+                
+                                            <label for="shop-email">Email:</label>
+                                            <input type="email" id="shop-email">
+                                        </div>
+    
+                                        <button id="interest-form-submit" class="interest-form-submit" type="submit">
+                                            Register your Interest<br>for a 5% Discount
+                                        </button>
+                                    </form>                            
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="product">
+                            <div class="product-title-container">
+                                <p class="product-title">CHILD SPLINT</p>
+                            </div>
+                            <div class="product-content">
                             <div class="product-image">
                                 <img src="/assets/Claires Spint-7.JPG" class="splint-image" alt="Photo of the OrthoPed Footdrop Splint">
                             </div>
-                            <div class="product-form">
-                                <form action="POST" id="interest-adult-splint" name="Interest in Adult Splint" netlify>
-                                    <div class="interest-options">
-                                        <label for="adult-select">Select size:</label>
-                                        <select name="adult-select" id="adult-select">
-                                            <option value="" disabled selected></option>
-                                            <option value="Small">Small</option>
-                                            <option value="Medium">Medium</option>
-                                            <option value="Large">Large</option>
-                                            <option value="Extra Large">Extra Large</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="interest-details">
-                                        <label for="shop-name">Name:</label>
-                                        <input type="text" id="shop-name">
-            
-                                        <label for="shop-surname">Surname:</label>
-                                        <input type="text" id="shop-surname">
-            
-                                        <label for="shop-email">Email:</label>
-                                        <input type="email" id="shop-email">
-                                    </div>
-
-                                    <button id="interest-form-submit" class="interest-form-submit" type="submit">
-                                        Register your Interest<br>for a 5% Discount
-                                    </button>
-                                </form>                            
-                            </div>                        
-                        </div>
-
-
-                    </div>
-                    <div class="product">
-                        <div class="product-title-container">
-                            <p class="product-title">CHILD SPLINT</p>
-                        </div>
-                        <div class="product-content">
-                        <div class="product-image">
-                            <img src="/assets/Claires Spint-7.JPG" class="splint-image" alt="Photo of the OrthoPed Footdrop Splint">
-                        </div>
-                            <div class="product-form">
-                                <form action="POST" id="interest-adult-splint" name="Interest in Child Splint" netlify>
-                                    <div class="interest-options">
-                                        <label for="child-select-size">Select size:</label>
-                                        <select name="child-select-size" id="adult-select-size" required>
-                                            <option value="" disabled selected></option>
-                                            <option value="Extra Small">Extra Small</option>
-                                            <option value="Small">Small</option>
-                                            <option value="Medium">Medium</option>
-                                            <option value="Large">Large</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="interest-details">
-                                        <label for="shop-name">Name:</label>
-                                        <input type="text" id="shop-name">
-            
-                                        <label for="shop-surname">Surname:</label>
-                                        <input type="text" id="shop-surname">
-            
-                                        <label for="shop-email">Email:</label>
-                                        <input type="email" id="shop-email">
-                                    </div>
-
-                                    <button id="interest-form-submit" class="interest-form-submit" type="submit">
-                                        Register your Interest<br>for a 5% Discount
-                                    </button>
-                                </form>                            
-                            </div>                        
+                                <div class="product-form">
+                                    <form action="POST" id="interest-adult-splint" name="Interest in Child Splint" netlify>
+                                        <div class="interest-options">
+                                            <label for="child-select-size">Select size:</label>
+                                            <select name="child-select-size" id="adult-select-size" required>
+                                                <option value="" disabled selected></option>
+                                                <option value="Extra Small">Extra Small</option>
+                                                <option value="Small">Small</option>
+                                                <option value="Medium">Medium</option>
+                                                <option value="Large">Large</option>
+                                            </select>
+                                        </div>
+    
+                                        <div class="interest-details">
+                                            <label for="shop-name">Name:</label>
+                                            <input type="text" id="shop-name">
+                
+                                            <label for="shop-surname">Surname:</label>
+                                            <input type="text" id="shop-surname">
+                
+                                            <label for="shop-email">Email:</label>
+                                            <input type="email" id="shop-email">
+                                        </div>
+    
+                                        <button id="interest-form-submit" class="interest-form-submit" type="submit">
+                                            Register your Interest<br>for a 5% Discount
+                                        </button>
+                                    </form>                            
+                                </div>                        
+                            </div>
                         </div>
                     </div>
-                </div>
-
-
-
-
-
+                </section>
             </div>            
         </div>
     </main>
