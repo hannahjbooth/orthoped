@@ -308,11 +308,22 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     font-family: "Albert Sans", sans-serif;
+    line-height: 0.7rem;
+    letter-spacing: 0.04rem;
 }
+
+/* .key-info span {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 1rem;
+} */
 
 .key-info p {
     margin: 3px;
 }
+
+/* .copyright {
+    font-size: 1.2rem;
+} */
 
 .logos {
     border-style: solid;
@@ -337,7 +348,10 @@ footer {
     margin-bottom: 10px;
 }
 
+.contact-details {
+    margin-left: 5vw;
 
+}
 
 .address span {
     display: none;
@@ -348,7 +362,7 @@ footer {
 .address, .policies {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    text-align: center;
     margin-block-start: 0px;
     margin-block-end: 0px;
     margin-top: 20px;
@@ -408,11 +422,13 @@ footer {
 .ortho {
     color: #80BDBC;
     font-weight: 300;
+    font-family: "Merriweather", "Times New Roman", serif;
 }
 
 .ped {
     color: #868585;
     font-weight: 300;
+    font-family: "Merriweather", "Times New Roman", serif;
 }
 
 /* 
