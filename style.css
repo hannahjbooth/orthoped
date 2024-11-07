@@ -290,11 +290,7 @@ textarea {
     margin: 0px 0px 5px 0px;
     color: red;
 }
-    /* Dynamic styling */
 
-    .hidden {
-        display: none;
-    }
 /* Footer */
 footer {
     width: 100%;
@@ -1312,3 +1308,9 @@ th {
 
 
 }
+
+    /* Dynamic styling */
+
+    .hidden {
+        display: none;
+    }
