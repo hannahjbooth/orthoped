@@ -321,9 +321,10 @@ footer {
     margin: 3px;
 }
 
-/* .copyright {
-    font-size: 1.2rem;
-} */
+.copyright {
+    font-size: 1.05rem;
+    font-weight: 200;
+}
 
 .logos {
     border-style: solid;
@@ -430,6 +431,7 @@ footer {
     font-weight: 300;
     font-family: "Merriweather", "Times New Roman", serif;
 }
+
 
 /* 
 Colours
