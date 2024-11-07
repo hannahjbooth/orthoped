@@ -753,6 +753,10 @@ section .text-right {
 
 /* Shop */
 
+.shop-scroll-target {
+    scroll-margin-top: 200px;
+}
+
 .shop-tables {
     display: flex;
     flex-direction: row;
