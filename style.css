@@ -1024,6 +1024,7 @@ th {
         width: 100vw;
         margin: 0;
         padding-bottom: 5px;
+        align-items: center;
 
     }
 
@@ -1272,8 +1273,22 @@ th {
         padding-top: 160px;
     }
 
-    .faqs-main h1 {
-        margin: 15px 0px 10px 0px;
+    /* .faq-content {
+        width: 100vw;
+    } */
+
+    .accordeon {
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100vw;
+        align-items: center;
+    }
+
+    .accordeon-section {
+        max-width: 320px;
+        margin: 10px 0px 10px 0px;
     }
 
     .faqs-main .questions {
@@ -1282,7 +1297,8 @@ th {
     }
 
     .faqs-main h2 {
-        padding-top: 10px;
+        padding-right: 10px;
+        line-height: 1.5rem;
     }
 
     /* Contact Us */
@@ -1343,8 +1359,21 @@ th {
     }
 
     /* Shop */
+
     .shop-main {
         padding-top: 155px;
+    }
+
+    .shop-content {
+        padding-top: 110px;
+    }
+
+    .shop-scroll-target {
+        scroll-margin-top: 280px;
+    }
+
+    .shop-tables {
+        flex-direction: column;
     }
 
     .product {
