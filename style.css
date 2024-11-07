@@ -729,7 +729,19 @@ section .text-right {
 /* Contact Us */
 
 .contact-us-content, .feedback-content {
-    padding-top: 115px;
+    padding-top: 80px;
+}
+
+.contact-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us-content p {
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 
@@ -738,6 +750,47 @@ section .text-right {
     background-color: rgba(0, 0, 0, 0.4);
     z-index: 3;
     pointer-events: none;
+}
+
+#contact-form {
+    width: 60%;
+    background-color: #776b6b17;
+    border-width: 1px;
+    border-color: #30303073;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e;   
+}
+
+#contact-form fieldset {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+
+#contact-form .question {
+    background-color: #776b6b17;
+    border-width: 1px;
+    border-color: #30303073;
+    padding-left: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e;   
+}
+
+legend {
+    display: flex;
+    width: fit-content;
+    font-family: "Albert Sans", sans-serif;
+    color: white;
+    background-color:#80bdbccf;
+    display: inline-block;
+    padding: 7px 12px 7px 12px;
+    border-radius: 15px;
 }
 
 /* Privacy Policy & Data Protection Policy */
@@ -1240,7 +1293,7 @@ th {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 50px;
+        padding-top: 100px;
     }
 
     .contact-us-content p {
