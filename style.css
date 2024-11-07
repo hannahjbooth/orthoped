@@ -753,6 +753,26 @@ section .text-right {
 
 /* Shop */
 
+.shop-tables {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+table {
+    margin: 0px 10px 20px 10px;
+    padding: 5px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+td {
+    padding: 0;
+}
+
+th {
+    padding: 0px 10px 0px 10px;
+}
 
 
 /* 
@@ -887,9 +907,6 @@ Colours
 
 /* Information for Use */
 
-.info-for-use-main {
-    height: 50vh;
-}
 
 /* Styling for mobile devices */
 
