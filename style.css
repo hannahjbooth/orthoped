@@ -5,6 +5,16 @@ Colours
     light grey: #7b7b7b4e
  */
 
+/* 
+Colours
+    Grey: 868585
+    Blue/Green: 80BDBC
+
+    test grey: #f7f6f5
+ */
+
+
+
 /* Accordeon */
 
 
@@ -779,19 +789,10 @@ th {
 }
 
 
-/* 
-Colours
-    Grey: 868585
-    Blue/Green: 80BDBC
-
-    test grey: #f7f6f5
- */
-
-
-.shop-intro-p {
+/* .shop-intro-p {
     margin: 20px;
     text-align: center;
-}
+} */
 
 .shop-main h2 {
     font-size: 1.2rem;
@@ -807,7 +808,7 @@ Colours
     font-weight: 400;
 }
 
-.shop-intro-p img {
+.shop-content img {
     width: 300px;
     border-style: solid;
     border-width: 1px;
@@ -815,7 +816,13 @@ Colours
 }
 
 .shop-content {
-    padding-top: 80px;
+    padding-top: 100px;
+    margin: 0px 20px 20px 20px;
+    text-align: center;
+}
+
+.shop-content section {
+    margin-bottom: 40px;
 }
 
 .products-h2 {
