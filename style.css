@@ -540,6 +540,11 @@ Colours
     display: flex;
     justify-content: space-evenly;
 }
+
+.home-page section {
+    display: flex;
+    justify-content: space-evenly;
+}
 section .images {
     display: flex;
     justify-content: center;
@@ -547,7 +552,7 @@ section .images {
 }
 
 section .text-left {
-    /* margin: 20px 20px 40px 60px; */
+    margin: 20px 40px 20px 40px;
     text-align: justify;
     width: 40%;
 }
