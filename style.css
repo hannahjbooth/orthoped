@@ -240,10 +240,14 @@ fieldset {
     text-align: left;
     border-style: solid;
     border-width: 1px;
-    max-width: 520px;
+    /* max-width: 520px; */
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
+}
+
+.contact-us-intro {
+    width: 60%;
 }
 
 .outer-form-fieldset {
@@ -434,18 +438,17 @@ footer {
 
 .image-placeholder {
     position: relative;
-    height: 55vh;
-    width: 40vw;
+    max-height: 80vh;
+    width: 42vw;
 }
 
 .image-placeholder img {
     position: absolute;
-    max-width: 70%;
+    max-width: 60%;
     border-style: solid;
     border-width: 5px;
     border-color: #f8f8f8;
-    box-shadow: 2px 2px 8px 0px #7b7b7b4e; 
-
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e;
 }
 
 .image-frame {
@@ -453,7 +456,7 @@ footer {
 }
 
 .img1 {
-    top: 0;
+    top: 30px;
     left: 0;
     width: 300px;
     transform: rotate(-5deg);
@@ -462,9 +465,45 @@ footer {
 .img2 {
     bottom: 0;
     right: 0;
-    width: 300px;
+    width: 270px;
     transform: rotate(5deg);
     z-index: -1;
+}
+
+.img3 {
+    top: 0;
+    left: 20px;
+    width: 500px;
+    max-height: 60%;
+    transform: rotate(-3deg);
+}
+
+.img4 {
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    transform: rotate(3deg);
+    z-index: -1;
+}
+
+.img5 {
+    top: 0;
+    left: 20px;
+    width: 500px;
+    transform: rotate(-7deg);
+}
+
+.img6 {
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    transform: rotate(5deg);
+    z-index: -1;
+}
+
+
+#what-is {
+    margin-top: 20px;
 }
 
 /* 
@@ -482,6 +521,10 @@ Colours
     flex-direction: row;
 }
 
+/* .home-page p {
+    lin
+} */
+
 .home-header {
     position: sticky;
     top: 100px;
@@ -493,6 +536,10 @@ Colours
     background: linear-gradient(to bottom, #ffffff, #f5f5f5);
 }
 
+section {
+    display: flex;
+    justify-content: space-evenly;
+}
 section .images {
     display: flex;
     justify-content: center;
@@ -500,13 +547,14 @@ section .images {
 }
 
 section .text-left {
-    margin: 20px 40px 20px 60px;
+    /* margin: 20px 20px 40px 60px; */
     text-align: justify;
-    width: 45%;
+    width: 40%;
 }
 
 section .text-right {
-    margin: 10px 60px 10px 40px;
+    /* margin: 20px 60px 20px 50px; */
+    margin: 20px;
     text-align: justify;
     width: 45%;
 }
@@ -1211,7 +1259,7 @@ th {
     }
 
     section .text-left, section .text-right {
-        margin: 0px 20px 0px 20px;
+        margin: 20px;
         width: 100%;
     }
 
