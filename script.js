@@ -53,6 +53,57 @@
         }
     });
 
+    // Highlight page section in page navigation bar upon hover
+    // IF page has page navigation
+        // FOR each li
+            // LET it link to a section of the page
+            // IF page is hovering over section
+                // LET li font weight increase by 200
+    
+    let main = document.querySelector("main");
+
+    function pageNavExists(main) {
+        if (main.querySelector(".page-nav-ul")) {
+            return true;
+        }
+    }
+
+    function pageNavUl(main) {
+        let ul = main.querySelector(".page-nav-ul");
+        return ul;
+    }
+
+
+    // if (pageNavExists(main) === true) {
+
+    //     console.log("page nav exists")
+
+    //     let ul = pageNavUl(main);
+    //     let lis = Array.from(ul.querySelectorAll("li"));
+    //     console.log("lis:", lis);
+
+    //     for (li of lis) {
+    //         let a = li.querySelectorAll("a");
+    //         console.log(a);
+    //     }
+    // }
+
+    // pageNavUl(main);
+
+    // function returnsArrayOfLi(main) {
+    //     let ArrayOfLi = Array.from(pageNavUl(main).querySelectorAll("li"));
+    //     console.log(ArrayOfLi);
+    // }
+
+    // returnsArrayOfLi(main);
+
+    // function returnsTextElement(main) {
+
+    // }
+
+
+
+
 
 
 
