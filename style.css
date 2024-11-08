@@ -438,7 +438,7 @@ footer {
 
 .image-placeholder {
     position: relative;
-    max-height: 80vh;
+    max-height: 85vh;
     width: 42vw;
 }
 
@@ -488,17 +488,18 @@ footer {
 
 .img5 {
     top: 0;
-    left: 20px;
+    left: -45px;
     width: 500px;
     transform: rotate(-7deg);
+    z-index: -1;
 }
 
 .img6 {
     bottom: 0;
     right: 0;
     width: 500px;
+    right: -10px;
     transform: rotate(5deg);
-    z-index: -1;
 }
 
 
@@ -521,9 +522,7 @@ Colours
     flex-direction: row;
 }
 
-/* .home-page p {
-    lin
-} */
+
 
 .home-header {
     position: sticky;
@@ -544,6 +543,7 @@ Colours
 .home-page section {
     display: flex;
     justify-content: space-evenly;
+    margin-bottom: 20px;
 }
 section .images {
     display: flex;
