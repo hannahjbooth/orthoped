@@ -246,6 +246,10 @@ fieldset {
     padding: 20px;
 }
 
+.radio-question {
+    display: initial;
+}
+
 .outer-form-fieldset {
     background-color: #776b6b17;
     border-width: 1px;
