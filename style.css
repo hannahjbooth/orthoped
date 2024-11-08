@@ -441,17 +441,30 @@ footer {
 .image-placeholder img {
     position: absolute;
     max-width: 70%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #f8f8f8;
+    box-shadow: 2px 2px 8px 0px #7b7b7b4e; 
+
+}
+
+.image-frame {
+    border-radius: 50%;
 }
 
 .img1 {
     top: 0;
     left: 0;
-    height: 100%;
+    width: 300px;
+    transform: rotate(-5deg);
 }
 
 .img2 {
     bottom: 0;
     right: 0;
+    width: 300px;
+    transform: rotate(5deg);
+    z-index: -1;
 }
 
 /* 
@@ -499,10 +512,6 @@ section .text-right {
 }
 
 .image-placeholder {
-    border-style: solid;
-    border-width: 1px;
-    /* width: 400px;
-    height: 300px; */
     margin-top: 30px;
 }
 
