@@ -536,7 +536,7 @@ Colours
     background: linear-gradient(to bottom, #ffffff, #f5f5f5);
 }
 
-section {
+.home-page header {
     display: flex;
     justify-content: space-evenly;
 }
