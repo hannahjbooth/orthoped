@@ -540,6 +540,10 @@ Colours
     justify-content: space-evenly;
 }
 
+.home-page p {
+    line-height: 1.4rem;
+}
+
 .home-page section {
     display: flex;
     justify-content: space-evenly;
@@ -976,9 +980,10 @@ th {
     padding-right: 20%;
 }
 
-.shop-intro-p1 span {
+.shop-intro-p1 span, .fontweight {
     font-weight: 400;
 }
+
 
 .shop-content img {
     width: 300px;
