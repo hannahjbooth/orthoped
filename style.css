@@ -1,3 +1,19 @@
+/* Universal styles */
+
+p, section li {
+    font-weight: 400;
+    color:#343434e0;
+}
+
+.shop-intro-p1 span, .fontweight {
+    font-weight: 500;
+    color:#232323
+}
+
+/* a {
+    white-space: nowrap;
+  } */
+
 /* 
 Colours
     Grey: 868585
@@ -979,11 +995,6 @@ th {
     padding-left: 20%;
     padding-right: 20%;
 }
-
-.shop-intro-p1 span, .fontweight {
-    font-weight: 400;
-}
-
 
 .shop-content img {
     width: 300px;
