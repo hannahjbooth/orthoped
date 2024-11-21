@@ -10,9 +10,9 @@ p, section li {
     color:#232323
 }
 
-p a {
+/* p a {
     white-space: nowrap;
-}
+} */
 
 
 /* 
@@ -576,6 +576,10 @@ section .text-left {
     margin: 20px 40px 20px 40px;
     text-align: justify;
     width: 40%;
+}
+
+.text-left p {
+    max-width: 100%;
 }
 
 section .text-right {
