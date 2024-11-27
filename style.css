@@ -372,8 +372,11 @@ footer {
 
 .contact-details {
     margin-left: 5vw;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 
 .address span {
     padding-top: 3px;
