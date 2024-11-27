@@ -537,11 +537,11 @@ footer {
 }
 
 .font-test-1 {
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .font-test-2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 
@@ -679,6 +679,19 @@ section .text-right {
 
 #user-guides-intro {
     padding-top: 120px;
+}
+
+#user-guides-intro p, #user-guides-intro li {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.4rem;;
+}
+
+#put-on li {
+    font-family: 'Lato', sans-serif;
+}
+
+#take-off li {
+    font-family: 'Roboto', sans-serif;
 }
 
 .user-guides-scroll-target {
