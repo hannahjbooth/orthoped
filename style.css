@@ -859,6 +859,11 @@ section .text-right {
     line-height: 1.4rem;
     font-size: 1rem;
 }
+.font-test-3 .data-h2 {
+    font-family: "Merriweather", "Times New Roman", serif;
+    font-size: 1.17em;
+}
+
 
 .font-test-4 h2, .font-test-4 p {
     font-family: 'Source Sans Pro', sans-serif;
@@ -876,17 +881,17 @@ section .text-right {
     font-size: 1rem;
 }
 
-.font-test-6 h2, .font-test-6 p {
+.font-test-6 h2, .font-test-6 p, .font-test-6 ol li {
     font-family: 'Lato', sans-serif;
     line-height: 1.4rem;
     font-size: 1rem;
 }
 
-.font-test-7 h2, .font-test-7 p {
+/* .font-test-7 h2, .font-test-7 p, .font-test-7 li {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.4rem;
     font-size: 1rem;
-}
+} */
 
 /* .font-test-8 h2, .font-test-8 p {
     font-family: 'Inter', sans-serif;
@@ -1035,8 +1040,12 @@ legend {
 
 /* Privacy Policy & Data Protection Policy */
 
+.data-h2 {
+    font-family: "Merriweather", "Times New Roman", serif;
+}
+
 .privacy-policy-main, .data-protection-main {
-    padding-top: 90px;
+    padding-top: 100px;
 }
 
 .privacy-policy-content, .data-protection-content {
