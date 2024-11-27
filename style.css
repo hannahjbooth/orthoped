@@ -530,6 +530,7 @@ footer {
 
 #what-is p {
     font-family: 'Roboto', sans-serif;
+    font-size: 1.05rem;
 }
 
 #history p {
@@ -546,11 +547,16 @@ footer {
 
 
 #funding p {
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1rem;
 }
 
 #further-info p {
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4rem;
 }
 
 /* 
@@ -681,18 +687,18 @@ section .text-right {
     padding-top: 120px;
 }
 
-#user-guides-intro p, #user-guides-intro li {
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1.4rem;;
+/* #user-guides-intro p, #user-guides-intro li {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
 }
 
 #put-on li {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 #take-off li {
     font-family: 'Roboto', sans-serif;
-}
+} */
 
 .user-guides-scroll-target {
     scroll-margin-top: 260px;
@@ -842,6 +848,53 @@ section .text-right {
 
 /* FAQS */
 
+.faqs-main h2 {
+    font-size: 1rem;
+    font-weight:400;
+}
+
+.font-test-3 h2, .font-test-3 p {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.font-test-4 h2, .font-test-4 p {
+    font-family: 'Source Sans Pro', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
+    line-height: 1.4rem;
+    font-size: 1.05rem;
+}
+
+.font-test-5 h2, .font-test-5 p, .font-test-5 li {
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4rem;
+    font-weight: 400;
+    /* color: #343434fb; */
+    font-size: 1rem;
+}
+
+.font-test-6 h2, .font-test-6 p {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+.font-test-7 h2, .font-test-7 p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1rem;
+}
+
+/* .font-test-8 h2, .font-test-8 p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.4rem;
+    font-size: 1rem;
+} */
+
+
 .faqs-main {
     padding-top: 100px;
 
@@ -888,10 +941,7 @@ section .text-right {
     font-size: 1.5rem;
 }
 
-.faqs-main h2 {
-    font-size: 1rem;
-    font-weight:400;
-}
+
 
 .accordeon-content {
     max-height: 0;            
