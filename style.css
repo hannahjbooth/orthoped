@@ -5,10 +5,10 @@ p, section li {
     color:#343434fb;
 }
 
-.shop-intro-p1 span, .fontweight {
-    font-weight: 500;
+/* .shop-intro-p1 span, .fontweight {
+    font-weight: 400;
     color:#232323
-}
+} */
 
 /* p a {
     white-space: nowrap;
@@ -530,7 +530,7 @@ footer {
 
 #what-is p {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1rem;
 }
 
 #history p {
@@ -543,6 +543,10 @@ footer {
 
 .font-test-2 {
     font-size: 1.05rem;
+}
+
+.font-test-3 {
+    font-size: 1rem;
 }
 
 
