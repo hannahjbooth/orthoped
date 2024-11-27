@@ -528,6 +528,31 @@ footer {
     margin-top: 20px;
 }
 
+#what-is p {
+    font-family: 'Roboto', sans-serif;
+}
+
+#history p {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.font-test-1 {
+    font-size: 1rem;
+}
+
+.font-test-2 {
+    font-size: 1.1rem;
+}
+
+
+#funding p {
+    font-family: 'Lato', sans-serif;
+}
+
+#further-info p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 /* 
 Colours
     Grey: 868585
