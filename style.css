@@ -264,7 +264,9 @@ fieldset {
 }
 
 .contact-us-intro {
-    width: 60%;
+    width: 50%;
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .outer-form-fieldset {
