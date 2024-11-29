@@ -53,56 +53,103 @@
         }
     });
 
-    // Highlight page section in page navigation bar upon hover
-    // IF page has page navigation
-        // FOR each li
-            // LET it link to a section of the page
-            // IF page is hovering over section
-                // LET li font weight increase by 200
+
     
-    let main = document.querySelector("main");
 
-    function pageNavExists(main) {
-        if (main.querySelector(".page-nav-ul")) {
-            return true;
-        }
-    }
-
-    function pageNavUl(main) {
-        let ul = main.querySelector(".page-nav-ul");
-        return ul;
-    }
-
-
-    // if (pageNavExists(main) === true) {
-
-    //     console.log("page nav exists")
-
-    //     let ul = pageNavUl(main);
-    //     let lis = Array.from(ul.querySelectorAll("li"));
-    //     console.log("lis:", lis);
-
-    //     for (li of lis) {
-    //         let a = li.querySelectorAll("a");
-    //         console.log(a);
+    // function pageNavExists(main) {
+    //     if (main.querySelector(".page-nav-ul")) {
+    //         return true;
     //     }
     // }
 
-    // pageNavUl(main);
-
-    // function returnsArrayOfLi(main) {
-    //     let ArrayOfLi = Array.from(pageNavUl(main).querySelectorAll("li"));
-    //     console.log(ArrayOfLi);
+    // function pageNavUl(main) {
+    //     let ul = main.querySelector(".page-nav-ul");
+    //     return ul;
     // }
 
-    // returnsArrayOfLi(main);
+    const sections = Array.from(document.querySelectorAll('section'));
+    const pageNav = document.querySelector(".page-nav-ul");
+    // console.log("testing page nav", pageNav)
+    // let pageNavLinks = Array.from(pageNav.querySelectorAll('nav a'));
+    // let pageNavLinks = returnsPageNavLinks();
 
-    // function returnsTextElement(main) {
-
-    // }
+    handlePageNav();
 
 
+    function returnsPageNavLinks() {
+        if (!pageNavExists) {
+            console.log('no page nav');
+            return;
+        } else {
+            return Array.from(pageNav.querySelectorAll('nav a'));
+        }
+    }
 
+    function handlePageNav() {
+        if (pageNavExists) {
+            let pageNavLinks = returnsPageNavLinks();
+            highlightActiveLink(pageNavLinks);
+            window.addEventListener('scroll', highlightActiveLink);
+        }
+    }  
+
+
+    if (!pageNavExists) {
+        console.log('no page nav');
+    }
+
+    function pageNavExists() {
+        if (pageNav === null) {
+           return false; 
+        }
+        return true;
+    }
+
+    function sectionIsInView(sectionPosition) {
+        if (sectionPosition.top >= 0 && sectionPosition.top < window.innerHeight / 1.3) {
+            return true;
+        }
+        return false;
+    }
+
+    function returnsSectionPosition(section) {
+        return section.getBoundingClientRect();
+    }
+
+    function returnsCurrentSection() {
+        for (let section of sections) {
+            let sectionPosition = returnsSectionPosition(section);
+            if (sectionIsInView(sectionPosition)) {
+                return section;
+            }
+        }
+        return null;
+    }
+
+    function highlightActiveLink(pageNavLinks) {
+        let currentSection = returnsCurrentSection();
+        console.log("current section", currentSection);
+
+        removePreviousActiveClass(pageNavLinks);
+        addActiveClassTo(currentSection);
+    }
+
+    function removePreviousActiveClass() {
+        let pageNavLinks = returnsPageNavLinks(pageNav);
+        for (link of pageNavLinks) {
+            link.classList.remove("active");
+        }
+    }
+
+    function addActiveClassTo(currentSection) {
+        let pageNavLinks = returnsPageNavLinks(pageNav);
+        for (link of pageNavLinks) {
+            if (link.getAttribute("href") === `/index.html#${currentSection.id}`) {
+                console.log("link", link);
+                link.classList.add('active');
+            }
+        }
+    }
 
 
 
