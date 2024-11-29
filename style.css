@@ -1537,3 +1537,7 @@ th {
     .hidden {
         display: none;
     }
+
+    .active {
+        font-weight: bold;
+    }
