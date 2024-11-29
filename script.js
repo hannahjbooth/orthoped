@@ -77,26 +77,17 @@
 
 
     function returnsPageNavLinks() {
-        if (!pageNavExists) {
-            console.log('no page nav');
-            return;
-        } else {
-            return Array.from(pageNav.querySelectorAll('nav a'));
-        }
+        return Array.from(pageNav.querySelectorAll('nav a'));
     }
 
     function handlePageNav() {
-        if (pageNavExists) {
+        if (pageNavExists()) {
             let pageNavLinks = returnsPageNavLinks();
+            console.log(pageNavLinks);
             highlightActiveLink(pageNavLinks);
             window.addEventListener('scroll', highlightActiveLink);
         }
     }  
-
-
-    if (!pageNavExists) {
-        console.log('no page nav');
-    }
 
     function pageNavExists() {
         if (pageNav === null) {
@@ -106,7 +97,9 @@
     }
 
     function sectionIsInView(sectionPosition) {
-        if (sectionPosition.top >= 0 && sectionPosition.top < window.innerHeight / 1.3) {
+        if (sectionPosition.top >= 0 && sectionPosition.top < window.innerHeight / 1.8) {
+            return true;
+        } else if (sectionPosition.top < 0 && sectionPosition.bottom > window.innerHeight) {
             return true;
         }
         return false;
@@ -128,7 +121,7 @@
 
     function highlightActiveLink(pageNavLinks) {
         let currentSection = returnsCurrentSection();
-        console.log("current section", currentSection);
+        // console.log("current section", currentSection);
 
         removePreviousActiveClass(pageNavLinks);
         addActiveClassTo(currentSection);
@@ -142,12 +135,14 @@
     }
 
     function addActiveClassTo(currentSection) {
+        if (!currentSection) {
+            return;
+        }
         let pageNavLinks = returnsPageNavLinks(pageNav);
         for (link of pageNavLinks) {
-            if (link.getAttribute("href") === `/index.html#${currentSection.id}`) {
-                console.log("link", link);
+            if (link.getAttribute("href") === `#${currentSection.id}`) {
                 link.classList.add('active');
-            }
+            } 
         }
     }
 
