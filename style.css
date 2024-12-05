@@ -1103,6 +1103,9 @@ th {
 
 /* Information for Use */
 
+.info-for-use-content {
+    min-height: 58vh;
+}
 
 /* Styling for mobile devices */
 
