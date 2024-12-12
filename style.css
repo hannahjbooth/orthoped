@@ -2,7 +2,7 @@
 
     /* Fonts */
 
-    p, section li, section ol li, td, th, label, .accordeon h2, button {
+    p, section li, section ol li, td, th, label, .accordeon h2, button, li {
         font-weight: 400;
         /* color:#343434fb; */
         color: black;
@@ -11,12 +11,12 @@
         font-size: 1rem;
     }
 
-    footer span, footer p {
+    .contact-details span, .policies p, .email-address {
         font-family: "Merriweather", "Times New Roman", serif;
         font-size: 0.8rem;
     }
 
-    h1, h2 {
+    h1, h2, h3 {
         font-family: "Merriweather", "Times New Roman", serif;
         color: black;
     }
@@ -303,27 +303,22 @@ footer {
     background: linear-gradient(to top, #ffffff, #ffffff,#ffffff,#ffffff, #7b7b7b13);
 }
 
+.patent, .copyright {
+    font-family: "Albert Sans", sans-serif;
+    line-height: 0.7rem;
+    letter-spacing: 0.04rem;
+    font-size: 1.05rem;
+    font-weight: 200;
+}
+
 .key-info {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    font-family: "Albert Sans", sans-serif;
-    line-height: 0.7rem;
-    letter-spacing: 0.04rem;
 }
-
-/* .key-info span {
-    font-family: "Merriweather", "Times New Roman", serif;
-    font-size: 1rem;
-} */
 
 .key-info p {
     margin: 3px;
-}
-
-.copyright {
-    font-size: 1.05rem;
-    font-weight: 200;
 }
 
 .logos {
