@@ -977,12 +977,6 @@ th {
     padding: 0px 10px 0px 10px;
 }
 
-
-/* .shop-intro-p {
-    margin: 20px;
-    text-align: center;
-} */
-
 .shop-main h2 {
     font-size: 1.2rem;
     text-align: center;
@@ -993,7 +987,7 @@ th {
     padding-right: 20%;
 }
 
-.shop-content img {
+.foot-measurement {
     width: 300px;
     border-style: solid;
     border-width: 1px;
@@ -1100,6 +1094,7 @@ th {
     font-family: "Albert Sans", sans-serif;
 
 }
+
 
 /* Information for Use */
 
