@@ -4,7 +4,6 @@
 
     p, section li, section ol li, td, th, label, .accordeon h2, button, li {
         font-weight: 400;
-        /* color:#343434fb; */
         color: black;
         font-family: 'Inter', sans-serif;
         line-height: 1.4rem;
@@ -20,17 +19,6 @@
         font-family: "Merriweather", "Times New Roman", serif;
         color: black;
     }
-    
-    /* .fontweight {
-        font-weight: bold;
-    } */
-/* 
-Colours
-    Grey: 868585
-    Blue/Green: 80BDBC
-    light grey: #7b7b7b4e
-    test grey: #f7f6f5
- */
 
 body {
     margin: 0;
@@ -254,7 +242,6 @@ fieldset {
     text-align: left;
     border-style: solid;
     border-width: 1px;
-    /* max-width: 520px; */
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -320,8 +307,6 @@ footer {
     font-size: 0.8rem;
     background: linear-gradient(to top, #ffffff, #ffffff,#ffffff,#ffffff, #7b7b7b13);
 }
-
-
 
 .patent, .copyright {
     font-family: "Albert Sans", sans-serif;
@@ -415,7 +400,6 @@ footer {
   }
 
 .contact-details {
-    /* margin-left: 5vw; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -475,7 +459,6 @@ footer {
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    /* margin-bottom: 10px; */
 }
 
 .home-h1 {
@@ -563,12 +546,6 @@ footer {
     transform: rotate(5deg);
 }
 
-
-/* 
-Colours
-    Grey: 868585
-    Blue/Green: 80BDBC
- */
 .home-page {
     display: flex;
     flex-direction: column;
@@ -579,12 +556,9 @@ Colours
     flex-direction: row;
 }
 
-
-
 .home-header {
     position: sticky;
     top: 100px;
-    /* margin-top: 10px; */
     padding-bottom: 10px;
     padding-top: 13px;
     background-color: white;
@@ -623,7 +597,6 @@ section .text-left {
 }
 
 section .text-right {
-    /* margin: 20px 60px 20px 50px; */
     margin: 20px;
     text-align: justify;
     width: 45%;
@@ -790,10 +763,6 @@ section .text-right {
     width: 380px;
 }
 
-/* .instruction-text-3, .instruction-text-4 {
-    width: 820px;
-} */
-
 .instruction-text-5 {
     width: 95%;
 }
@@ -870,7 +839,6 @@ section .text-right {
 .accordeon-button h2 {
     display: inline-flex; 
     align-items: center;  
-    /* margin: 0; */
 }
 
 .accordeon-button h2::before {
@@ -921,7 +889,6 @@ section .text-right {
     padding-right: 10%;
 }
 
-
 .darkening-effect {
     position: fixed;
     top: 0;
@@ -950,8 +917,6 @@ section .text-right {
     border-radius: 10px;
 }
 
-
-
 #contact-form .question {
     background-color: #776b6b17;
     border-width: 1px;
@@ -978,7 +943,6 @@ legend {
 .data-h2 {
     font-family: "Merriweather", "Times New Roman", serif;
 }
-
 
 .privacy-policy-content, .data-protection-content {
     margin-right: 20px;
@@ -1152,18 +1116,8 @@ th {
     }
 
     main {
-        /* padding-top: 0px; */
         padding-top: 155px;
     }
-
-    /* .main-with-page-nav {
-        padding-top: 270px;
-    } */
-
-    /* .faqs-main, .search-main, .shop-main, .contact-us-main, .feedback-main, .privacy-policy-main, .data-protection-main, .info-for-use-main {
-        padding-top: 155px;
-    } */
-
 
     h1 {
         font-size: 1.2rem;
@@ -1246,7 +1200,6 @@ th {
         font-weight: 500;
         margin: 10px 0px 0px 0px;
         text-align: center;
-        /* color:#595757; */
     }
 
     .page-content {
@@ -1374,17 +1327,9 @@ th {
 
     /* User Guides */
 
-    /* .user-guides {
-        padding-top: 150px;
-    } */
-
     .user-guides-scroll-target {
         scroll-margin-top: 295px;
     }
-
-    /* #user-guides-intro {
-        padding-top: 130px;
-    } */
 
     #user-guides-intro, #put-on, #take-off, #videos {
         margin: 0px 30px 0px 30px;
@@ -1542,28 +1487,15 @@ th {
 
     #contact-form p {
         margin: 5px 0px 5px 0px;
-        /* text-align: end; */
     }
 
     /* Privacy Policy, Data Protection Policy and Information for Use */
-
-
-
-    /* .privacy-policy-content, .data-protection-content, .info-for-use-content {
-        padding-top: 70px;
-    } */
 
     .info-for-use-main {
         height: 100vh;
     }
 
     /* Shop */
-
-
-
-    /* .shop-content {
-        padding-top: 110px;
-    } */
 
     .shop-scroll-target {
         scroll-margin-top: 280px;
@@ -1590,16 +1522,14 @@ th {
     #interest-adult-splint, #interest-child-splint {
         justify-content: space-between;
     }
-
-
 }
 
-    /* Dynamic styling */
+/* Dynamic styling */
 
-    .hidden {
-        display: none;
-    }
+.hidden {
+    display: none;
+}
 
-    .active {
-        font-weight: 600;
-    }
+.active {
+    font-weight: 600;
+}
