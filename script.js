@@ -32,98 +32,79 @@ function toggleDarkeningEffect() {
         }
     });
 
+// Page navigation dynamic highlighting
 
-    
+const sections = Array.from(document.querySelectorAll('section'));
+const pageNav = document.querySelector(".page-nav-ul");
 
-    // function pageNavExists(main) {
-    //     if (main.querySelector(".page-nav-ul")) {
-    //         return true;
-    //     }
-    // }
+handlePageNav();
 
-    // function pageNavUl(main) {
-    //     let ul = main.querySelector(".page-nav-ul");
-    //     return ul;
-    // }
+function returnsPageNavLinks() {
+    return Array.from(pageNav.querySelectorAll('nav a'));
+}
 
-    const sections = Array.from(document.querySelectorAll('section'));
-    const pageNav = document.querySelector(".page-nav-ul");
-    // console.log("testing page nav", pageNav)
-    // let pageNavLinks = Array.from(pageNav.querySelectorAll('nav a'));
-    // let pageNavLinks = returnsPageNavLinks();
-
-    handlePageNav();
-
-
-    function returnsPageNavLinks() {
-        return Array.from(pageNav.querySelectorAll('nav a'));
+function handlePageNav() {
+    if (pageNavExists()) {
+        let pageNavLinks = returnsPageNavLinks();
+        highlightActiveLink(pageNavLinks);
+        window.addEventListener('scroll', highlightActiveLink);
     }
+}  
 
-    function handlePageNav() {
-        if (pageNavExists()) {
-            let pageNavLinks = returnsPageNavLinks();
-            console.log(pageNavLinks);
-            highlightActiveLink(pageNavLinks);
-            window.addEventListener('scroll', highlightActiveLink);
-        }
-    }  
+function pageNavExists() {
+    if (pageNav === null) {
+        return false; 
+    }
+    return true;
+}
 
-    function pageNavExists() {
-        if (pageNav === null) {
-           return false; 
-        }
+function sectionIsInView(sectionPosition) {
+    if (sectionPosition.top >= 0 && sectionPosition.top < window.innerHeight / 1.8) {
+        return true;
+    } else if (sectionPosition.top < 0 && sectionPosition.bottom > window.innerHeight) {
         return true;
     }
+    return false;
+}
 
-    function sectionIsInView(sectionPosition) {
-        if (sectionPosition.top >= 0 && sectionPosition.top < window.innerHeight / 1.8) {
-            return true;
-        } else if (sectionPosition.top < 0 && sectionPosition.bottom > window.innerHeight) {
-            return true;
-        }
-        return false;
-    }
+function returnsSectionPosition(section) {
+    return section.getBoundingClientRect();
+}
 
-    function returnsSectionPosition(section) {
-        return section.getBoundingClientRect();
-    }
-
-    function returnsCurrentSection() {
-        for (let section of sections) {
-            let sectionPosition = returnsSectionPosition(section);
-            if (sectionIsInView(sectionPosition)) {
-                return section;
-            }
-        }
-        return null;
-    }
-
-    function highlightActiveLink(pageNavLinks) {
-        let currentSection = returnsCurrentSection();
-        // console.log("current section", currentSection);
-
-        removePreviousActiveClass(pageNavLinks);
-        addActiveClassTo(currentSection);
-    }
-
-    function removePreviousActiveClass() {
-        let pageNavLinks = returnsPageNavLinks(pageNav);
-        for (link of pageNavLinks) {
-            link.classList.remove("active");
+function returnsCurrentSection() {
+    for (let section of sections) {
+        let sectionPosition = returnsSectionPosition(section);
+        if (sectionIsInView(sectionPosition)) {
+            return section;
         }
     }
+    return null;
+}
 
-    function addActiveClassTo(currentSection) {
-        if (!currentSection) {
-            return;
-        }
-        let pageNavLinks = returnsPageNavLinks(pageNav);
-        for (link of pageNavLinks) {
-            if (link.getAttribute("href") === `#${currentSection.id}`) {
-                link.classList.add('active');
-            } 
-        }
+function highlightActiveLink(pageNavLinks) {
+    let currentSection = returnsCurrentSection();
+    removePreviousActiveClass(pageNavLinks);
+    addActiveClassTo(currentSection);
+}
+
+function removePreviousActiveClass() {
+    let pageNavLinks = returnsPageNavLinks(pageNav);
+    for (link of pageNavLinks) {
+        link.classList.remove("active");
     }
+}
+
+function addActiveClassTo(currentSection) {
+    if (!currentSection) {
+        return;
+    }
+    let pageNavLinks = returnsPageNavLinks(pageNav);
+    for (link of pageNavLinks) {
+        if (link.getAttribute("href") === `#${currentSection.id}`) {
+            link.classList.add('active');
+        } 
+    }
+}
 
 
 
