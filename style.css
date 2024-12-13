@@ -120,6 +120,8 @@ nav {
     list-style-type: none;
 }
 
+
+
 nav a {
     color: black;
     text-decoration: none;
@@ -459,8 +461,11 @@ footer {
 .page-nav-ul {
     padding-top: 10px;
     margin: 0 auto;
-    font-family: "Albert Sans", sans-serif;
     letter-spacing: 1.3px;
+}
+
+.page-nav-ul li a {
+    font-family: "Albert Sans", sans-serif;
 }
 
 .home-nav-logo {
@@ -1596,5 +1601,5 @@ th {
     }
 
     .active {
-        font-weight: 500;
+        font-weight: 600;
     }
