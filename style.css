@@ -77,6 +77,23 @@ h1 {
     margin: 0;
 }
 
+.page-content {
+    margin-top: 80px;
+}
+
+    /* Pages with page navigation */
+    .home-content {
+        margin-top: 0px;
+    }
+
+    .user-guides-content {
+        margin-top: 120px;
+    }
+
+    .shop-content {
+        margin-top: 120px;
+    }
+
 
 /* Header */
 
@@ -432,11 +449,6 @@ footer {
 
 /* Search Results */
 
-/* .search-content {
-    padding-top: 80px;
-} */
-
-
 
 /* Home */
 
@@ -546,10 +558,6 @@ footer {
     transform: rotate(5deg);
 }
 
-
-#what-is {
-    margin-top: 20px;
-}
 
 /* 
 Colours
@@ -675,13 +683,8 @@ section .text-right {
 
 /* User Guides */
 
-#user-guides-intro {
-    padding-top: 120px;
-}
-
-
 .user-guides-scroll-target {
-    scroll-margin-top: 260px;
+    scroll-margin-top: 210px;
 }
 
 .bolder-font {
@@ -833,15 +836,6 @@ section .text-right {
     font-weight:400;
 }
 
-
-
-
-
-.faqs-main {
-    padding-top: 100px;
-
-}
-
 .faq-content {
     display: flex;
     justify-content: center;
@@ -854,7 +848,6 @@ section .text-right {
 
 .accordeon {
     margin: 0px 20px 0px 20px;
-    padding-top: 80px;
     list-style-type: none; 
     padding-left: 0;
 }
@@ -910,9 +903,6 @@ section .text-right {
 
 /* Contact Us */
 
-.contact-us-content, .feedback-content {
-    padding-top: 80px;
-}
 
 .contact-us-content {
     display: flex;
@@ -984,13 +974,10 @@ legend {
     font-family: "Merriweather", "Times New Roman", serif;
 }
 
-.privacy-policy-main, .data-protection-main {
-    padding-top: 100px;
-}
 
 .privacy-policy-content, .data-protection-content {
-    padding-top: 80px;
-    margin: 0px 20px 0px 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .rights-ul li, .personal-info li {
@@ -1044,8 +1031,9 @@ th {
 }
 
 .shop-content {
-    padding-top: 100px;
-    margin: 0px 20px 20px 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     text-align: center;
 }
 
@@ -1103,7 +1091,6 @@ th {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* padding: 10px 0px 30px 0px; */
 }
 
 #interest-adult-splint, #interest-child-splint {
@@ -1160,8 +1147,18 @@ th {
     }
 
     main {
-        padding-top: 270px;
+        /* padding-top: 0px; */
+        padding-top: 155px;
     }
+
+    /* .main-with-page-nav {
+        padding-top: 270px;
+    } */
+
+    /* .faqs-main, .search-main, .shop-main, .contact-us-main, .feedback-main, .privacy-policy-main, .data-protection-main, .info-for-use-main {
+        padding-top: 155px;
+    } */
+
 
     h1 {
         font-size: 1.2rem;
@@ -1245,6 +1242,22 @@ th {
         margin: 10px 0px 0px 0px;
         text-align: center;
         /* color:#595757; */
+    }
+
+    .page-content {
+        margin-top: 65px;
+    }
+
+    .home-content {
+        margin-top: 110px;
+    }
+
+    .shop-content {
+        margin-top: 140px;
+    }
+
+    .user-guides-content {
+        margin-top: 170px;
     }
     
     /* Search Bar */
@@ -1356,17 +1369,17 @@ th {
 
     /* User Guides */
 
-    .user-guides {
+    /* .user-guides {
         padding-top: 150px;
-    }
+    } */
 
     .user-guides-scroll-target {
         scroll-margin-top: 295px;
     }
 
-    #user-guides-intro {
+    /* #user-guides-intro {
         padding-top: 130px;
-    }
+    } */
 
     #user-guides-intro, #put-on, #take-off, #videos {
         margin: 0px 30px 0px 30px;
@@ -1446,10 +1459,6 @@ th {
 
     /* Feedback */
 
-    .feedback-main {
-        padding-top: 160px;
-    }
-
     .feedback-main h1 {
         margin: 15px 0px 10px 0px;
     }
@@ -1469,16 +1478,7 @@ th {
 
     /* FAQ */
 
-    .faqs-main {
-        padding-top: 160px;
-    }
-
-    /* .faq-content {
-        width: 100vw;
-    } */
-
     .accordeon {
-        padding-top: 60px;
         display: flex;
         flex-direction: column;
         margin: 0;
@@ -1503,19 +1503,15 @@ th {
 
     /* Contact Us */
 
-    .contact-us-main {
-        padding-top: 160px;
-    }
 
-    /* .page-h1-container {
-        margin: 35px 0px 10px 0px;
-    } */
+    .page-h1-container {
+        margin-bottom: 10px;
+    }
 
     .contact-us-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 100px;
     }
 
     .contact-us-content p {
@@ -1546,13 +1542,11 @@ th {
 
     /* Privacy Policy, Data Protection Policy and Information for Use */
 
-    .privacy-policy-main, .data-protection-main, .info-for-use-main {
-        padding-top: 155px;
-    }
 
-    .privacy-policy-content, .data-protection-content, .info-for-use-content {
+
+    /* .privacy-policy-content, .data-protection-content, .info-for-use-content {
         padding-top: 70px;
-    }
+    } */
 
     .info-for-use-main {
         height: 100vh;
@@ -1560,13 +1554,11 @@ th {
 
     /* Shop */
 
-    .shop-main {
-        padding-top: 155px;
-    }
 
-    .shop-content {
+
+    /* .shop-content {
         padding-top: 110px;
-    }
+    } */
 
     .shop-scroll-target {
         scroll-margin-top: 280px;
