@@ -1240,9 +1240,10 @@ th {
     footer .row {
         display: flex;
         flex-wrap: wrap;
+        flex-direction: column;
     }
 
-    footer .row div {
+    footer .row .column-1 div {
         flex: 0 1 30%;         
         margin: 10px;
     
@@ -1252,6 +1253,23 @@ th {
        display: flex;
        align-items: center;
     }
+
+    .logos {
+        max-width: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+
+    .logos img {
+        min-width: 165px;
+        width: 165px;
+    }
+
+
+
+    /* Home */
 
     .home-header {
         display: flex;
@@ -1282,8 +1300,6 @@ th {
         padding-top: 0;
         padding-bottom: 3px;
     }
-
-    /* Home */
 
     .page-nav-ul {
         padding-top: 0;
