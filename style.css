@@ -886,6 +886,10 @@ section .text-right {
    margin-bottom: 10px;   
 }
 
+.accordeon-section-basic:last-of-type {
+    margin-bottom: 25px;
+}
+
 
 
 /* Contact Us */
