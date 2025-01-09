@@ -29,7 +29,7 @@ body {
 }
 
 .page-h1-container {
-    z-index: 1;
+    z-index: 999;
 }
 
 main {
@@ -1115,8 +1115,8 @@ th {
 .interest-form-submit {
     align-items: center;
     font-family: "Albert Sans", sans-serif;
-
 }
+
 
 
 /* Information for Use */
