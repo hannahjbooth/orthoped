@@ -20,6 +20,8 @@
         color: black;
     }
 
+    
+
 body {
     margin: 0;
     padding: 0;
@@ -1476,6 +1478,11 @@ th {
     .accordeon-section {
         max-width: 320px;
         margin: 10px 0px 10px 0px;
+    }
+
+    .accordeon-section-basic {
+        max-width: 90%;
+        padding-right: 10px;
     }
 
     .faqs-main .questions {
