@@ -20,7 +20,9 @@
         color: black;
     }
 
-    
+.shopping-cart-svg {
+    padding-top: 8px;
+}
 
 body {
     margin: 0;
