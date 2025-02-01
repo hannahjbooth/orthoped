@@ -38,14 +38,12 @@ function observeForBodyElement() {
 }
 
 function hideBothBuggingTables(body) {
-        // Find the first table with the class 'ecwid-productBrowser-innerTable' within the body
         const table1 = body.querySelector('table.ecwid-productBrowser-innerTable:first-of-type');
         if (table1) {
             console.log('Hiding first table with class "ecwid-productBrowser-innerTable"');
             table1.style.display = 'none';
         }
     
-        // Find the first table with the class 'ecwid-productBrowser-auth-mini' within the body
         const table2 = body.querySelector('table.ecwid-productBrowser-auth-mini:first-of-type');
         if (table2) {
             console.log('Hiding first table with class "ecwid-productBrowser-auth-mini"');
