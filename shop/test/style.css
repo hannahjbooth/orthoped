@@ -1,24 +1,11 @@
-/* .webshop-container {
-    border-style: solid;
-    border-color: black;
-    border-width: 2px;
-    margin-left: 40px;
-    margin-right: 40px;
-} */
-
-/* h2 .page-title__name {
-    padding: 20px;
-} */
-
 .ecwid h1 {
     text-align: left; 
 }
-
-/* #ecwid_body {
-    padding-top: 70px;
-} */
 
 .ecwid span, .ecwid a, .ecwid p {
     font-family: 'Inter', sans-serif;
 }
 
+#ecwid_html {
+    padding-bottom: 0px;
+}
