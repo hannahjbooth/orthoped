@@ -22,6 +22,7 @@
 
 .shopping-cart-svg {
     padding-top: 8px;
+    display: hidden;
 }
 
 body {
@@ -1023,7 +1024,7 @@ th {
 
 .shop-content {
     margin-right: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     margin-left: 20px;
     text-align: center;
 }
