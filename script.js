@@ -119,6 +119,38 @@ for (let question of questions) {
     })
 }
 
+// PDF reader
+
+const canvas = document.getElementById('pdf-canvas');
+const pdfUrl = '/assets/docs/orthoped-information-for-use-leaflet.pdf'
+
+pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc) {
+	pdfDoc.getPage(1).then(function (page) {
+
+        const viewport = page.getViewport({ scale: 1.5 });
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+
+        const ctx = canvas.getContext('2d');
+
+        const renderContext = {
+            canvasContext: ctx,
+            viewport: viewport,
+        };
+        
+        page.render(renderContext);
+
+    });
+}).catch(error => {
+    console.error('Error loading PDF:', error);
+});
+
+
+
+
+
 
 
 

@@ -1580,3 +1580,31 @@ th {
 .active {
     font-weight: 600;
 }
+
+/* PDF display @ Information for Use */
+
+/* @media (max-width: 768px) {
+    #pdf-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .pdf-mobile {
+        display: none;
+    }
+} */
+
+.info-for-use-content {
+    display: flex;
+}
+
+.pdf-desktop {
+    display: flex;
+}
+
+
+.pdf-buttons, .pdf-page-count {
+    display: flex;
+    justify-content: center;
+}
