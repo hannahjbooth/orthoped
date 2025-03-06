@@ -1628,6 +1628,8 @@ th {
     margin-bottom: 8px;
 }
 
-.returns-scroll-margin-top {
-    scroll-margin-top: 250px;
+/* Returns & Refunds */
+
+.returns-and-refunds-content h2 {
+    font-size: 1rem;
 }
