@@ -1608,3 +1608,26 @@ th {
     display: flex;
     justify-content: center;
 }
+
+/* T&Cs */
+
+.terms-and-conditions-content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.terms-and-conditions-content h2 {
+    margin-bottom: 5px;
+}
+
+.terms-and-conditions-content h3 {
+    font-size: 1rem;
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 400;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.returns-scroll-margin-top {
+    scroll-margin-top: 250px;
+}
