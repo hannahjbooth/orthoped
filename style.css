@@ -1628,6 +1628,17 @@ th {
     margin-bottom: 8px;
 }
 
+.terms-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.terms-intro p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /* Returns & Refunds */
 
 .returns-and-refunds-content h2 {
