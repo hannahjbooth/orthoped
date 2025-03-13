@@ -807,6 +807,61 @@ section .text-right {
     justify-content: center;
 }
 
+.video-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.video-section h3 {
+    font-family: Inter, Arial, sans-serif;
+    font-weight: 400;
+}
+
+.video-selection-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.video-options {
+    margin-left: 20px;
+}
+
+.select {
+    font-family: "Albert Sans", "Times New Roman", serif;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+}
+
+#user-guides-video {
+    padding: 10px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #80BDBC;
+    background-color: #f9f7f7;
+}
+
+@media (max-width: 430px) {
+    #user-guides-video {
+        padding: 10px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: #80BDBC;
+        background-color: #f9f7f7;
+    }
+}
+
+
+.bold {
+    font-weight: 800;
+}
+
 /* FAQS */
 
 .faqs-main h2 {

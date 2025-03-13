@@ -119,35 +119,94 @@ for (let question of questions) {
     })
 }
 
-// PDF reader
+// // PDF reader
 
-const canvas = document.getElementById('pdf-canvas');
-const pdfUrl = '/assets/docs/orthoped-information-for-use-leaflet.pdf'
+// const canvas = document.getElementById('pdf-canvas');
+// const pdfUrl = '/assets/docs/orthoped-information-for-use-leaflet.pdf'
 
-pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+// pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
 
-pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc) {
-	pdfDoc.getPage(1).then(function (page) {
+// pdfjsLib.getDocument(pdfUrl).promise.then(function (pdfDoc) {
+// 	pdfDoc.getPage(1).then(function (page) {
 
-        const viewport = page.getViewport({ scale: 1.5 });
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
+//         const viewport = page.getViewport({ scale: 1.5 });
+//         canvas.width = viewport.width;
+//         canvas.height = viewport.height;
 
-        const ctx = canvas.getContext('2d');
+//         const ctx = canvas.getContext('2d');
 
-        const renderContext = {
-            canvasContext: ctx,
-            viewport: viewport,
-        };
+//         const renderContext = {
+//             canvasContext: ctx,
+//             viewport: viewport,
+//         };
         
-        page.render(renderContext);
+//         page.render(renderContext);
 
-    });
-}).catch(error => {
-    console.error('Error loading PDF:', error);
-});
+//     });
+// }).catch(error => {
+//     console.error('Error loading PDF:', error);
+// });
 
 
+
+// User Guides - video selection
+
+/* PSEUDOCODE
+
+LET 3 video titles
+    LET each title be assigned a video link
+LET 1 video
+    LET default video be video link 1
+FOR each title
+    IF user clicks title
+    LET video be assigned title's video link
+*/
+
+let title1 = document.getElementById('title-1');
+let title2 = document.getElementById('title-2');
+let title3 = document.getElementById('title-3');
+
+let titles = [title1, title2, title3];
+console.log(titles);
+
+let video = document.getElementById('user-guides-video');
+
+console.log('testing titles', title1, title2, title3);
+console.log('video', video);
+
+
+function handleTitleClicks() {
+    title1.addEventListener('click', function(){
+        video.setAttribute('src', 'https://www.youtube.com/embed/3KDM0j9LiQs?si=jzmxXK3HZDzMRp77?vq=hd720');
+    })
+    
+    title2.addEventListener('click', function(){
+        video.setAttribute('src', 'https://www.youtube.com/embed/-xSPk3mrbTg?si=pmoBFW2YpjShT1Gf?vq=hd720');
+    })
+    
+    title3.addEventListener('click', function(){
+        video.setAttribute('src', 'https://www.youtube.com/embed/3pjZjv1FoVA?si=ur6fW6HE3lRapoQ7?vq=hd720');
+    })
+}
+
+handleTitleClicks();
+
+function resetTitlesFontWeight() {
+    for (let title of titles) {
+            title.removeAttribute('class', 'bold');
+        };
+    }
+
+function handleTitleFontWeight() {
+    for (let title of titles) {
+        title.addEventListener('click', function() {
+            resetTitlesFontWeight();
+            title.setAttribute('class', 'bold');
+        })
+    }
+}
+
+handleTitleFontWeight();
 
 
 
