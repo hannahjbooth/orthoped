@@ -66,25 +66,27 @@
         </div>
         <div class="page-content info-for-use-content">
 
-            <div class="pdf-desktop">
-                <div class="pdf-buttons">
-                    <button id="prev-page">Previous</button>
-                    <button id="next-page">Next</button>
-                </div>
-                <div class="pdf-page-count">
-                    <p>Page <span id="page-num">1</span> of <span id="page-count">2</span></p>
-                </div>
-                <div class="pdf-canvas">
-                    <canvas id="pdf-canvas"></canvas>
-                </div>
-            </div>
-
-            <!-- <div class="pdf-mobile">
-                
-                <h2 id="pdf-mobile-title">testing mobile pdf reader shows</h2>
-
-            </div> -->
-
+            <object
+            id="info-for-use-object"
+            data="/assets/docs/OrthoPed Information for Use Leaflet.pdf#toolbar=1&navpanes=0&pagemode=none"
+            type="application/pdf"
+            width="100%"
+            height="100%"
+            title="Embedded PDF Viewer"
+            >
+                <iframe
+                    src="/assets/docs/OrthoPed Information for Use Leaflet.pdf#toolbar=1&navpanes=0&pagemode=none"
+                    width="100%"
+                    height="100%"
+                    style="border: none"
+                    title="Fallback PDF Viewer"
+                >
+                    <p>
+                        Your browser does not support PDFs.
+                        <a href="/assets/docs/OrthoPed Information for Use Leaflet.pdf#">Download the PDF</a>
+                    </p>
+                </iframe>
+        </object>
         </div>            
     </main>
     <footer>
@@ -110,7 +112,7 @@
                     <a href="/privacy-policy/index.html">Privacy Policy</a>
                     <a href="/data-protection-policy/index.html">Data Protection Policy</a>
                     <a href="/information-for-use/index.html">Information for Use</a>
-                </div>s
+                </div>
     
                 <div class="key-info box">
                     <p class="patent">PATENT NUMBER: GB2618786</p>

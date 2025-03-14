@@ -1183,6 +1183,11 @@ th {
 
 .info-for-use-content {
     min-height: 58vh;
+    margin-top: 60px;
+}
+
+#info-for-use-object {
+    height: 1650px;
 }
 
 /* Styling for mobile devices */
