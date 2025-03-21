@@ -130,10 +130,6 @@ console.log(titles);
 
 let video = document.getElementById('user-guides-video');
 
-console.log('testing titles', title1, title2, title3);
-console.log('video', video);
-
-
 function handleTitleClicks() {
     title1.addEventListener('click', function(){
         video.setAttribute('src', 'https://www.youtube.com/embed/3KDM0j9LiQs?si=jzmxXK3HZDzMRp77?vq=hd720');
@@ -152,7 +148,8 @@ handleTitleClicks();
 
 function resetTitlesFontWeight() {
     for (let title of titles) {
-            title.removeAttribute('class', 'bold');
+            title.removeAttribute('class', 'selected-title');
+            title.setAttribute('class', 'title-container')
         };
     }
 
@@ -160,7 +157,7 @@ function handleTitleFontWeight() {
     for (let title of titles) {
         title.addEventListener('click', function() {
             resetTitlesFontWeight();
-            title.setAttribute('class', 'bold');
+            title.setAttribute('class', 'selected-title');
         })
     }
 }
