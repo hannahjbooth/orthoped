@@ -829,6 +829,7 @@ section .text-right {
 
 .select-p {
     border-style: solid;
+    border-width: 1px;
     border-radius: 20px;
     padding: 10px;
     background-color:#80BDBC;
