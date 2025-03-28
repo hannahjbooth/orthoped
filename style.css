@@ -58,17 +58,13 @@
             margin: 0;
         }
 
-        .home-h1 {
+        #home-h1 {
             text-align: center;
             margin: 0px;
             color: #2a2a2a;
             font-weight: 400;
         }
     
-        .user-guides-h1 {
-            margin-bottom: 5px;
-            margin-top: 23px;
-        }
 
         /* h2 */
 
@@ -175,11 +171,7 @@
 
     /* Section */
 
-    section .images {
-        display: flex;
-        justify-content: center;
-        width: 45%;
-    }
+
 
     section .text-left {
         margin: 20px 40px 20px 40px;
@@ -283,10 +275,11 @@
             margin-top: 120px;
         }
 
-        .user-guides-content {
+        #user-guides-content {
             margin-top: 120px;
+            margin-left: 70px;
+            margin-right: 70px;
         }
-
 
         .home-content {
             margin-top: 0px;
@@ -313,10 +306,6 @@
         .user-guides-nav li {
             padding-left: 10px;
             padding-right: 10px;
-        }
-
-        .after-page-nav {
-            margin-top: 40px;
         }
 
         .page-nav-ul {
@@ -640,23 +629,25 @@
 
     /* Images */
 
-    .image-placeholder {
+    .images {
+        display: flex;
+        justify-content: center;
+        width: 45%;
+    }
+
+    .images-container {
         position: relative;
         max-height: 85vh;
         width: 42vw;
     }
 
-    .image-placeholder img {
+    .images-container img {
         position: absolute;
         max-width: 60%;
         border-style: solid;
         border-width: 5px;
         border-color: #f8f8f8;
         box-shadow: 2px 2px 8px 0px #7b7b7b4e;
-    }
-
-    .image-frame {
-        border-radius: 50%;
     }
 
     .img1 {
@@ -706,23 +697,18 @@
         transform: rotate(5deg);
     }
 
-    .image-placeholder {
+    .images-container {
         margin-top: 30px;
     }
     
-    .image-placeholder-history {
+    /* .image-placeholder-history {
         border-style: solid;
         border-width: 1px;
         width: 400px;
         height: 500px;
         margin-top: 30px
-    }
+    } */
     
-    .image-placeholder p {
-        text-align: center;
-    }
-
-
             /* Home */
 
             .ortho {
@@ -737,17 +723,17 @@
             font-family: "Merriweather", "Times New Roman", serif;
             }
 
-            .home-page {
+            #home {
             display: flex;
             flex-direction: column;
             }
 
-            .home-page .overview, .home-page .history, .home-page .funding {
+            #home #what-is, #home #history, #home #funding {
             display: flex;
             flex-direction: row;
             }
 
-            .home-header {
+            #home-header {
             position: sticky;
             top: 100px;
             padding-bottom: 10px;
@@ -757,16 +743,16 @@
             background: linear-gradient(to bottom, #ffffff, #f5f5f5);
             }
 
-            .home-page header {
+            #home header {
             display: flex;
             justify-content: space-evenly;
             }
 
-            .home-page p {
+            #home p {
             line-height: 1.4rem;
             }
 
-            .home-page section {
+            #home section {
             display: flex;
             justify-content: space-evenly;
             margin-bottom: 20px;
@@ -777,11 +763,11 @@
                 max-width: 100%;
             }
 
-            .history {
+            #history {
                 align-self: flex-end;
             }
 
-            .further-info {
+            #further-info {
                 display: flex;
                 flex-direction: column;
                 margin-left: 270px;
@@ -789,12 +775,12 @@
                 align-self: center;
             }
 
-            .further-info p {
+            #further-info p {
                 text-align: center;
                 margin-top: 10px;
             }
 
-            .further-info-h2 {
+            #further-info h2 {
                 text-align: center;
                 margin-bottom: 10px;
             }
@@ -833,18 +819,13 @@
         opacity: 25%;
     }
 
-
-
 /* User Guides */
 
 .bolder-font {
     font-weight: 400;
 }
 
-#user-guides-intro, #put-on, #take-off, #videos {
-    margin-left: 70px;
-    margin-right: 70px;
-}
+
 
     /* User Guides images */
 
@@ -875,11 +856,7 @@
     .multiple-images {
         display: flex;
         flex-direction: row;
-        border-style: solid;
         border-width: 1px;
-    }
-
-    .multiple-images-2 {
         justify-content: center;
     }
 
@@ -947,12 +924,9 @@
     .instruction-5 {
         width: 880px;
         margin: 20px 10px 50px 50px;
-    }
-
-    .instruction-5 {
-        display: flex;
         flex-direction: column;
     }
+
 
     .instruction-6 {
         display: flex;
@@ -1188,7 +1162,7 @@ th {
     padding-right: 20%;
 }
 
-.foot-measurement {
+#foot-measurement {
     width: 300px;
     border-style: solid;
     border-width: 1px;
@@ -1313,7 +1287,7 @@ th {
     }
 
     main {
-        padding-top: 155px;
+        padding-top: 126.49px;
     }
 
     h1 {
@@ -1401,6 +1375,8 @@ th {
 
     .page-content {
         margin-top: 65px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .home-content {
@@ -1411,7 +1387,7 @@ th {
         margin-top: 140px;
     }
 
-    .user-guides-content {
+    #user-guides-content {
         margin-top: 170px;
     }
     
@@ -1471,7 +1447,7 @@ th {
 
     /* Home */
 
-    .home-header {
+    #home-header {
         display: flex;
         flex-direction: column;
         margin-top: 45px;
@@ -1483,14 +1459,14 @@ th {
         padding: 15px 0px 10px 0px;
     }
 
-    .home-header ul, .user-guides-nav, .shop-nav {
+    #home-header ul, .user-guides-nav, .shop-nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100vw;
     }
 
-    .home-header a, .user-guides-nav a, .shop-nav a {
+    #home-header a, .user-guides-nav a, .shop-nav a {
         font-size: 0.8rem;
     }
 
@@ -1513,11 +1489,11 @@ th {
         display: none;
     }
 
-    .home-h1 {
+    #home-h1 {
         display: none;
     }
     
-    .overview {
+    #what-is {
         width: 100%;
         margin-top: 15px;
     }
@@ -1531,7 +1507,7 @@ th {
         width: 100%;
     }
 
-    .further-info {
+    #further-info {
         margin: 0px 20px 0px 20px;
     }
 
@@ -1547,11 +1523,12 @@ th {
         scroll-margin-top: 295px;
     }
 
-    #user-guides-intro, #put-on, #take-off, #videos {
-        margin: 0px 30px 0px 30px;
+    #user-guides-content {
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
-    #user-guides-intro p, #user-guides-intro li, #put-on li, #take-off li {
+    #user-guides-content p, #user-guides-content li {
         text-align: justify;
     }
 
