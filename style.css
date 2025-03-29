@@ -73,12 +73,6 @@
             font-size: 1rem;
         }
 
-        .shop-main h2 {
-            font-size: 1.2rem;
-            text-align: center;
-        }
-        
-
         .faqs-main h2 {
             font-size: 1rem;
             font-weight:400;
@@ -186,6 +180,15 @@
         width: 47%;
     }
 
+    .text-left-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 20px 40px 20px;
+        width: 40%;
+    }
+
     .text-right {
         margin: 20px;
         text-align: justify;
@@ -278,9 +281,7 @@
             align-items: center;
         }
 
-        .shop-content {
-            margin-top: 120px;
-        }
+
 
         #user-guides-content {
             margin-top: 120px;
@@ -304,6 +305,10 @@
 
         .page-content {
             margin-top: 80px;
+        }
+
+        .shop-content {
+            margin-top: 120px;
         }
 
         .page-h1-container {
@@ -737,6 +742,21 @@
         transform: rotate(5deg);
     }
 
+    .img9 {
+        top: 10px;
+        width: 380px;
+        max-width: 60%;
+        transform: rotate(-5deg);
+        z-index: -1;
+    }
+
+    .img10 {
+        right: 60px;
+        width: 380px;
+        max-width: 60%;
+        transform: rotate(5deg);
+    }
+
     .images-container {
         margin-top: 30px;
     }
@@ -776,7 +796,7 @@
             flex-direction: column;
             }
 
-            #home #what-is, #home #history, #home #funding {
+            #what-is, #history, #funding, #availability {
             display: flex;
             flex-direction: row;
             }
@@ -1176,8 +1196,6 @@ legend {
 
 /* Shop */
 
-
-
 .shop-tables {
     display: flex;
     flex-direction: row;
@@ -1199,13 +1217,6 @@ th {
     padding: 0px 10px 0px 10px;
 }
 
-
-
-.shop-intro-p1 {
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
 #foot-measurement {
     width: 300px;
     border-style: solid;
@@ -1213,15 +1224,30 @@ th {
     border-color:#2a2a2a80;
 }
 
-.shop-content {
-    margin-right: 20px;
-    /* margin-bottom: 20px; */
-    margin-left: 20px;
+#shop h2 {
+    font-size: 1.2rem;
     text-align: center;
 }
 
-.shop-content section {
-    margin-bottom: 40px;
+#availability {
+    height: 300px;
+    /* padding-bottom: 20px; */
+    margin-right: 20px;
+}
+
+#availability p, #size p {
+    text-align: center;
+    max-width: 450px;
+}
+
+#availability .images-container {
+    margin-top: 0;
+    width: 100%;
+}
+
+#availability .images {
+    width: 60%;
+    margin: 20px;
 }
 
 .products-h2 {
