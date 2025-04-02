@@ -864,7 +864,7 @@
         width: 60%;
     }
 
-    #shop .test-images-container {
+    #shop .images-container {
         display: flex;
         max-height: initial;
         width: initial;
@@ -912,7 +912,7 @@
             min-height: initial;
         }
 
-        #shop .test-images-container {
+        #shop .images-container {
             flex-direction: column;
         }
         .img9 {
@@ -1014,7 +1014,7 @@
 
     @media (max-width: 530px) {
 
-        #shop .test-images-container {
+        #shop .images-container {
             flex-direction: row;
         }
 
@@ -1094,7 +1094,7 @@
         height: 25vh;
     }
 
-    #size .test-images-container {
+    #size .images-container {
         flex-direction: column;
         align-items: center;
     }
