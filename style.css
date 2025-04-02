@@ -860,7 +860,7 @@
         width: 40%;
     }
 
-    .test-images {
+    #shop .test-images {
         width: 60%;
     }
 
@@ -1018,7 +1018,7 @@
             flex-direction: row;
         }
 
-        .test-images {
+        #shop .test-images {
             width: 100%;
         }
 
