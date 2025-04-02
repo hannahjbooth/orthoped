@@ -864,7 +864,7 @@
         width: 60%;
     }
 
-    .test-images-container {
+    #shop .test-images-container {
         display: flex;
         max-height: initial;
         width: initial;
@@ -912,7 +912,7 @@
             min-height: initial;
         }
 
-        .test-images-container {
+        #shop .test-images-container {
             flex-direction: column;
         }
         .img9 {
@@ -1014,7 +1014,7 @@
 
     @media (max-width: 530px) {
 
-        .test-images-container {
+        #shop .test-images-container {
             flex-direction: row;
         }
 
