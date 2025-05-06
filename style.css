@@ -149,6 +149,7 @@
     /* Temporary Shop banner styling */
     .banner-text-shop {
         color:#212121;
+        padding-left: 5px;
     }
 
     .news-shop {
