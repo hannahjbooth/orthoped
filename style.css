@@ -152,13 +152,29 @@
     }
 
     .news-shop {
-        padding: 2px 5px;;
+        padding: 2px 5px;
         background-color: #80BDBC;
         font-weight: 600;
         color: white;
     }
 
-    
+    /* Temporary User Guides banner styling */
+
+    .news-user-guides {
+        padding: 2px 5px;
+        background-color: #80BDBC;
+        font-weight: 600;
+        color: white;
+        font-family: Inter, Arial, sans-serif;
+    }
+
+    .banner-text-user-guides {
+        padding-left: 5px;
+        font-family: "Merriweather", "Times New Roman", serif;
+        font-weight: 300;
+        font-size: 14px;
+    }
+
     nav {
         width: 100vw;
         display: flex;
