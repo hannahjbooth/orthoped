@@ -146,6 +146,12 @@
         padding-right: 55rem;
     }
 
+
+    .banner-favicon {
+        padding: 5px;
+        height: 20px;
+    }
+
     /* Temporary Shop banner styling */
     .banner-text-shop {
         color:#212121;
@@ -195,7 +201,7 @@
         background-color: #8a8a8a21;
         color:#353535;
         font-weight: 400;
-        letter-spacing: 0.05rem;
+        letter-spacing: 0.04rem;
     }
 
     .news-contact {
