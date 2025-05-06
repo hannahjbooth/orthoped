@@ -160,7 +160,6 @@
     }
 
     /* Temporary User Guides banner styling */
-
     .news-user-guides {
         padding: 2px 5px;
         background-color: #80BDBC;
@@ -174,6 +173,19 @@
         font-family: "Merriweather", "Times New Roman", serif;
         font-weight: 300;
         font-size: 14px;
+    }
+
+    /* Temporary FAQs banner styling */
+    .banner-text-faq {
+        color: #212121;
+        padding-left: 5px;
+    }
+
+    .news-faq {
+        padding: 2px 5px;
+        background-color: #868585;
+        font-weight: 600;
+        color: white;
     }
 
     nav {
