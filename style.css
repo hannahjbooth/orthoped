@@ -1592,6 +1592,11 @@
     }
 
     @media (max-width: 850px) {
+        /* Nav */
+        .main-nav-ul {
+            justify-content: space-evenly;
+        }
+        
         /* Home */
         #what-is .images {
             width: 30%;
@@ -1711,6 +1716,22 @@
 
     @media (max-width: 700px) {
 
+        /* Nav */
+
+
+
+        .main-nav-ul li, nav ul li {
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        .main-nav-ul a {
+            letter-spacing: 0.05rem;
+        }
+
+
+
+        /* Home */
         #home section {
             margin-bottom: 30px;
             position: relative;
