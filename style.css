@@ -146,6 +146,18 @@
         padding-right: 55rem;
     }
 
+    /* Temporary Shop banner styling */
+    .banner-text-shop {
+        color:#212121;
+    }
+
+    .news-shop {
+        padding: 2px 5px;;
+        background-color: #80BDBC;
+        font-weight: 600;
+        color: white;
+    }
+
     
     nav {
         width: 100vw;
