@@ -1027,22 +1027,20 @@
 
         .img5 {
             top: 0;
-            left: -45px;
+            left: 0;
             width: 500px;
             max-width: 60%;
             transform: rotate(-7deg);
-            z-index: -1;
         }
     
         .img6 {
-            top: 50%;
+            top: 40%;
             right: 0;
             width: 500px;
-            right: -10px;
             max-width: 60%;
             transform: rotate(5deg);
+            z-index: -2;
         }
-
 
         .img9 {
             left: 0;
@@ -1088,6 +1086,23 @@
             max-width: 90%;
             transform: rotate(3deg);
             z-index: -1;
+        }
+
+        .img5 {
+            top: 50%;
+            left: 0;
+            width: 500px;
+            max-width: 80%;
+            transform: rotate(-7deg);
+        }
+    
+        .img6 {
+            top: 0;
+            right: 10%;
+            width: 500px;
+            max-width: 80%;
+            transform: rotate(5deg);
+            z-index: -2;
         }
 
         
@@ -1583,7 +1598,7 @@
             align-items: center;
         }
 
-        #what-is .img1 {        
+        .img1 {        
             top: 10%;
             left: 0;
             width: 200px;
@@ -1592,7 +1607,7 @@
             z-index: -1;        
         }
 
-        #what-is .img2 {  
+        .img2 {  
             right: 20px;
             width: 200px;
             max-width: 80%;
@@ -1614,6 +1629,23 @@
             max-width: 90%;
             transform: rotate(3deg);
             z-index: -1;
+        }
+
+        .img5 {
+            top: 30%;
+            left: 0;
+            width: 500px;
+            max-width: 80%;
+            transform: rotate(-7deg);
+        }
+    
+        .img6 {
+            top: 0;
+            right: 10%;
+            width: 500px;
+            max-width: 80%;
+            transform: rotate(5deg);
+            z-index: -2;
         }
 
         .shop-content {
@@ -1676,6 +1708,7 @@
             transform: rotate(-5deg);
         }
     }
+
     @media (max-width: 700px) {
 
         #home section {
@@ -1684,16 +1717,8 @@
           }
 
         #home .text-and-images {
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
-        }
-
-        /* #home .images {
-            min-height: 30vh;
-        } */
-
-        #home .images-container img {
-            position: initial;
         }
 
         #home .text-left, #home .text-right {
@@ -1703,48 +1728,68 @@
 
         #home .images, #home .images-container {
             width: 90%;
+            height: 220px;
         }
 
         .img1 {        
-            top: initial;
+            top: 0%;
             bottom: initial;
-            left: 0;
+            left: 12%;
             right: initial;
-            width: 200px;
+            height: 200px;
             max-width: 80%;
-            transform: rotate(-5deg);
-            z-index: -1;        
+            transform: rotate(-5deg);    
         }
 
         .img2 {  
-            top: initial;
+            top: 0;
             bottom: initial;
             left: initial;
-            right: 0;
-            width: 200px;
-            max-width: 80%;
+            right: 12%;
+            height: 200px;
+            max-width: 90%;
             transform: rotate(5deg);
+            z-index: -1;
         }
 
         .img3 {
             top: 10%;
-            left: 20px;
-            width: 500px;
+            bottom: initial;
+            left: initial;
+            right: 0;
+            width: 250px;
+            max-height: initial;
             max-width: 90%;
             transform: rotate(-3deg);
         }
 
         .img4 {
-            top: 40%;
-            right: 0;
-            width: 500px;
+            top: 0;
+            left: initial;
+            right: initial;
+            bottom: initial;
+            width: 250px;
             max-width: 90%;
             transform: rotate(3deg);
             z-index: -1;
         }
 
-
-
+        .img5 {
+            top: 0;
+            left: 0;
+            width: 250px;
+            max-width: 80%;
+            transform: rotate(-7deg);
+        }
+    
+        .img6 {
+            top: 0;
+            right: 0;
+            width: 250px;
+            max-width: 80%;
+            transform: rotate(5deg);
+            z-index: -2;
+        }
     }
 
     @media (max-width: 530px) {
@@ -1764,6 +1809,23 @@
     
         .text-and-images {
             align-items: center;
+        }
+
+        .img5 {
+            top: -15%;
+            left: -5%;
+            width: 220px;
+            max-width: 80%;
+            transform: rotate(-7deg);
+        }
+    
+        .img6 {
+            top: 25%;
+            right: -5%;
+            width: 220px;
+            max-width: 80%;
+            transform: rotate(5deg);
+            z-index: -2;
         }
     
     }    
