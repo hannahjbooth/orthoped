@@ -51,6 +51,24 @@ function hideBothBuggingTables(body) {
         }
 }
 
+// Mobile dropdown menu
+let dropdownButton = document.getElementById('dropdown-button');
+let dropdownContent = document.getElementById('dropdown-content');
+console.log(dropdownButton);
+console.log(dropdownContent);
+
+function toggleDropdownMenu(menu) {
+    if (menu.style.display === 'none') {
+        menu.style.display = 'flex';
+    } else {
+        menu.style.display = 'none';
+    }
+}
+
+dropdownButton.addEventListener('click', function (){
+    toggleDropdownMenu(dropdownContent);
+})
+
 
 
 
