@@ -272,11 +272,11 @@
         width: 40%;
     }
 
-    .text-left-2 {
+    /* .text-left-2 {
         margin: 20px 0px 20px 0px;
         text-align: justify;
         width: 47%;
-    }
+    } */
 
     /* .text-left-3 {
         display: flex;
@@ -392,9 +392,9 @@
 
         #user-guides-intro {
             display: flex;
-            justify-content: space-around;
-            margin-left: 70px;
-            margin-right: 0;
+            justify-content: space-evenly;
+            /* margin-left: 70px; */
+            /* margin-right: 0; */
         }
 
         .home-content {
@@ -586,7 +586,7 @@
             line-height: 1.4rem;
             }
 
-            #home section {
+            #home section, #user-guides-intro section {
             display: flex;
             justify-content: space-evenly;
             margin-bottom: 20px;
@@ -848,7 +848,7 @@
         box-shadow: 2px 2px 8px 0px #7b7b7b4e;
     }
 
-    .image-container img {
+    .images-container img {
         border-style: solid;
         border-width: 5px;
         border-color: #f8f8f8;
@@ -910,17 +910,17 @@
 
     .img7 {
         top: 0;
-        left: -15px;
-        width: 350px;
+        left: 0;
+        width: 300px;
         max-width: 80%;
         transform: rotate(-3deg);
         z-index: -1;
     }
 
     .img8 {
-        bottom: 0;
-        right: 0;
-        width: 350px;
+        top: 40%;
+        right: 10%;
+        width: 300px;
         max-width: 80%;
         transform: rotate(5deg);
     }
@@ -1063,7 +1063,7 @@
     @media (max-width: 1000px) {
         /* Home */
 
-        #home .text-left, #home .text-right {
+        #home .text-left, #home .text-right, #user-guides-intro .text-left {
             width: 60%
         }
 
@@ -1653,6 +1653,24 @@
             z-index: -2;
         }
 
+        /* User Guides */
+        .img7 {
+            top: 0;
+            left: 0;
+            width: 300px;
+            max-width: 90%;
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+    
+        .img8 {
+            top: 35%;
+            right: 0;
+            width: 300px;
+            max-width: 90%;
+            transform: rotate(5deg);
+        }
+
         .shop-content {
             margin-top: 140px;
         }
@@ -1737,20 +1755,21 @@
             position: relative;
           }
 
-        #home .text-and-images {
+        #home .text-and-images, #user-guides .text-and-images {
             flex-direction: column;
             align-items: center;
         }
 
-        #home .text-left, #home .text-right {
+        #home .text-left, #home .text-right, #user-guides-intro .text-left {
             width: 80%;
             align-items: center;
         }
 
-        #home .images, #home .images-container {
+        #home .images, #home .images-container, #user-guides-intro .images, #user-guides-intro .images-container {
             width: 90%;
             height: 220px;
         }
+
 
         .img1 {        
             top: 0%;
@@ -1812,6 +1831,35 @@
             transform: rotate(5deg);
             z-index: -2;
         }
+
+        /* User Guides */
+
+        #user-guides-content {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .img7 {
+            top: 0;
+            left: 0;
+            width: 260px;
+            max-width: 90%;
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+    
+        .img8 {
+            top: 0;
+            right: 0;
+            width: 260px;
+            max-width: 90%;
+            transform: rotate(5deg);
+        }
+
+        #user-guides-intro .images-container {
+            margin-top: 0;
+        }
+
     }
 
     @media (max-width: 530px) {
@@ -1870,6 +1918,25 @@
             max-width: 80%;
             transform: rotate(5deg);
             z-index: -2;
+        }
+
+        /* User Guides */
+
+        .img7 {
+            top: -10%;
+            left: 0;
+            width: 230px;
+            max-width: 90%;
+            transform: rotate(-3deg);
+            z-index: -1;
+        }
+    
+        .img8 {
+            top: 35%;
+            right: 0;
+            width: 230px;
+            max-width: 90%;
+            transform: rotate(5deg);
         }
     
     }    
@@ -2002,13 +2069,13 @@
 
 }
 
-    #user-guides-intro .images {
+    /* #user-guides-intro .images {
         width: 52%;
     }
 
     #user-guides-intro .images-container {
         margin-top: 20px;
-    }
+    } */
     
 
     /* Scroll targets */
@@ -2048,6 +2115,10 @@
 .bolder-font {
     font-weight: 400;
 }
+
+/* #user-guides-intro .images {
+    width: 35%;
+} */
 
 
 
