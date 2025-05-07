@@ -1596,7 +1596,7 @@
         .main-nav-ul {
             justify-content: space-evenly;
         }
-        
+
         /* Home */
         #what-is .images {
             width: 30%;
@@ -1755,18 +1755,19 @@
         .img1 {        
             top: 0%;
             bottom: initial;
-            left: 12%;
+            left: 5%;
             right: initial;
             height: 200px;
             max-width: 80%;
-            transform: rotate(-5deg);    
+            transform: rotate(-5deg);
+            z-index: 0;
         }
 
         .img2 {  
-            top: 0;
+            top: 0%;
             bottom: initial;
             left: initial;
-            right: 12%;
+            right: 5%;
             height: 200px;
             max-width: 90%;
             transform: rotate(5deg);
@@ -1830,6 +1831,28 @@
     
         .text-and-images {
             align-items: center;
+        }
+
+        .img1 {        
+            top: -10%;
+            bottom: initial;
+            left: 0;
+            right: initial;
+            height: 200px;
+            max-width: 80%;
+            transform: rotate(-5deg);
+            z-index: 0;
+        }
+
+        .img2 {  
+            top: 20%;
+            bottom: initial;
+            left: initial;
+            right: 0;
+            height: 200px;
+            max-width: 90%;
+            transform: rotate(5deg);
+            z-index: -1;
         }
 
         .img5 {
