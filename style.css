@@ -152,66 +152,20 @@
         height: 20px;
     }
 
-    /* Temporary Shop banner styling */
-    .banner-text-shop {
+    /* Banner styling */
+    .banner-text {
         color:#212121;
         padding-left: 5px;
     }
 
-    .news-shop {
+    .news {
         padding: 2px 5px;
         background-color: #80BDBC;
         font-weight: 600;
         color: white;
     }
 
-    /* Temporary User Guides banner styling */
-    .news-user-guides {
-        padding: 2px 5px;
-        background-color: #80BDBC;
-        font-weight: 600;
-        color: white;
-        font-family: Inter, Arial, sans-serif;
-    }
 
-    .banner-text-user-guides {
-        padding-left: 5px;
-        font-family: "Merriweather", "Times New Roman", serif;
-        font-weight: 300;
-        font-size: 14px;
-    }
-
-    /* Temporary FAQs banner styling */
-    .banner-text-faq {
-        color: #212121;
-        padding-left: 5px;
-    }
-
-    .news-faq {
-        padding: 2px 5px;
-        background-color: #868585;
-        font-weight: 600;
-        color: white;
-    }
-
-    /* Temporary Contact banner styling */
-    .banner-text-contact {
-        margin-left: 5px;
-        padding: 2px 5px;
-        background-color: #8a8a8a21;
-        color:#353535;
-        font-weight: 400;
-        letter-spacing: 0.04rem;
-    }
-
-    .news-contact {
-        padding: 2px 5px;
-        background-color: #80BDBC;
-        font-weight: 500;
-        color: white;
-    }
-
-    
     nav {
         width: 100vw;
         display: flex;
