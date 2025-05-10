@@ -119,6 +119,37 @@ for (let question of questions) {
     })
 }
 
+// Mobile dropdown menu
+let dropdownArea = document.getElementById('dropdown');
+let dropdownButton = document.getElementById('dropdown-button');
+let dropdownContent = document.getElementById('dropdown-content');
+console.log(dropdownButton);
+console.log(dropdownContent);
+
+function toggleDropdownContent(menu) {
+    if (!menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+    } else {
+        menu.classList.remove('hidden');
+    }
+}
+
+dropdownButton.addEventListener('click', function() {
+    toggleDropdownContent(dropdownContent);
+})
+
+window.addEventListener('scroll', function() {
+    dropdownContent.classList.add('hidden');
+})
+
+window.addEventListener('click', function(event) {
+    if (!dropdownArea.contains(event.target)) {
+        dropdownContent.classList.add('hidden');
+        console.log('menu is not clicked on');
+    }
+})
+
+
 
 
 
