@@ -147,10 +147,6 @@
     }
 
 
-    .banner-favicon {
-        padding: 5px;
-        height: 20px;
-    }
 
     /* Banner styling */
     .banner-text {
@@ -1337,10 +1333,21 @@
         main {
             padding-top: 106.49px;
         }
-    
-        .banner {
-            display: none;
+
+        .scrolling-text {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: scroll-left 13s linear infinite;
         }
+    
+        .scrolling-text p {
+            margin: 0;
+            padding-top: 4px;
+            font-size: 15px;
+            padding-right: 20rem;
+        }
+    
+
     
         h1 {
             font-size: 1.2rem;
@@ -1355,14 +1362,14 @@
         }
     
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
     
     
         /* Navigation bar */
     
         header {
-            padding-top: 0;
+            padding-top: 30px;
             position: fixed;
             top: 0;
             width: 100vw;
@@ -1435,7 +1442,7 @@
         }
     
         .home-content {
-            margin-top: 100px;
+            margin-top: 150px;
         }
     
         /* .shop-content {
@@ -1506,7 +1513,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 0px;
-            top: 105px;
+            top: 145px;
             position: fixed;
             border-bottom: solid;
             border-width: 1px;
@@ -1946,6 +1953,11 @@
         }
 
         /* Home */
+
+        .home-content {
+            margin-top: 130px;
+        }
+
         #home section {
             margin-bottom: 30px;
             position: relative;
@@ -2073,6 +2085,92 @@
 
     @media (max-width: 530px) {
 
+
+        .home-content {
+            margin-top: 110px;
+        }
+
+        .second-news .news {
+            display: none;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+           }
+    
+
+        .scrolling-text {
+            display: flex;
+            white-space: nowrap;
+            animation: none;
+        }
+
+        .news {
+            margin-left: 5px;
+        }
+
+        .mobile-scroll-wrapper {
+            display: inline-block;
+            position: initial;
+            overflow: hidden;
+            width: 100%;  
+            margin-left: 5px;
+        }
+
+        .banner {
+            height: 27px;
+            /* border-style: solid;
+            border-left: none;
+            border-top: none;
+            border-right: none;
+            border-color:#ece8e8;
+            border-width: 1px; */
+        }
+
+        .banner-text {
+            display: inline-flex;
+            white-space: nowrap;
+            animation: scroll-left 12s linear infinite;
+            position: relative;
+            padding-left: 50px;
+        }
+    
+        .scrolling-text p {
+            margin: 0;
+            padding-top: 4px;
+            font-size: 0.8rem;
+            padding-right: 0;
+        }
+
+        .scrolling-text p {
+            line-height: 1;
+        }
+          
+        .news {
+            line-height: 1.5;
+            vertical-align: middle;
+        }
+
+        .banner-text {
+            line-height: inherit;
+            vertical-align: top;
+            position: relative;
+        }
+
+        header {
+            padding-top: 27px;
+        }
+
+        /* .logo-area {
+            background: linear-gradient(to top, #ffffff,#ffffff, #ffffff, #ffffff, #ffffff,#f9f7f7);
+        } */
+
+        /* .nav-logo {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        } */
+
         main {
             padding-top: 126.49px;
         }
@@ -2153,6 +2251,7 @@
     @media (max-width: 530px) {
 
         /* Dropdown menu */
+
 
         .nav-row {
             background: linear-gradient(to bottom, #ffffff, #ffffff, #ffffff, #ffffff, #80bdbc1e, #80bdbc88, #80bdbc, #71b4b2);            background-size: 100% 110px; /* Ensure the gradient has a fixed height of 100px */
