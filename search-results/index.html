@@ -34,14 +34,24 @@
                         <p class="mobile-nav-title">Home of the <span class="ortho"> Ortho</span><span class="ped">Ped </span> Foot Drop Splint</p>
                     </div>
                     <ul id="dropdown" class="main-nav-ul">
-                        <button id="dropdown-button" class="dropdown-button">MENU</button>
-                        <div id="dropdown-content" class="hidden">
+                        <li id="dropdown-button" class="dropdown-button"><button>MENU</button></li>
+                        <ul id="dropdown-content" class="hidden">
                             <li><a href="/index.html">HOME</a></li>
                             <li><a href="/shop/index.html">SHOP</a></li>
                             <li><a href="/user-guides/index.html">USER GUIDES</a></li>
                             <li><a href="/faqs/index.html">FAQ</a></li>
                             <li><a href="/contact/index.html">CONTACT</a></li>
-                            <li><a href="" id="search-link">SEARCH</a></li>
+                            <li id="mobile-search-li">
+                                <a href="" id="search-link">SEARCH</a>
+                                <div id="mobile-search-box" class="hidden">
+                                    <div id="mobile-search">
+                                        <form id="mobile-search-form" role="search" action="/search-results/index.html">
+                                            <!-- <label for="query">Type to search the site:</label> -->
+                                            <input type="search" class="mobile-search-input" id="mobile-query" name="q">
+                                            <button type="submit" class="mobile-search-button">Go</button>
+                                        </form> 
+                                    </div>
+                            </li>
                             <li class="shopping-cart-svg">
                                 <a href="/shop/test/index.html#!/~/cart">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="white" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
@@ -52,12 +62,12 @@
                                     </svg>
                                 </a>
                             </li>
-                        </div>
+                        </ul>
                     </ul>
                 </div>
                 <div id="search-box" class="hidden">
                     <div id="search">
-                        <form id="search" role="search" action="/search-results/index.html">
+                        <form id="search-form" role="search" action="/search-results/index.html">
                             <label for="query">Type to search the site:</label>
                             <input type="search" class="search-input" id="query" name="q">
                             <button type="submit" class="search-button">Go</button>
