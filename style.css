@@ -380,6 +380,7 @@
         }
 
         #dropdown-content {
+            padding-left: 0;
             display: flex;
             align-items: center;
             justify-content: space-evenly;
@@ -484,6 +485,7 @@
             justify-content: center;
             width: 100vw;
         }
+    
 
         .search-input {
             border-bottom: solid;
@@ -510,6 +512,25 @@
             font-size: 1rem;
             background-color: white;
         }
+
+        #mobile-search-li {
+            flex-direction: row;
+        }
+
+        .mobile-search-input {
+            border-style: none;
+            margin-right: 10px;
+        }
+
+        .mobile-search-button {
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 6px;
+            border-color: white;
+            background-color: #ffffff00;
+            color: white;
+        }
+
 
             /* Home */
 
@@ -1395,7 +1416,6 @@
             margin: 0;
             padding-bottom: 5px;
             align-items: center;
-    
         }
     
         .nav-row {
@@ -1513,7 +1533,7 @@
             display: flex;
             flex-direction: column;
             margin-top: 0px;
-            top: 145px;
+            top: 140px;
             position: fixed;
             border-bottom: solid;
             border-width: 1px;
@@ -2085,6 +2105,9 @@
 
     @media (max-width: 530px) {
 
+        #home-header {
+            top: 137px;
+        }
 
         .home-content {
             margin-top: 110px;
@@ -2261,8 +2284,8 @@
         }
 
         #dropdown-content {
+            height: initial;
             flex-direction: column;
-            /* margin-top: 5px; */
             background-color: #71b4b2;
             background: linear-gradient(to top, #90c4c3, #71b4b2);
             box-shadow: 0px 4px 12px -7px #040606;
@@ -2270,6 +2293,11 @@
         }
 
         #dropdown-button {
+            display: initial; 
+            height: 36.15px;
+        }
+
+        #dropdown-button button {
             display: initial;
             background: initial;
             appearance: initial;
@@ -2297,12 +2325,13 @@
             border-style: initial;
             border-color: initial;
             border-image: initial;
+            height: 36.15px;
             /* padding-top: 15px; */
-            height: 36.51px;
         }
 
         #dropdown {
             height: 36.51px;
+            padding-bottom: 0;
         }
 
         #dropdown .hidden {
@@ -2311,6 +2340,16 @@
 
         #dropdown-content li {
             margin: 3px;
+        }
+
+        #mobile-search-li {
+            height: initial;
+            flex-direction: column;
+        }
+
+        .nav-row {
+            height: initial;
+            min-height: 110px;
         }
 
 
