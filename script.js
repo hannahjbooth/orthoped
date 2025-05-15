@@ -11,8 +11,24 @@ searchLink.addEventListener("click", function(event) {
 });
 
 function toggleSearchBox() {
-    searchBox.classList.toggle("hidden");
+    // if (window.innerWidth > 530) {
+        searchBox.classList.toggle("hidden");
+        // console.log('screen is larger than 530px')
+    // } else {
+        // console.log('screen is smaller than 530px')
+    // }
 }
+
+// Close search bar upon click elsewhere on the page
+    window.addEventListener('click', function(event) {
+        if (!searchBox.classList.contains('hidden')) {
+            if (!searchBox.contains(event.target) && !searchLink.contains(event.target)) {
+                toggleSearchBox();
+                toggleDarkeningEffect();
+            }
+        }
+    })
+
 
 function toggleDarkeningEffect() {
     overlay.classList.toggle("darkening-effect");
@@ -31,6 +47,9 @@ function toggleDarkeningEffect() {
             searchInput.classList.remove("search-input-filled");
         }
     });
+
+
+
 
 // Page navigation dynamic highlighting
 
@@ -145,7 +164,6 @@ window.addEventListener('scroll', function() {
 window.addEventListener('click', function(event) {
     if (!dropdownArea.contains(event.target)) {
         dropdownContent.classList.add('hidden');
-        console.log('menu is not clicked on');
     }
 })
 
