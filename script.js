@@ -2,24 +2,29 @@
 
 const searchLink = document.getElementById("search-link");
 const searchBox = document.getElementById("search-box");
+const mobileSearchBox = document.getElementById('mobile-search-box');
+const mobileSearchLi = document.getElementById('mobile-search-li');
 const overlay = document.getElementById("overlay");
 
 searchLink.addEventListener("click", function(event) {
     event.preventDefault();
     toggleSearchBox();
-    toggleDarkeningEffect();
+    if (window.innerWidth > 530) {
+        toggleDarkeningEffect();
+    }
 });
 
 function toggleSearchBox() {
-    // if (window.innerWidth > 530) {
+    if (window.innerWidth > 530) {
         searchBox.classList.toggle("hidden");
-        // console.log('screen is larger than 530px')
-    // } else {
-        // console.log('screen is smaller than 530px')
-    // }
+    } else {
+        mobileSearchBox.classList.toggle("hidden");
+        console.log('screen is smaller than 530px')
+    }
 }
 
 // Close search bar upon click elsewhere on the page
+
     window.addEventListener('click', function(event) {
         if (!searchBox.classList.contains('hidden')) {
             if (!searchBox.contains(event.target) && !searchLink.contains(event.target)) {
@@ -31,7 +36,12 @@ function toggleSearchBox() {
 
 
 function toggleDarkeningEffect() {
-    overlay.classList.toggle("darkening-effect");
+    if (window.innerWidth > 530) {
+        overlay.classList.toggle("darkening-effect");
+    } else {
+        overlay.classList.toggle("darkening-effect");
+        console.log('screen is smaller than 530px')
+    }
 }
 
 
@@ -48,7 +58,36 @@ function toggleDarkeningEffect() {
         }
     });
 
+// Mobile dropdown menu
+let dropdownArea = document.getElementById('dropdown');
+let dropdownButton = document.getElementById('dropdown-button');
+let dropdownContent = document.getElementById('dropdown-content');
+console.log(dropdownButton);
+console.log(dropdownContent);
 
+function toggleDropdownContent(menu) {
+    if (!menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+    } else {
+        menu.classList.remove('hidden');
+    }
+}
+
+dropdownButton.addEventListener('click', function() {
+    toggleDropdownContent(dropdownContent);
+})
+
+window.addEventListener('scroll', function() {
+    dropdownContent.classList.add('hidden');
+    mobileSearchBox.classList.add('hidden');
+})
+
+window.addEventListener('click', function(event) {
+    if (!dropdownArea.contains(event.target)) {
+        dropdownContent.classList.add('hidden');
+        mobileSearchBox.classList.add('hidden');
+    }
+})
 
 
 // Page navigation dynamic highlighting
@@ -138,34 +177,7 @@ for (let question of questions) {
     })
 }
 
-// Mobile dropdown menu
-let dropdownArea = document.getElementById('dropdown');
-let dropdownButton = document.getElementById('dropdown-button');
-let dropdownContent = document.getElementById('dropdown-content');
-console.log(dropdownButton);
-console.log(dropdownContent);
 
-function toggleDropdownContent(menu) {
-    if (!menu.classList.contains('hidden')) {
-        menu.classList.add('hidden');
-    } else {
-        menu.classList.remove('hidden');
-    }
-}
-
-dropdownButton.addEventListener('click', function() {
-    toggleDropdownContent(dropdownContent);
-})
-
-window.addEventListener('scroll', function() {
-    dropdownContent.classList.add('hidden');
-})
-
-window.addEventListener('click', function(event) {
-    if (!dropdownArea.contains(event.target)) {
-        dropdownContent.classList.add('hidden');
-    }
-})
 
 
 
