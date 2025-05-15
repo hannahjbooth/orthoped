@@ -519,10 +519,13 @@
 
         .mobile-search-input {
             border-style: none;
-            margin-right: 10px;
+            /* margin-right: 10px; */
+            width: 60vw;
+            margin-left: 15%;
         }
 
         .mobile-search-button {
+            margin-left: 2%;
             border-style: solid;
             border-width: 1px;
             border-radius: 6px;
