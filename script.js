@@ -95,7 +95,6 @@ window.addEventListener('click', function(event) {
     window.addEventListener('resize', function() {
         let currentWidth = window.innerWidth;
         if (previousWidth <= 530 && currentWidth > 530) {
-            console.log('screen size has increased beyond 530px')
             mobileSearchBox.classList.add('hidden');
         }
         previousWidth = currentWidth;
