@@ -2302,9 +2302,10 @@
             flex-direction: column;
             background-color: #71b4b2;
             background: linear-gradient(to top, #90c4c3, #71b4b2);
-            box-shadow: 0px 4px 12px -7px #040606;
+            box-shadow: 0px 9px 10px -10px #040606;
             /* box-shadow: 1px 1px 12px 3px #4c7473;    */
             transition: max-height 0.3s ease, opacity 0.3s ease;
+            border-radius: 0px 0px 5px 5px;
 
         }
 
