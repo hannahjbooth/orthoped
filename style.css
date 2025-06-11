@@ -2105,7 +2105,7 @@
             grid-row: 2;
             left: -15%;
             top: -10%;            
-            width: 115%
+            width: 115%;
         }
         
         .pos-3 {
@@ -2646,115 +2646,6 @@
             margin-right: 0;
         }
 
-
-         /* .bubble-container {
-            margin: 3% 0%;
-        }
-
-        .bubble-img {
-            width: 85%;
-            height: 130%;
-            object-fit: fill;
-        } */
-
-        /* .bubble-text {
-            width: 78%;
-            padding: 0 5% 5% 5%;
-        }  */
-
-        /* .pos-1 {
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        .pos-2 {
-            grid-column: 2;
-            grid-row: 1;
-            left: 20%;
-            width: 100%;
-        }
-
-        .pos-3 {
-            grid-column: 2;
-            grid-row: 2;
-            top: -30%;
-            width: 90%;
-        }
-
-        .pos-4 {
-            grid-column: 1;
-            grid-row: 3;
-            top: -30%;
-            left: 10%;
-        }
-
-        .pos-5 {
-            grid-column: 2;
-            grid-row: 3;
-            top: -10%;
-            left: 30%;
-            width: 78%;
-        }
-
-        .pos-6 {
-            grid-column: 2;
-            grid-row: 4;
-            top: -50%;
-            left: 10%;
-            width: 80%;
-        }
-
-        .pos-7 {
-            grid-column: 1;
-            grid-row: 4;
-            width: 70%;
-            top: -40%;
-            left: 10%;
-        }
-
-        .pos-8 {
-            grid-column: 2;
-            grid-row: 5;
-            top: -50%;
-            left: 20%;
-            width: 90%;
-        }
-
-        .pos-9 {
-            grid-column: 1;
-            grid-row: 5;
-            left: 20%;
-            top: -30%;
-            width: 80%;
-        }
-
-        .pos-10 {
-            grid-column: 2;
-            grid-row: 7;
-            top: -40%;
-            width: 90%;
-        }
-
-        .pos-11 {
-            grid-column: 1;
-            grid-row: 7;
-            top: 20%;
-            left: 20%;
-            width: 80%;
-        }
-
-        .pos-12 {
-            grid-column: 2;
-            grid-row: 8;
-            top: -20%;
-            left: 20%;
-            width: 90%;
-        } */
-
-
-
-
-
         /* User Guides */
 
         #user-guides-content {
@@ -3210,6 +3101,215 @@
         transform: rotate(-5deg);
     }
 
+    /* Home - Feedback */
+
+    .study-grid-container {
+        grid-template-columns: 200px 200px;
+    }
+
+    .pos-1 {
+        grid-column: 1;
+        grid-row: 1;
+        top: -15%;
+        left: 35%;
+        width: 120%;
+    }
+
+    .pos-1 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-1 p {
+        padding: 3% 5% 3% 5%;
+    }
+
+    .pos-2 {
+        grid-column: 2;
+        grid-row: 2;
+        left: 0;
+        top: 15%;            
+        width: 85%;
+    }
+
+    .pos-2 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-2 p {
+        padding: 3% 5% 6% 5%;
+    }
+    
+    .pos-3 {
+        grid-column: 1;
+        grid-row: 2;
+        top: -5%; 
+        left: 10%;
+        width: 85%;           
+    }
+
+    .pos-3 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-3 p {
+        padding: 5% 12% 4% 12%;
+    }
+    
+    .pos-4 {
+        grid-column: 2;
+        grid-row: 3;
+        top: 30%;
+        left: -10%;       
+    }
+
+    .pos-4 img {
+        height: 110%;
+        object-fit: fill;
+    }
+
+    .pos-4 p {
+        padding: 3% 5% 6% 5%;
+    }
+
+    .pos-5 {
+        grid-column: 1;
+        grid-row: 3;            
+        top: 15%;
+        left: 10%; 
+        width: 75%;
+    }
+
+    .pos-5 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-5 p {
+        padding: 10% 6% 6% 6%;
+    }
+
+    .pos-6 {
+        grid-column: 2;
+        grid-row: 5;   
+        top: -10%;
+        left: 0;
+        width: 75%;                        
+    }
+
+    .pos-6 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-6 p {
+        padding: 0 6% 6% 6%;
+    }   
+
+    .pos-7 {
+        grid-column: 1;
+        grid-row: 4;            
+        top: -10%;
+        right: 0;
+        width: 60%;
+        left: 20%;
+    }
+
+    .pos-7 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-7 p {
+        padding: 6% 6% 6% 6%;
+    }    
+
+    .pos-8 {
+        grid-column: 2;
+        grid-row: 6;              
+        top: 15%;
+        left: 0; 
+        width: 80%;  
+    }
+
+    .pos-8 img {
+        height: 130%;
+        object-fit: fill;
+    }
+
+    .pos-8 p {
+        padding: 6% 6% 3% 6%;
+    }    
+
+    .pos-9 {
+        grid-column: 1;
+        grid-row: 5;              
+        top: 15%;
+        left: 10%;
+        width: 85%;   
+    }
+
+    .pos-9 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-9 p {
+        padding: 6% 6% 6% 6%;
+    }    
+
+    .pos-10 {
+        grid-column: 1;
+        grid-row: 6;              
+        top: 25%;
+        left: 15%; 
+        width: 80%;  
+    }
+
+    .pos-10 img {
+        height: 140%;
+        object-fit: fill;
+    }
+
+    .pos-10 p {
+        padding: 6% 6% 3% 6%;
+    }    
+
+    .pos-11 {
+        grid-column: 2;
+        grid-row: 7;   
+        top: 55%; 
+        left: 5%;  
+        width: 80%;  
+    }
+
+    .pos-11 img {
+        height: 140%;
+        object-fit: fill;
+    }
+
+    .pos-11 p {
+        padding: 3% 6% 3% 6%;
+    }    
+
+    .pos-12 {
+        grid-column: 1;
+        grid-row: 8;              
+        top: -10%;
+        left: 15%; 
+        width: 85%;
+    }
+
+    .pos-12 img {
+        height: 120%;
+        object-fit: fill;
+    }
+
+    .pos-12 p {
+        padding: 3% 6% 3% 6%;
+    } 
 }
 
     /* #user-guides-intro .images {
