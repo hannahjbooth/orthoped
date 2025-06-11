@@ -3101,7 +3101,13 @@
         transform: rotate(-5deg);
     }
 
+
+
     /* Home - Feedback */
+
+    /* #home section {
+        margin-bottom: 0;
+    } */
 
     .study-grid-container {
         grid-template-columns: 200px 200px;
@@ -3109,6 +3115,11 @@
 
     #both-studies h3 {
         max-width: 90%;
+
+    }
+
+    #study-1 h3 {
+        margin-top: 15px;
     }
 
     .pos-1 {
@@ -3338,7 +3349,6 @@
     .shop-scroll-target {
         scroll-margin-top: 200px;
     }
-
 
     /* Feet images */
 
