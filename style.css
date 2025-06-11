@@ -3107,6 +3107,10 @@
         grid-template-columns: 200px 200px;
     }
 
+    #both-studies h3 {
+        max-width: 90%;
+    }
+
     .pos-1 {
         grid-column: 1;
         grid-row: 1;
