@@ -3244,7 +3244,7 @@
     .pos-8 {
         grid-column: 2;
         grid-row: 6;              
-        top: 15%;
+        top: 25%;
         left: 0; 
         width: 80%;  
     }
@@ -3295,7 +3295,7 @@
     .pos-11 {
         grid-column: 2;
         grid-row: 7;   
-        top: 55%; 
+        top: 75%; 
         left: 5%;  
         width: 80%;  
     }
