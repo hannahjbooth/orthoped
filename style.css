@@ -378,7 +378,7 @@
             border-color: #ece8e8;
             background-color: white;
             background: linear-gradient(to bottom, #ffffff, #ffffff, #f9f7f7);
-            padding: 25px 0px 10px 0px;
+            padding: 15px 0px 10px 0px;
             z-index: 999;
         }
         
@@ -2258,6 +2258,7 @@
     
         .page-h1-container {
             margin-bottom: 10px;
+            padding: 45px 0px 10px 0px;
         }
     
         .contact-us-content {
@@ -2703,6 +2704,10 @@
 
         .home-content {
             margin-top: 110px;
+        }
+
+        .page-h1-container {
+            padding: 25px 0px 10px 0px;
         }
 
         .second-news .news {
