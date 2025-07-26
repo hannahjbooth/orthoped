@@ -1427,8 +1427,13 @@
         width: 40%;
     }
 
+
     #shop .images {
         width: 60%;
+    }
+
+    .shop-intro-p {
+        margin: 0 auto;
     }
 
     #shop .images-container {
@@ -3505,6 +3510,11 @@ td {
 
 th {
     padding: 0px 10px 0px 10px;
+}
+
+.foot-image-container {
+    display: flex;
+    justify-content: center;
 }
 
 #foot-measurement {
