@@ -400,6 +400,7 @@
         .user-guides-nav li {
             padding-left: 10px;
             padding-right: 10px;
+            text-align: center;
         }
 
         .page-nav-ul {
@@ -438,7 +439,8 @@
         
         .main-nav-ul a {
             letter-spacing: 2px;
-            color: white
+            color: white;
+            text-align: center;
         }
         
         .main-nav-ul li {
