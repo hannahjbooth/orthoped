@@ -1,34 +1,34 @@
-handleBuggingTables();
+// handleBuggingTables();
 
-function handleBuggingTables() {
-    observeForBodyElement();
-}
+// function handleBuggingTables() {
+//     observeForBodyElement();
+// }
 
-function observeForBodyElement() {
-    const observer = new MutationObserver(() => {
-        let body = document.getElementById('ecwid_body');
-        if (body) {
-            console.log("observed", body);
-            hideBothBuggingTables(body);
-            observer.disconnect();
-        }
-    })
-    observer.observe(document.body, { childList: true, subtree: true });
-}
+// function observeForBodyElement() {
+//     const observer = new MutationObserver(() => {
+//         let body = document.getElementById('ecwid_body');
+//         if (body) {
+//             console.log("observed", body);
+//             hideBothBuggingTables(body);
+//             observer.disconnect();
+//         }
+//     })
+//     observer.observe(document.body, { childList: true, subtree: true });
+// }
 
-function hideBothBuggingTables(body) {
-        const table1 = body.querySelector('table.ecwid-productBrowser-innerTable:first-of-type');
-        if (table1) {
-            console.log('Hiding first table with class "ecwid-productBrowser-innerTable"');
-            table1.style.display = 'none';
-        }
+// function hideBothBuggingTables(body) {
+//         const table1 = body.querySelector('table.ecwid-productBrowser-innerTable:first-of-type');
+//         if (table1) {
+//             console.log('Hiding first table with class "ecwid-productBrowser-innerTable"');
+//             table1.style.display = 'none';
+//         }
     
-        const table2 = body.querySelector('table.ecwid-productBrowser-auth-mini:first-of-type');
-        if (table2) {
-            console.log('Hiding first table with class "ecwid-productBrowser-auth-mini"');
-            table2.style.display = 'none';
-        }
-}
+//         const table2 = body.querySelector('table.ecwid-productBrowser-auth-mini:first-of-type');
+//         if (table2) {
+//             console.log('Hiding first table with class "ecwid-productBrowser-auth-mini"');
+//             table2.style.display = 'none';
+//         }
+// }
 
 // Mobile dropdown menu
 let dropdownArea = document.getElementById('dropdown');
