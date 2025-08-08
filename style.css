@@ -381,6 +381,8 @@
             padding: 15px 0px 10px 0px;
             z-index: 999;
         }
+
+
         
 
         /* Navigation */
@@ -3630,6 +3632,22 @@ th {
     font-family: "Albert Sans", sans-serif;
 }
 
+#tax-form {
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+@media (max-width: 850px) {
+
+    #tax-form .question {
+        max-width: 100%;
+    }
+}
+
+#tax-form fieldset {
+    width: 100%;
+}
 
 
 /* Information for Use */
