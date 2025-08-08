@@ -161,6 +161,87 @@
                     <img id="foot-measurement" src="/assets/foot-measure.png" alt="Foot being measured around the widest part of the ankle with a tape measure">                     
                 </div>
             </section>
+            <section id="tax-exemption">
+                <form id="tax-form" name="Tax Exemption Form" action="/thank-you" method="POST" data-netlify="true">
+                   <fieldset class="inner-form-fieldset">
+                        <legend>Tax Exemption Form</legend>
+                        <p>* Indicates required question</p>
+                        <div class="question">
+                            <label for="name">Name: *</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="question">
+                            <label for="address">Address: *</label>
+                            <textarea name="address" id="address"></textarea>
+                        </div>
+                        <div class="question">
+                            <label for="email">Email: *</label>
+                            <input type="email">
+                        </div>
+                        <div class="question">
+                            <label for="splint-size">Splint Size: *</label>
+                            <select name="splint-size" id="splint-size">
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div class="question">
+                            <p>Left-Handed or Right-Handed: *</p>
+                            <div class="radio-label">
+                                <input type="radio" id="left-handed" required>
+                                <label for="left-handed">Left-Handed</label>                                
+                            </div>
+                            <div>
+                                <input type="radio" id="right-handed" required>
+                                <label for="right-handed">Right-Handed</label>                                
+                            </div>
+                        </div>
+                        <div class="question">
+                            <label for="details">Please provide details of your chronic condition or disability: *</label>
+                            <textarea name="conditions-disability-details" id="details" required></textarea>
+                        </div>
+                        <div class="question">
+                            <p>These products are for domestic or my own personal use: *</p>
+                            <div>
+                                <label for="yes-domestic-or-personal">Yes</label>
+                                <input type="checkbox" i="yes-domestic-or-personal" required>                                
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>I consent to this data being used to assess my eligibility for VAT relief: *</p>
+                            <div>
+                                <label for="yes-data-use-consent">Yes</label>
+                                <input type="checkbox" id="yes-data-use-consent" required>                                
+                            </div>
+                        </div>
+                        <div class="question">
+                            <p>I confirm that the above data is true and accurate to the best of my knowledge and I would like to claim VAT relief: *</p>
+                            <div>
+                                <label for="yes-true">Yes</label>
+                                <input type="checkbox" id="yes-true" required>                                
+                            </div>
+                        </div>
+                        <input type="submit" value="Submit">
+                   </fieldset>
+                   
+                   
+                    <!-- the customer can fill out an online contact form on the shop page with their name, address, contact details and the splint size and left or right handed. I can then send them an invoice directly without the VAT for them to pay. The form will also need these questions for the customer to answer to show they are VAT exempt:
+Please provide details of your chronic condition or disability (free text box)
+These products are for domestic or my own personal use (yes)
+I consent to this data being used to assess my eligibility for VAT relief (yes)
+I confirm that the above data is true and accurate to the best of my knowledge and I would like to claim VAT relief (yes) -->
+
+                </form>
+
+            </section>
         </div>            
     </main>
     <footer>
