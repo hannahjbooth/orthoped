@@ -146,7 +146,7 @@
     .scrolling-text {
         display: inline-flex;
         white-space: nowrap;
-        animation: scroll-left 17s linear infinite;
+        animation: scroll-left 27s linear infinite;
     }
 
     .scrolling-text p {
