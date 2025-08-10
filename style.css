@@ -846,20 +846,25 @@
                 width: 90%;
             }
 
-            #further-info {
+            #further-info, #splint-testing {
                 display: flex;
                 flex-direction: column;
-                margin-left: 270px;
-                margin-right: 270px;
+                margin-left: 8%;
+                margin-right: 8%;
                 align-self: center;
             }
 
-            #further-info p {
+            #row {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #further-info p, #splint-testing p {
                 text-align: center;
                 margin-top: 10px;
             }
 
-            #further-info h2 {
+            #further-info h2, #splint-testing h2 {
                 text-align: center;
                 margin-bottom: 10px;
             }
