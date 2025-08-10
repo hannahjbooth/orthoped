@@ -656,7 +656,7 @@
                 border-radius: 5%;
             } */
 
-            #benefits, #limitations {
+            #benefits, #limitations, #delivery-notice {
                 background-color: #f9f9f9;
                 border-radius: 20px;
                 border-style: solid;
@@ -684,7 +684,7 @@
                 margin: 5px 0;
             }
 
-            #study-2 h4 {
+            #study-2 h4, #delivery-notice h2 {
                 margin-bottom: 10px;
                 background-color: rgb(128, 189, 188);
                 color: rgb(255, 255, 255);
@@ -3499,6 +3499,32 @@ legend {
 }
 
 /* Shop */
+
+
+
+#delivery-notice {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#delivery-notice div {
+    display: flex;
+    justify-content: center;
+}
+
+#delivery-notice p {
+    text-align: center;
+}
+
+#shop #delivery-notice h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+}
+
+.delivery-notice-container {
+    display: flex;
+    flex-direction: column;
+}
 
 .shop-tables {
     display: flex;
