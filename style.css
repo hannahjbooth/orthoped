@@ -849,9 +849,23 @@
             #further-info, #splint-testing {
                 display: flex;
                 flex-direction: column;
-                margin-left: 8%;
-                margin-right: 8%;
+
                 align-self: center;
+            }
+
+            #further-info {
+                margin-left: 8%;
+                margin-right: 6%;
+            }
+
+            #splint-testing {
+                margin-left: 6%;
+                margin-right: 6%;
+            }
+
+            #shop #splint-testing {
+                margin-left: 29%;
+                margin-right: 29%;
             }
 
             #row {
@@ -2308,6 +2322,11 @@
         }
     
         /* Shop */
+
+        #shop #splint-testing {
+            margin-left: 15%;
+            margin-right: 15%;
+        }
     
         .shop-scroll-target {
             scroll-margin-top: 280px;
