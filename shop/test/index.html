@@ -173,19 +173,19 @@
                         <p>* Indicates required question</p>
                         <div class="question">
                             <label for="name">Name: *</label>
-                            <input type="text" id="name">
+                            <input type="text" id="name" required>
                         </div>
                         <div class="question">
                             <label for="address">Address: *</label>
-                            <textarea name="address" id="address"></textarea>
+                            <textarea name="address" id="address" required></textarea>
                         </div>
                         <div class="question">
                             <label for="email">Email: *</label>
-                            <input type="email">
+                            <input type="email" required>
                         </div>
                         <div class="question">
                             <label for="splint-size">Splint Size: *</label>
-                            <select name="splint-size" id="splint-size">
+                            <select name="splint-size" id="splint-size" required>
                                 <option value="1_Paediatric_Extra_Small">1 - Paediatric Extra Small</option>
                                 <option value="2_Paediatric_Small">2 - Paediatric Small</option>
                                 <option value="3_Paediatric_Medium">3 - Paediatric Medium</option>
@@ -202,7 +202,7 @@
                                 <label for="left-handed">Left-Handed</label>                                
                             </div>
                             <div>
-                                <input type="radio" id="right-handed" required>
+                                <input type="radio" id="right-handed">
                                 <label for="right-handed">Right-Handed</label>                                
                             </div>
                         </div>
