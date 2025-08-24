@@ -232,6 +232,10 @@
         width: 40%;
     }
 
+    #home #splint-testing .text-left {
+        width: 40%;
+    }
+
     /* .text-left-2 {
         margin: 20px 0px 20px 0px;
         text-align: justify;
@@ -846,7 +850,7 @@
                 width: 90%;
             }
 
-            #further-info, #home #splint-testing {
+            #further-info {
                 display: flex;
                 flex-direction: column;
                 align-self: center;
@@ -857,7 +861,7 @@
                 margin-right: 6%;
             }
 
-            #splint-testing {
+            #home #splint-testing, #shop #splint-testing {
                 margin-left: 6%;
                 margin-right: 6%;
             }
@@ -1432,7 +1436,7 @@
 
     .img15 {
         left: 25%;
-        top: 5%;
+        top: -5%;
         min-width: 280px;
         width: 65%;
         transform: rotate(5deg);
@@ -1562,6 +1566,10 @@
 
         #home .images {
             width: 30%;
+        }
+
+        #home #splint-testing .images {
+            width: initial;
         }
 
         .img3 {
@@ -2332,9 +2340,13 @@
     
         /* Shop */
 
-        #shop #splint-testing {
+        #splint-testing {
             margin-left: 15%;
             margin-right: 15%;
+        }
+
+        #home #splint-testing .text-left {
+            width: 80%;
         }
     
         .shop-scroll-target {
@@ -2363,12 +2375,12 @@
             justify-content: space-between;
         }
 
-        #shop #splint-testing {
+        #splint-testing {
             margin-left: 2%;
             margin-right: 3%;
         }
 
-        #shop #splint-testing .text-left {
+        #splint-testing .text-left {
             width: 70%;
         }
 
@@ -2748,16 +2760,16 @@
             width: 95%;
         }
 
-        #shop #splint-testing {
+        #splint-testing {
             flex-direction: column;
         }
 
-        #shop #splint-testing .text-left {
+        #splint-testing .text-left {
             margin-left: 20%;
             margin-right: 20%;
         }
 
-        #shop #splint-testing .images {
+        #splint-testing .images {
             display: none;
         }
 
