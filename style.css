@@ -3626,6 +3626,7 @@ th {
 .table-size {
     text-align: left;
     padding-left: 3%;
+    width: 60%;
 }
 
 .foot-image-container {
