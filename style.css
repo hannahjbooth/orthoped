@@ -3607,6 +3607,8 @@ legend {
 .delivery-notice-container {
     display: flex;
     flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .shop-tables {
