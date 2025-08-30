@@ -3773,6 +3773,10 @@ th {
     margin-right: 5%;
 }
 
+#tax-form input[type="checkbox"], #tax-form input[type="radio"] {
+    margin-right: 2%;
+}
+
 @media (max-width: 850px) {
 
     #tax-form {
