@@ -3753,8 +3753,8 @@ th {
 
 #tax-form {
     margin-top: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #tax-form label {
@@ -3770,11 +3770,16 @@ th {
 }
 
 #tax-form p {
-    margin-left: 5%;
     margin-right: 5%;
 }
 
 @media (max-width: 850px) {
+
+    #tax-form {
+        margin-top: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 
     #tax-form .question {
         max-width: 100%;
