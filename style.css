@@ -3687,7 +3687,7 @@ th {
 }
 
 .table-size {
-    text-align: left;
+    /* text-align: left; */
     padding-left: 3%;
     width: 60%;
 }
